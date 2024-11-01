@@ -44,3 +44,6 @@ Section 02: Next.js Tutorial
 10. CSS
 
 11. Tailwind Info (optional)
+
+12. Layout Component
+-manje izmjene u komponenti layout.tsx
