@@ -55,3 +55,9 @@ Section 02: Next.js Tutorial
 -nav elementu dodajemo Tailwind CSS klase
 -u nav elementu kreiramo cetiri komponente Link
 -u komponentu layout.tsx importujemo komponentu Navbar.tsx
+
+14. Fonts
+-u komponentu layout.tsx importujemo funkcije Inter, Inconsolata, Roboto iz paketa next/font/google
+-kreiramo varijable const inter, const inconsolata i const roboto
+-u jsx-u, body elementu dodajemo prop className
+-u prop className proslijedujemo vrijednost varijable inter.className

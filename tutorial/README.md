@@ -216,7 +216,8 @@ return (
 
 ## Fonts - Google Fonts
 
-Automatically self-host any Google Font. Fonts are included in the deployment and served from the same domain as your deployment. No requests are sent to Google by the browser.
+Automatically self-host any Google Font. Fonts are included in the deployment and served 
+from the same domain as your deployment. No requests are sent to Google by the browser.
 
 ```tsx
 import './globals.css';
