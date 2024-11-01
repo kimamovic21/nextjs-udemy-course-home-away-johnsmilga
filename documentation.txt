@@ -61,3 +61,8 @@ Section 02: Next.js Tutorial
 -kreiramo varijable const inter, const inconsolata i const roboto
 -u jsx-u, body elementu dodajemo prop className
 -u prop className proslijedujemo vrijednost varijable inter.className
+
+15. Metadata
+-u komponentu layout importujemo tip Metadata iz paketa next
+-kreiramo i eksportujemo varijablu const metadata
+-varijabli const metadata dodajemo tip Metadata

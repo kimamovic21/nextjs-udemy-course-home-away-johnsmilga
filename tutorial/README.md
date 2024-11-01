@@ -243,7 +243,9 @@ export default function RootLayout({
 
 ## Metadata
 
-Next.js has a Metadata API that can be used to define your application metadata (e.g. meta and link tags inside your HTML head element) for improved SEO and web shareability.To define static metadata, export a Metadata object from a layout.tsx or page.tsx file.
+Next.js has a Metadata API that can be used to define your application metadata (e.g. meta and link tags 
+inside your HTML head element) for improved SEO and web shareability. To define static metadata, export a 
+Metadata object from a layout.tsx or page.tsx file.
 
 ```tsx
 import type { Metadata } from 'next';
