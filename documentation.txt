@@ -20,3 +20,6 @@ Section 02: Next.js Tutorial
 05. Files and Folders
 -dodajemo plan rada u README.md fajl
 -u globals.css fajlu obrisemo CSS stil
+
+06. Home Page
+-u app/page.tsx fajlu kreiramo funkciju HomePage()
