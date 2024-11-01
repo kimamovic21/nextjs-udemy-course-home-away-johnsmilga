@@ -7,3 +7,8 @@ Section 01: Introduction
 
 02. Github Repo
 -otvorimo link https://github.com/john-smilga/nextjs-course-home-away
+
+
+Section 02: Next.js Tutorial
+
+03. Important Info!!!
