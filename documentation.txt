@@ -4,3 +4,6 @@ Mastering Next.js - Build Airbnb Clone from Scratch (2024)
 Section 01: Introduction
 
 01. Useful Info
+
+02. Github Repo
+-otvorimo link https://github.com/john-smilga/nextjs-course-home-away
