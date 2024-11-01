@@ -12,3 +12,7 @@ Section 01: Introduction
 Section 02: Next.js Tutorial
 
 03. Important Info!!!
+
+04. Install
+-otvorimo web stranicu: https://nextjs.org/
+-u terminalu instaliramo Next.js aplikaciju verziju 14.1.4 sa komandom npx create-next-app@14.1.4
