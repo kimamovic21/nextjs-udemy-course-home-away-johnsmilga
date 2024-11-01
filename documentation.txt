@@ -30,3 +30,9 @@ Section 02: Next.js Tutorial
 -u komponenti about/page.tsx kreiramo funkciju AboutPage()
 -kreiramo folder info i komponentu page.tsx
 -u komponenti info/page.tsx kreiramo funkciju InfoPage()
+
+08. Link Component
+-u komponentu app/page.tsx importujemo komponentu Link iz paketa next/link
+-u jsx-u kreiramo komponentu Link sa otvorenim i zatvorenim tagom
+-komponenti Link dodajemo Tailwind CSS klase
+-komponenti Link dodajemo prop href
