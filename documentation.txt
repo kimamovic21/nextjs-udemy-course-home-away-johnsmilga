@@ -42,3 +42,5 @@ Section 02: Next.js Tutorial
 -u komponenti contact/page.ts kreiramo funkciju ContactPage()
 
 10. CSS
+
+11. Tailwind Info (optional)
