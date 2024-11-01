@@ -36,3 +36,7 @@ Section 02: Next.js Tutorial
 -u jsx-u kreiramo komponentu Link sa otvorenim i zatvorenim tagom
 -komponenti Link dodajemo Tailwind CSS klase
 -komponenti Link dodajemo prop href
+
+09. Nested Routes
+-u folderu info kreiramo folder contact i komponentu page.tsx
+-u komponenti contact/page.ts kreiramo funkciju ContactPage()
