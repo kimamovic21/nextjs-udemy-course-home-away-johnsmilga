@@ -16,3 +16,7 @@ Section 02: Next.js Tutorial
 04. Install
 -otvorimo web stranicu: https://nextjs.org/
 -u terminalu instaliramo Next.js aplikaciju verziju 14.1.4 sa komandom npx create-next-app@14.1.4
+
+05. Files and Folders
+-dodajemo plan rada u README.md fajl
+-u globals.css fajlu obrisemo CSS stil
