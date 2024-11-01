@@ -47,3 +47,11 @@ Section 02: Next.js Tutorial
 
 12. Layout Component
 -manje izmjene u komponenti layout.tsx
+
+13. Navbar Component
+-kreiramo folder components i komponentu Navbar.tsx
+-u komponentu Navbar.tsx importujemo komponentu Link 
+-u jsx-u kreiramo nav element kao roditelj element
+-nav elementu dodajemo Tailwind CSS klase
+-u nav elementu kreiramo cetiri komponente Link
+-u komponentu layout.tsx importujemo komponentu Navbar.tsx
