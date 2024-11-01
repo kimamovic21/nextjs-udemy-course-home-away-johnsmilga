@@ -23,3 +23,10 @@ Section 02: Next.js Tutorial
 
 06. Home Page
 -u app/page.tsx fajlu kreiramo funkciju HomePage()
+
+07. Create Page
+-u folderu app kreiramo folder about
+-u folderu about kreiramo komponentu page.tsx
+-u komponenti about/page.tsx kreiramo funkciju AboutPage()
+-kreiramo folder info i komponentu page.tsx
+-u komponenti info/page.tsx kreiramo funkciju InfoPage()
