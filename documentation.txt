@@ -77,3 +77,19 @@ Section 02: Next.js Tutorial
 -u folderu components kreiramo komponentu Counter
 -premjestamo kod iz komponente counter/page.tsx u komponentu Counter.tsx
 -u komponentu counter/page.tsx importujemo komponentu Counter.tsx
+
+18. Fetch Data
+-otvorimo link: https://www.course-api.com/react-tours-project
+-kreiramo folder tours i komponentu page.tsx
+-u komponenti tours/page.tsx kreiramo funkciju ToursPage()
+-kreiramo varijablu const url
+-kreiramo tip Tour
+-funkciji ToursPage() dodajemo asinhronost
+-u funkciju ToursPage() dodajemo metodu await fetch(url)
+-vrijednost metode await fetch(url) pohranjujemo u varijablu const response
+-dodajemo metodu await response.json()
+-vrijednost metode await response.json() pohranjujemo u varijablu const data
+-varijabli const data dodajemo tip Tour[]
+-u jsx-u kreiramo roditelj section element
+-u section elementu kreiramo h2 element sa Tailwind CSS klasama
+-dodajemo metodu data.map()
