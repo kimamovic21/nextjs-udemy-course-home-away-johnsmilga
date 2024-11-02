@@ -68,3 +68,12 @@ Section 02: Next.js Tutorial
 -varijabli const metadata dodajemo tip Metadata
 
 16. Server vs Client
+
+17. Counter
+-u folderu app kreiramo folder counter i komponentu page.tsx
+-u komponenti counter/page.tsx kreiramo funkciju Counter()
+-u funkciji Counter(), u return izjavi kreiramo HTML elemente sa Tailwind CSS klasama
+-kreiramo state varijablu state i set funkciju setCount
+-u folderu components kreiramo komponentu Counter
+-premjestamo kod iz komponente counter/page.tsx u komponentu Counter.tsx
+-u komponentu counter/page.tsx importujemo komponentu Counter.tsx
