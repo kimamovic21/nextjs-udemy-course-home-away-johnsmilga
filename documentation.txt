@@ -105,3 +105,8 @@ Section 02: Next.js Tutorial
 -u folderu tours kreiramo komponentu loading.tsx
 -u komponenti loading.tsx kreiramo funkciju loading()
 -u funkciji loading(), u return izjavi kreiramo span element sa Tailwind CSS klasama
+
+21. Error Component
+-u folderu tours kreiramo komponente error.tsx
+-u komponenti error.tsx kreiramo funkciju error()
+-u funkciji error(), u return izjavi kreiramo span element
