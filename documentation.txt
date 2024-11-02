@@ -138,9 +138,16 @@ Section 02: Next.js Tutorial
 24. Local Image
 -kreiramo folder images
 -u folder images dodajemo sliku maps.jpg
--importujemo komponentu Image iz paketa next/image
+-u komponentu [id]/page.tsx importujemo komponentu Image iz paketa next/image
+-kreiramo varijablu const url
 -u roditelj div elementu kreiramo section element sa Tailwind CSS klasama
 -u section elementu kreiramo div element za komponentu Image
 -u div elementu kreiramo komponentu Image
 -komponenti Image dodajemo prop src, alt, width, height i className
 -komponenti Image dodajemo Tailwind CSS klase
+
+25. Remote Images
+-u komponenti [id]/page.tsx kreiramo jos jedan div element sa komponentu Image
+-komponenti Image dodajemo prop src, alt, width, height, priority i className
+-u next.config.mjs fajl dodajemo objekt images
+-u objekt images dodajemo niz remotePatterns
