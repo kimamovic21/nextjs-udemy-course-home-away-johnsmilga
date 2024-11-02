@@ -187,3 +187,12 @@ Section 02: Next.js Tutorial
 -u funkciju createUser() dodajemo direktivu 'use server' 
 -form elemente dodajemo atribut action
 -u atribut action proslijedujemo vrijednost funkcije createUser
+
+30. Actions File
+-kreiramo folder utils i actions.ts fajl
+-u actions.ts fajlu kreiramo i eksportujemo funkciju createUser()
+-u actions.ts fajl dodajemo direktivu 'use server'
+-u komponentu Form.tsx importujemo funkciju createUser
+-komponenti Form.tsx dodajemo direktivu 'use client'
+-u actions.ts fajlu funkciji createUser() dodajemo parametar formData sa tipom FormData
+-u funkciji createUser() kreiramo varijable const firstName, const lastName i const rawData
