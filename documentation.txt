@@ -100,3 +100,8 @@ Section 02: Next.js Tutorial
 -kreiramo varijable const response i const data
 -dodajemo izjavu return data
 -u funkciju ToursPage() dodajemo funkciju fetchTours()
+
+20. Loading Component
+-u folderu tours kreiramo komponentu loading.tsx
+-u komponenti loading.tsx kreiramo funkciju loading()
+-u funkciji loading(), u return izjavi kreiramo span element sa Tailwind CSS klasama
