@@ -8,9 +8,15 @@ type Tour = {
   price: string;
 };
 
-async function ToursPage() {
+const fetchTours = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   const response = await fetch(url);
   const data: Tour[] = await response.json();
+  return data;
+};
+
+async function ToursPage() {
+  const data = await fetchTours();
   console.log(data);
 
   return (

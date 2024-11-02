@@ -93,3 +93,10 @@ Section 02: Next.js Tutorial
 -u jsx-u kreiramo roditelj section element
 -u section elementu kreiramo h2 element sa Tailwind CSS klasama
 -dodajemo metodu data.map()
+
+19. Refactor
+-u komponenti tours/page.tsx kreiramo asinhronu funkciju fetchTours()
+-u funkciju fetchTours() dodajemo metodu await new Promise()
+-kreiramo varijable const response i const data
+-dodajemo izjavu return data
+-u funkciju ToursPage() dodajemo funkciju fetchTours()
