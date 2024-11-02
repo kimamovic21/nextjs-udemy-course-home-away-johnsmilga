@@ -158,3 +158,11 @@ Section 02: Next.js Tutorial
 -kreiramo div element za metodu data.map()
 -kreiramo div element sa Tailwind CSS klasama za komponentu Image
 -komponenti Image dodajemo prop src, alt, fill, sizes, priority i className
+
+27. More Routing Options
+-u folderu app kreiramo folder (dashboard)
+-u folderu (dashboard) kreiramo folder auth
+-u folderu auth kreiramo folder [[...sign-in]]
+-u folderu [[...sign-in]] kreiramo komponentu page.tsx
+-u komponenti page.tsx kreiramo funkciju SignInPage()
+-u pretrazivacu otvorimo rutu: http://localhost:3000/auth/sign-in/123
