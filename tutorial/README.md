@@ -503,9 +503,11 @@ return (
 
 The Next.js Image component extends the HTML <img> element with features for automatic image optimization:
 
-- Size Optimization: Automatically serve correctly sized images for each device, using modern image formats like WebP and AVIF.
+- Size Optimization: Automatically serve correctly sized images for each device, using modern image formats 
+  like WebP and AVIF.
 - Visual Stability: Prevent layout shift automatically when images are loading.
-- Faster Page Loads: Images are only loaded when they enter the viewport using native browser lazy loading, with optional blur-up placeholders.
+- Faster Page Loads: Images are only loaded when they enter the viewport using native browser lazy loading, 
+  with optional blur-up placeholders.
 - Asset Flexibility: On-demand image resizing, even for images stored on remote servers
 
 - disable cache

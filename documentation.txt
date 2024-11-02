@@ -134,3 +134,13 @@ Section 02: Next.js Tutorial
 -u metodu data.map() dodajemo komponentu Link 
 -komponenti Link dodajemo prop key, href i className
 -u href dodajemo dinamicki link sa id-em
+
+24. Local Image
+-kreiramo folder images
+-u folder images dodajemo sliku maps.jpg
+-importujemo komponentu Image iz paketa next/image
+-u roditelj div elementu kreiramo section element sa Tailwind CSS klasama
+-u section elementu kreiramo div element za komponentu Image
+-u div elementu kreiramo komponentu Image
+-komponenti Image dodajemo prop src, alt, width, height i className
+-komponenti Image dodajemo Tailwind CSS klase
