@@ -120,3 +120,17 @@ Section 02: Next.js Tutorial
 -u div elementu kreiramo header element sa Tailwind CSS klasama
 -u header elementu kreiramo h2 element sa Tailwind CSS klasama
 -dodajemo prop {children}
+
+23. Dynamic Page
+-u folderu tours kreiramo folder [id]
+-u folderu [id] kreiramo komponentu page.tsx
+-u komponenti page.tsx() kreiramo funkciju page()
+-funkciji page() dodajemo destruktuirani parametar prop { params }
+-parametru params dodajemo tip 
+-u jsx-u kreiramo roditelj div element
+-u div elementu kreiramo h2 element sa Tailwind CSS klasama
+-u h2 element dodajemo {params.id}
+-u komponentu tours/page.tsx importujemo komponentu Link
+-u metodu data.map() dodajemo komponentu Link 
+-komponenti Link dodajemo prop key, href i className
+-u href dodajemo dinamicki link sa id-em
