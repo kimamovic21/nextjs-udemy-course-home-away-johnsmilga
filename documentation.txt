@@ -151,3 +151,10 @@ Section 02: Next.js Tutorial
 -komponenti Image dodajemo prop src, alt, width, height, priority i className
 -u next.config.mjs fajl dodajemo objekt images
 -u objekt images dodajemo niz remotePatterns
+
+26. Responsive Images
+-u komponenti tours/page.tsx div element dodajemo Tailwind CSS klase
+-importujemo komponentu Image
+-kreiramo div element za metodu data.map()
+-kreiramo div element sa Tailwind CSS klasama za komponentu Image
+-komponenti Image dodajemo prop src, alt, fill, sizes, priority i className
