@@ -110,3 +110,13 @@ Section 02: Next.js Tutorial
 -u folderu tours kreiramo komponente error.tsx
 -u komponenti error.tsx kreiramo funkciju error()
 -u funkciji error(), u return izjavi kreiramo span element
+
+22. Nested Layout
+-u folderu tours kreiramo komponentu layout.tsx
+-u komponenti tours/layout.tsx kreiramo funkciju ToursLayout()
+-funkciji ToursLayout() dodajemo parametar destruktuirani prop children
+-parametru prop children dodajemo tip React.ReactNode
+-u jsx-u kreiramo div roditelj element
+-u div elementu kreiramo header element sa Tailwind CSS klasama
+-u header elementu kreiramo h2 element sa Tailwind CSS klasama
+-dodajemo prop {children}
