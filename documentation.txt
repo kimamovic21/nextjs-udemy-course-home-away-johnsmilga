@@ -168,3 +168,22 @@ Section 02: Next.js Tutorial
 -u pretrazivacu otvorimo rutu: http://localhost:3000/auth/sign-in/123
 
 28. Server Actions - Info
+
+29. Actions Page - Setup
+-u folderu app kreiramo folder actions i komponentu page.tsx
+-u komponenti actions/page.tsx kreiramo funkciju ActionsPage()
+-u folderu components kreiramo komponente Form.tsx i UsersList.tsx
+-u komponentu actions/page.tsx importujemo komponente Form.tsx i UsersList.tsx
+-u komponenti Form.tsx, u funkciji Form(), u jsx-u kreiramo form roditelj element
+-u form elementu kreiramo elemente h2, dva inputa i button
+-h2 elementu dodajemo Tailwind CSS klase
+-input elementima dodajemo atribute type, name, defaultValue, className i required
+-kreiramo varijable const formStyle, const inputStyle i const btnStyle
+-form elementu dodajemo klasu formStyle
+-input elementima dodajemo klasu inputStyle
+-button elementu dodajemo atribute type i className
+-button elementu dodajemo klasu btnStyle
+-kreiramo asinhronu funkciju createUser()
+-u funkciju createUser() dodajemo direktivu 'use server' 
+-form elemente dodajemo atribut action
+-u atribut action proslijedujemo vrijednost funkcije createUser
