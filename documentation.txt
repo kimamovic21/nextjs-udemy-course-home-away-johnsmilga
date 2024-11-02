@@ -166,3 +166,5 @@ Section 02: Next.js Tutorial
 -u folderu [[...sign-in]] kreiramo komponentu page.tsx
 -u komponenti page.tsx kreiramo funkciju SignInPage()
 -u pretrazivacu otvorimo rutu: http://localhost:3000/auth/sign-in/123
+
+28. Server Actions - Info

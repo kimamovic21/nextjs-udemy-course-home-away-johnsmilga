@@ -713,7 +713,8 @@ export default SignInPage;
   - make request from the front-end
     - setup form, handle submission etc
 
-- Next.js server actions allow you to mutate server state directly from within a React component by defining server-side logic alongside client-side interactions.
+- Next.js server actions allow you to mutate server state directly from within a React component by defining 
+  server-side logic alongside client-side interactions.
 
 Rules :
 
