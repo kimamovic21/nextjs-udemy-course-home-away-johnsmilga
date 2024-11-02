@@ -66,3 +66,5 @@ Section 02: Next.js Tutorial
 -u komponentu layout importujemo tip Metadata iz paketa next
 -kreiramo i eksportujemo varijablu const metadata
 -varijabli const metadata dodajemo tip Metadata
+
+16. Server vs Client
