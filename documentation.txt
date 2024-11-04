@@ -225,10 +225,19 @@ Section 02: Next.js Tutorial
 
 34. UseFormStatus Hook
 -otvorimo link: https://react.dev/reference/react-dom/hooks/useFormStatus
--u komponentu Form.tsx importujemo funkcije useFormState i useFormStatus iz paketa react-dom
+-u komponentu Form.tsx importujemo funkciju useFormStatus iz paketa react-dom
 -kreiramo funkciju SubmitButton()
 -u funkciji SubmitButton(), u jsx-u kreiramo button element sa prop type, className i disableb
 -u funkciji SubmitButton() dodajemo funkciju useFormStatus()
 -vrijednost funkcije useFormStatus() pohranjujemo u destruktuiranu varijablu const { pending }
 -u prop disableb proslijedujemo vrijednost varijable pending
 -u button element dodajemo ternarni operator za varijablu pending
+
+35. UseFormState Hook
+-otvorimo link: https://react.dev/reference/react-dom/hooks/useFormState
+-u komponentu Form.tsx importujemo i kreiramo funkciju useFormState iz paketa react-dom
+-vrijednost funkcije useFormState() pohranjujemo u varijable const [message, formAction]
+-u prop action proslijedujemo vrijednost funkcije formAction
+-u form elementu dodajemo uslov {message && <p>{messaeg}</p>}
+-u actions.ts fajlu, funkciji createUser() dodajemo parametar prevState sa tipom any
+-u blokove koda try - catch dodajemo izjave return
