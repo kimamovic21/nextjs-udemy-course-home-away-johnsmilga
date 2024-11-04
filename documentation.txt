@@ -269,3 +269,5 @@ Section 02: Next.js Tutorial
 -u prop action proslijedujemo funkciju removeUserWithId
 -u actions.ts fajlu, funkciji removeUser() dodajemo parametar id sa tipom string
 -u funkciji removeUser() kreiramo varijable const name, const users i const updatedUsers
+
+39. Route Handlers - Info
