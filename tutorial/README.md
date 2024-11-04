@@ -1119,7 +1119,8 @@ export default DeleteButton;
 
 ## Bind Option
 
-- An alternative to passing arguments as hidden input fields in the form (e.g. `<input type="hidden" name="userId" value={userId} />`) is to use the bind option. With this approach, the value is not part of the rendered HTML and will not be encoded.
+- An alternative to passing arguments as hidden input fields in the form (e.g. `<input type="hidden" name="userId" value={userId} />`) 
+  is to use the bind option. With this approach, the value is not part of the rendered HTML and will not be encoded.
 
 - .bind works in both Server and Client Components. It also supports progressive enhancement.
 

@@ -262,3 +262,10 @@ Section 02: Next.js Tutorial
 -u funkciji deleteUser() kreiramo varijable const id, const users i const updatedUsers
 -dodajemo metodu await writeFile()
 -dodajemo funkciju revalidatePath('/actions')
+
+38. Bind Method
+-u komponentu DeleteButton.tsx importujemo funkciju removeUser
+-u funkciji DeleteButton() kreiramo funkciju removeUserWithId()
+-u prop action proslijedujemo funkciju removeUserWithId
+-u actions.ts fajlu, funkciji removeUser() dodajemo parametar id sa tipom string
+-u funkciji removeUser() kreiramo varijable const name, const users i const updatedUsers
