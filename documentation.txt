@@ -250,3 +250,15 @@ Section 02: Next.js Tutorial
 -u komponentu UsersList.tsx importujemo komponentu DeleteButton.tsx
 -u metodu users.map() dodajemo komponentu DeleteButton
 -komponenti DeleteButton dodajemo prop id
+
+37. Input Hidden
+-u actions.ts fajlu kreiramo i eksportujemo asinhrone funkcije deleteUser() i removeUser() sa parametrom formData
+-parametru formData dodajemo tip FormData
+-u komponentu DeleteButton.tsx importujemo funkciju deleteUser 
+-form elementu dodajemo prop action
+-u prop action proslijedujemo funkciju deleteUser
+-kreiramo input element sa atributima type, name i value
+-u atribut value proslijedujemo varijablu id
+-u funkciji deleteUser() kreiramo varijable const id, const users i const updatedUsers
+-dodajemo metodu await writeFile()
+-dodajemo funkciju revalidatePath('/actions')
