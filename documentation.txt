@@ -241,3 +241,12 @@ Section 02: Next.js Tutorial
 -u form elementu dodajemo uslov {message && <p>{messaeg}</p>}
 -u actions.ts fajlu, funkciji createUser() dodajemo parametar prevState sa tipom any
 -u blokove koda try - catch dodajemo izjave return
+
+36. Delete Button
+-u folderu components kreiramo komponentu DeleteButton.tsx
+-u komponenti DeleteButton.tsx, funkciji DeleteButton() dodajemo parametar destruktuirani prop id sa tipom
+-u jsx-u kreiramo roditelj form element
+-u form elementu kreiramo button element delete sa prop type i className
+-u komponentu UsersList.tsx importujemo komponentu DeleteButton.tsx
+-u metodu users.map() dodajemo komponentu DeleteButton
+-komponenti DeleteButton dodajemo prop id
