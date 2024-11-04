@@ -196,3 +196,19 @@ Section 02: Next.js Tutorial
 -komponenti Form.tsx dodajemo direktivu 'use client'
 -u actions.ts fajlu funkciji createUser() dodajemo parametar formData sa tipom FormData
 -u funkciji createUser() kreiramo varijable const firstName, const lastName i const rawData
+
+31. Save User
+-u actions.ts fajlu kreiramo tip User
+-importujemo funkcije readFile i writeFile iz paketa fs
+-u funkciji createUser() kreiramo varijablu const newUser
+-kreiramo i eksportujemo funkciju fetchUsers()
+-funkciji fetchUsers() dodajemo tip Promise<User[]>
+-u funkciji fetchUsers() kreiramo varijablu const result
+-kreiramo varijablu const users
+-dodajemo izjavu return users
+-kreiramo asinhronu funkciju saveUser() sa parametrom user
+-parametru user dodajemo tip User
+-u funkciji saveUser() kreiramo varijablu const users
+-dodajemo metodu users.push(user)
+-dodajemo metodu await writeFile()
+-u funkciju createUser() dodajemo metodu await saveUser()
