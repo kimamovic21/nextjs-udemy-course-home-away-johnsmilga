@@ -218,3 +218,7 @@ Section 02: Next.js Tutorial
 -u funkciji UsersList.tsx kreiramo varijablu const users
 -u jsx-u, u roditelj div element dodajemo ternarni operator users.length
 -dodajemo metodu users.map()
+
+33. Revalidate Fetch and Redirect
+-u actions.ts fajl importujemo funkcije redirect i revalidatePath iz paketa next
+-u funkciju createUser() dodajemo funkciju revalidatePath() i redirect()
