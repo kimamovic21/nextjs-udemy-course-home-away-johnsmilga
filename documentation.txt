@@ -212,3 +212,9 @@ Section 02: Next.js Tutorial
 -dodajemo metodu users.push(user)
 -dodajemo metodu await writeFile()
 -u funkciju createUser() dodajemo metodu await saveUser()
+
+32. Fetch Users
+-u komponente UsersList.tsx importujemo funkciju fetchUsers()
+-u funkciji UsersList.tsx kreiramo varijablu const users
+-u jsx-u, u roditelj div element dodajemo ternarni operator users.length
+-dodajemo metodu users.map()
