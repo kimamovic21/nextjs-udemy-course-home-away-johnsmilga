@@ -337,3 +337,9 @@ Section 03: HomeAway Project
 -u kreiranim folderima kreiramo komponente page.tsx
 
 51. Important Update !!!
+
+52. Install Shadcn/ui Library
+-otvorimo web stranicu: https://ui.shadcn.com/
+-u terminalu ukucamo komandu npx shadcn@latest init
+-manje izmjene u fajlovima globals.css i tailwind.config.ts
+-generisani folder lib, fajlovi utils.ts i components.json
