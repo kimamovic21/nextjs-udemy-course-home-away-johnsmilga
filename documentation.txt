@@ -271,3 +271,12 @@ Section 02: Next.js Tutorial
 -u funkciji removeUser() kreiramo varijable const name, const users i const updatedUsers
 
 39. Route Handlers - Info
+
+40. Route Handler - GET
+-u folderu app kreiramo folder api
+-u folderu api kreiramo folder users i route.ts fajl
+-u route.ts fajl importujemo funkciju fetchUsers iz foldera utils
+-kreiramo i eksportujemo asinhronu funkciju GET
+-u funkciju GET u return izjavu dodajemo metodu Response.json()
+-kreiramo varijablu const users
+-u pretrazivacu otvorimo link: http://localhost:3000/api/users
