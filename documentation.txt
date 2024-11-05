@@ -290,3 +290,12 @@ Section 02: Next.js Tutorial
 -importujemo tip NextRequest i funkciju NextResponse iz paketa next/server
 -parametru req dodajemo tip NextResponse
 -u return izjavu dodajemo metodu NextResponse.redirect()
+
+42. Route Handlers - POST
+-u route.ts fajl importujemo funkciju saveUser iz foldera utils
+-kreiramo i eksportujemo asinhronu funkciju POST sa parametrom req
+-parametru req dodajemo tip Request
+-kreiramo varijable const user i const newUser
+-dodajemo metodu await saveUser(newUser)
+-u return izjavu dodajemo Response.json()
+-u Postman-u testiramo rute GET i POST
