@@ -331,3 +331,7 @@ Section 03: HomeAway Project
 -u komponenti layout.tsx, u varijablu const metadata dodajemo opis projekta
 -u globals.css fajlu brisemo CSS stil
 -u README.md fajl dodajemo plan rada
+
+50. Create Pages
+-u folderu app kreiramo foldere: bookings, checkout, favorites, profile, properties, rentals i reviews
+-u kreiranim folderima kreiramo komponente page.tsx
