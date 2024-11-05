@@ -343,3 +343,9 @@ Section 03: HomeAway Project
 -u terminalu ukucamo komandu npx shadcn@latest init
 -manje izmjene u fajlovima globals.css i tailwind.config.ts
 -generisani folder lib, fajlovi utils.ts i components.json
+
+53. Shadcn/ui Button Component
+-u terminalu ukucamo komandu npx shadcn@latest add button
+-generisani folderi components, ui i komponenta button.tsx
+-u komponentu app/page.tsx importujemo komponentu Button iz foldera components 
+-u jsx-u, komponenti Button dodajemo prop variant, size i className
