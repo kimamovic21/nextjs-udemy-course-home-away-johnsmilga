@@ -335,3 +335,5 @@ Section 03: HomeAway Project
 50. Create Pages
 -u folderu app kreiramo foldere: bookings, checkout, favorites, profile, properties, rentals i reviews
 -u kreiranim folderima kreiramo komponente page.tsx
+
+51. Important Update !!!
