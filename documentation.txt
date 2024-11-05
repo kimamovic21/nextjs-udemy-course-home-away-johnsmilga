@@ -349,3 +349,10 @@ Section 03: HomeAway Project
 -generisani folderi components, ui i komponenta button.tsx
 -u komponentu app/page.tsx importujemo komponentu Button iz foldera components 
 -u jsx-u, komponenti Button dodajemo prop variant, size i className
+
+54. Install More Shadcn/ui Components
+-u folderu components kreiramo foldere card, form, home, properties i navbar
+-u terminalu instaliramo vise Shadcn/ui komponenti
+-generisan folder hooks i use-toast.ts fajl
+-u folderu components/ui generisano vise jsx komponenti
+-u folderu navbar kreiramo sedam jsx komponenti
