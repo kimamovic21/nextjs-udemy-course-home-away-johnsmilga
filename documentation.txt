@@ -322,3 +322,6 @@ Section 02: Next.js Tutorial
 Section 03: HomeAway Project
 
 47. Project Overview
+
+48. Install New Next.js Application
+-u terminalu instaliramo Next.js aplikaciju home-away verziju 14.2.1.
