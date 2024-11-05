@@ -1199,13 +1199,15 @@ export const GET = async (request: NextRequest) => {
 };
 ```
 
-The URL constructor takes two arguments: url and base. If the url is a relative URL, then base is required. If url is an absolute URL, then base is ignored.
+The URL constructor takes two arguments: url and base. If the url is a relative URL, then base is required. 
+If url is an absolute URL, then base is ignored.
 
 Here, '/' is the url and request.url is the base.
 
 This means it's creating a new URL object that represents the root of the URL contained in request.url.
 
-For example, if request.url is 'http://example.com/path/to/resource', the new URL object would represent 'http://example.com/'.
+For example, if request.url is 'http://example.com/path/to/resource', the new URL object would represent 
+'http://example.com/'.
 
 ## Middleware
 

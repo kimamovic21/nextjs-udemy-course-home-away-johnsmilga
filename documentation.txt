@@ -280,3 +280,13 @@ Section 02: Next.js Tutorial
 -u funkciju GET u return izjavu dodajemo metodu Response.json()
 -kreiramo varijablu const users
 -u pretrazivacu otvorimo link: http://localhost:3000/api/users
+
+41. Route Handlers - Params
+-u route.ts fajlu, funkciji GET dodajemo parametar req sa tipom Request
+-dodajemo metodu new URL()
+-vrijednost metode new URL() pohranjujemo u destruktuiranu varijablu const { searchParams }
+-dodajemo metodu searchParams.get()
+-vrijednost metode searchParams.get() pohranjujemo u varijablu const id
+-importujemo tip NextRequest i funkciju NextResponse iz paketa next/server
+-parametru req dodajemo tip NextResponse
+-u return izjavu dodajemo metodu NextResponse.redirect()
