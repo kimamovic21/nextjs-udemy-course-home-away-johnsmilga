@@ -8,47 +8,50 @@ Section 01: Introduction
 02. Github Repo
 -otvorimo link https://github.com/john-smilga/nextjs-course-home-away
 
+03. Discord Channel
+-otvorimo link: https://discord.com/invite/GhUxjr66xz
+
 
 Section 02: Next.js Tutorial
 
-03. Important Info!!!
+04. Important Info!!!
 
-04. Install
+05. Install
 -otvorimo web stranicu: https://nextjs.org/
 -u terminalu instaliramo Next.js aplikaciju verziju 14.1.4 sa komandom npx create-next-app@14.1.4
 
-05. Files and Folders
+06. Files and Folders
 -dodajemo plan rada u README.md fajl
 -u globals.css fajlu obrisemo CSS stil
 
-06. Home Page
+07. Home Page
 -u app/page.tsx fajlu kreiramo funkciju HomePage()
 
-07. Create Page
+08. Create Page
 -u folderu app kreiramo folder about
 -u folderu about kreiramo komponentu page.tsx
 -u komponenti about/page.tsx kreiramo funkciju AboutPage()
 -kreiramo folder info i komponentu page.tsx
 -u komponenti info/page.tsx kreiramo funkciju InfoPage()
 
-08. Link Component
+09. Link Component
 -u komponentu app/page.tsx importujemo komponentu Link iz paketa next/link
 -u jsx-u kreiramo komponentu Link sa otvorenim i zatvorenim tagom
 -komponenti Link dodajemo Tailwind CSS klase
 -komponenti Link dodajemo prop href
 
-09. Nested Routes
+10. Nested Routes
 -u folderu info kreiramo folder contact i komponentu page.tsx
 -u komponenti contact/page.ts kreiramo funkciju ContactPage()
 
-10. CSS
+11. CSS
 
-11. Tailwind Info (optional)
+12. Tailwind Info (optional)
 
-12. Layout Component
+13. Layout Component
 -manje izmjene u komponenti layout.tsx
 
-13. Navbar Component
+14. Navbar Component
 -kreiramo folder components i komponentu Navbar.tsx
 -u komponentu Navbar.tsx importujemo komponentu Link 
 -u jsx-u kreiramo nav element kao roditelj element
@@ -56,20 +59,20 @@ Section 02: Next.js Tutorial
 -u nav elementu kreiramo cetiri komponente Link
 -u komponentu layout.tsx importujemo komponentu Navbar.tsx
 
-14. Fonts
+15. Fonts
 -u komponentu layout.tsx importujemo funkcije Inter, Inconsolata, Roboto iz paketa next/font/google
 -kreiramo varijable const inter, const inconsolata i const roboto
 -u jsx-u, body elementu dodajemo prop className
 -u prop className proslijedujemo vrijednost varijable inter.className
 
-15. Metadata
+16. Metadata
 -u komponentu layout importujemo tip Metadata iz paketa next
 -kreiramo i eksportujemo varijablu const metadata
 -varijabli const metadata dodajemo tip Metadata
 
-16. Server vs Client
+17. Server vs Client
 
-17. Counter
+18. Counter
 -u folderu app kreiramo folder counter i komponentu page.tsx
 -u komponenti counter/page.tsx kreiramo funkciju Counter()
 -u funkciji Counter(), u return izjavi kreiramo HTML elemente sa Tailwind CSS klasama
@@ -78,7 +81,7 @@ Section 02: Next.js Tutorial
 -premjestamo kod iz komponente counter/page.tsx u komponentu Counter.tsx
 -u komponentu counter/page.tsx importujemo komponentu Counter.tsx
 
-18. Fetch Data
+19. Fetch Data
 -otvorimo link: https://www.course-api.com/react-tours-project
 -kreiramo folder tours i komponentu page.tsx
 -u komponenti tours/page.tsx kreiramo funkciju ToursPage()
@@ -94,24 +97,24 @@ Section 02: Next.js Tutorial
 -u section elementu kreiramo h2 element sa Tailwind CSS klasama
 -dodajemo metodu data.map()
 
-19. Refactor
+20. Refactor
 -u komponenti tours/page.tsx kreiramo asinhronu funkciju fetchTours()
 -u funkciju fetchTours() dodajemo metodu await new Promise()
 -kreiramo varijable const response i const data
 -dodajemo izjavu return data
 -u funkciju ToursPage() dodajemo funkciju fetchTours()
 
-20. Loading Component
+21. Loading Component
 -u folderu tours kreiramo komponentu loading.tsx
 -u komponenti loading.tsx kreiramo funkciju loading()
 -u funkciji loading(), u return izjavi kreiramo span element sa Tailwind CSS klasama
 
-21. Error Component
+22. Error Component
 -u folderu tours kreiramo komponente error.tsx
 -u komponenti error.tsx kreiramo funkciju error()
 -u funkciji error(), u return izjavi kreiramo span element
 
-22. Nested Layout
+23. Nested Layout
 -u folderu tours kreiramo komponentu layout.tsx
 -u komponenti tours/layout.tsx kreiramo funkciju ToursLayout()
 -funkciji ToursLayout() dodajemo parametar destruktuirani prop children
@@ -121,7 +124,7 @@ Section 02: Next.js Tutorial
 -u header elementu kreiramo h2 element sa Tailwind CSS klasama
 -dodajemo prop {children}
 
-23. Dynamic Page
+24. Dynamic Page
 -u folderu tours kreiramo folder [id]
 -u folderu [id] kreiramo komponentu page.tsx
 -u komponenti page.tsx() kreiramo funkciju page()
@@ -135,7 +138,7 @@ Section 02: Next.js Tutorial
 -komponenti Link dodajemo prop key, href i className
 -u href dodajemo dinamicki link sa id-em
 
-24. Local Image
+25. Local Image
 -kreiramo folder images
 -u folder images dodajemo sliku maps.jpg
 -u komponentu [id]/page.tsx importujemo komponentu Image iz paketa next/image
@@ -146,20 +149,20 @@ Section 02: Next.js Tutorial
 -komponenti Image dodajemo prop src, alt, width, height i className
 -komponenti Image dodajemo Tailwind CSS klase
 
-25. Remote Images
+26. Remote Images
 -u komponenti [id]/page.tsx kreiramo jos jedan div element sa komponentu Image
 -komponenti Image dodajemo prop src, alt, width, height, priority i className
 -u next.config.mjs fajl dodajemo objekt images
 -u objekt images dodajemo niz remotePatterns
 
-26. Responsive Images
+27. Responsive Images
 -u komponenti tours/page.tsx div element dodajemo Tailwind CSS klase
 -importujemo komponentu Image
 -kreiramo div element za metodu data.map()
 -kreiramo div element sa Tailwind CSS klasama za komponentu Image
 -komponenti Image dodajemo prop src, alt, fill, sizes, priority i className
 
-27. More Routing Options
+28. More Routing Options
 -u folderu app kreiramo folder (dashboard)
 -u folderu (dashboard) kreiramo folder auth
 -u folderu auth kreiramo folder [[...sign-in]]
@@ -167,9 +170,9 @@ Section 02: Next.js Tutorial
 -u komponenti page.tsx kreiramo funkciju SignInPage()
 -u pretrazivacu otvorimo rutu: http://localhost:3000/auth/sign-in/123
 
-28. Server Actions - Info
+29. Server Actions - Info
 
-29. Actions Page - Setup
+30. Actions Page - Setup
 -u folderu app kreiramo folder actions i komponentu page.tsx
 -u komponenti actions/page.tsx kreiramo funkciju ActionsPage()
 -u folderu components kreiramo komponente Form.tsx i UsersList.tsx
@@ -188,7 +191,7 @@ Section 02: Next.js Tutorial
 -form elemente dodajemo atribut action
 -u atribut action proslijedujemo vrijednost funkcije createUser
 
-30. Actions File
+31. Actions File
 -kreiramo folder utils i actions.ts fajl
 -u actions.ts fajlu kreiramo i eksportujemo funkciju createUser()
 -u actions.ts fajl dodajemo direktivu 'use server'
@@ -197,7 +200,7 @@ Section 02: Next.js Tutorial
 -u actions.ts fajlu funkciji createUser() dodajemo parametar formData sa tipom FormData
 -u funkciji createUser() kreiramo varijable const firstName, const lastName i const rawData
 
-31. Save User
+32. Save User
 -u actions.ts fajlu kreiramo tip User
 -importujemo funkcije readFile i writeFile iz paketa fs
 -u funkciji createUser() kreiramo varijablu const newUser
@@ -213,17 +216,17 @@ Section 02: Next.js Tutorial
 -dodajemo metodu await writeFile()
 -u funkciju createUser() dodajemo metodu await saveUser()
 
-32. Fetch Users
+33. Fetch Users
 -u komponente UsersList.tsx importujemo funkciju fetchUsers()
 -u funkciji UsersList.tsx kreiramo varijablu const users
 -u jsx-u, u roditelj div element dodajemo ternarni operator users.length
 -dodajemo metodu users.map()
 
-33. Revalidate Fetch and Redirect
+34. Revalidate Fetch and Redirect
 -u actions.ts fajl importujemo funkcije redirect i revalidatePath iz paketa next
 -u funkciju createUser() dodajemo funkciju revalidatePath() i redirect()
 
-34. UseFormStatus Hook
+35. UseFormStatus Hook
 -otvorimo link: https://react.dev/reference/react-dom/hooks/useFormStatus
 -u komponentu Form.tsx importujemo funkciju useFormStatus iz paketa react-dom
 -kreiramo funkciju SubmitButton()
@@ -233,7 +236,7 @@ Section 02: Next.js Tutorial
 -u prop disableb proslijedujemo vrijednost varijable pending
 -u button element dodajemo ternarni operator za varijablu pending
 
-35. UseFormState Hook
+36. UseFormState Hook
 -otvorimo link: https://react.dev/reference/react-dom/hooks/useFormState
 -u komponentu Form.tsx importujemo i kreiramo funkciju useFormState iz paketa react-dom
 -vrijednost funkcije useFormState() pohranjujemo u varijable const [message, formAction]
@@ -242,7 +245,7 @@ Section 02: Next.js Tutorial
 -u actions.ts fajlu, funkciji createUser() dodajemo parametar prevState sa tipom any
 -u blokove koda try - catch dodajemo izjave return
 
-36. Delete Button
+37. Delete Button
 -u folderu components kreiramo komponentu DeleteButton.tsx
 -u komponenti DeleteButton.tsx, funkciji DeleteButton() dodajemo parametar destruktuirani prop id sa tipom
 -u jsx-u kreiramo roditelj form element
@@ -251,7 +254,7 @@ Section 02: Next.js Tutorial
 -u metodu users.map() dodajemo komponentu DeleteButton
 -komponenti DeleteButton dodajemo prop id
 
-37. Input Hidden
+38. Input Hidden
 -u actions.ts fajlu kreiramo i eksportujemo asinhrone funkcije deleteUser() i removeUser() sa parametrom formData
 -parametru formData dodajemo tip FormData
 -u komponentu DeleteButton.tsx importujemo funkciju deleteUser 
@@ -263,16 +266,16 @@ Section 02: Next.js Tutorial
 -dodajemo metodu await writeFile()
 -dodajemo funkciju revalidatePath('/actions')
 
-38. Bind Method
+39. Bind Method
 -u komponentu DeleteButton.tsx importujemo funkciju removeUser
 -u funkciji DeleteButton() kreiramo funkciju removeUserWithId()
 -u prop action proslijedujemo funkciju removeUserWithId
 -u actions.ts fajlu, funkciji removeUser() dodajemo parametar id sa tipom string
 -u funkciji removeUser() kreiramo varijable const name, const users i const updatedUsers
 
-39. Route Handlers - Info
+40. Route Handlers - Info
 
-40. Route Handler - GET
+41. Route Handler - GET
 -u folderu app kreiramo folder api
 -u folderu api kreiramo folder users i route.ts fajl
 -u route.ts fajl importujemo funkciju fetchUsers iz foldera utils
@@ -281,7 +284,7 @@ Section 02: Next.js Tutorial
 -kreiramo varijablu const users
 -u pretrazivacu otvorimo link: http://localhost:3000/api/users
 
-41. Route Handlers - Params
+42. Route Handlers - Params
 -u route.ts fajlu, funkciji GET dodajemo parametar req sa tipom Request
 -dodajemo metodu new URL()
 -vrijednost metode new URL() pohranjujemo u destruktuiranu varijablu const { searchParams }
@@ -291,7 +294,7 @@ Section 02: Next.js Tutorial
 -parametru req dodajemo tip NextResponse
 -u return izjavu dodajemo metodu NextResponse.redirect()
 
-42. Route Handlers - POST
+43. Route Handlers - POST
 -u route.ts fajl importujemo funkciju saveUser iz foldera utils
 -kreiramo i eksportujemo asinhronu funkciju POST sa parametrom req
 -parametru req dodajemo tip Request
@@ -300,7 +303,7 @@ Section 02: Next.js Tutorial
 -u return izjavu dodajemo Response.json()
 -u Postman-u testiramo rute GET i POST
 
-43. Middleware
+44. Middleware
 -kreiramo middleware.ts fajl
 -u middleware.ts fajlu kreiramo i eksportujemo funkciju middleware()
 -u funkciju middleware() dodajemo izjavu return Response.json()
@@ -309,8 +312,8 @@ Section 02: Next.js Tutorial
 -importujemo funkciju NextResponse
 -u funkciju middleware dodajemo funkciju NextResponse.redirect()
 
-44. Local Build
+45. Local Build
 -u terminalu ukucamo komandu npm run build
 -nakon komande npm run build ukucamo komandu npm start
 
-45. Cache
+46. Cache
