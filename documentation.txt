@@ -299,3 +299,12 @@ Section 02: Next.js Tutorial
 -dodajemo metodu await saveUser(newUser)
 -u return izjavu dodajemo Response.json()
 -u Postman-u testiramo rute GET i POST
+
+43. Middleware
+-kreiramo middleware.ts fajl
+-u middleware.ts fajlu kreiramo i eksportujemo funkciju middleware()
+-u funkciju middleware() dodajemo izjavu return Response.json()
+-kreiramo i eksportujemo objekt varijablu const config
+-u objekt config dodajemo niz matcher
+-importujemo funkciju NextResponse
+-u funkciju middleware dodajemo funkciju NextResponse.redirect()

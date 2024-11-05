@@ -1213,7 +1213,8 @@ For example, if request.url is 'http://example.com/path/to/resource', the new UR
 
 [Docs](https://nextjs.org/docs/app/building-your-application/routing/middleware)
 
-Middleware in Next.js is a piece of code that allows you to perform actions before a request is completed and modify the response accordingly.
+Middleware in Next.js is a piece of code that allows you to perform actions before a request is completed 
+and modify the response accordingly.
 
 - create middleware.ts in the root
 - by default will be invoked for every route in your project
@@ -1232,7 +1233,7 @@ export const config = {
 import { NextResponse } from 'next/server';
 
 // This function can be marked `async` if using `await` inside
-export function middleware(request) {
+export function middleware(request: Request) {
   return NextResponse.redirect(new URL('/', request.url));
 }
 
