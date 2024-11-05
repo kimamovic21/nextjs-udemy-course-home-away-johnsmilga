@@ -312,3 +312,5 @@ Section 02: Next.js Tutorial
 44. Local Build
 -u terminalu ukucamo komandu npm run build
 -nakon komande npm run build ukucamo komandu npm start
+
+45. Cache
