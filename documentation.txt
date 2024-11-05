@@ -325,3 +325,9 @@ Section 03: HomeAway Project
 
 48. Install New Next.js Application
 -u terminalu instaliramo Next.js aplikaciju home-away verziju 14.2.1.
+
+49. Remove Boilerplate
+-u komponenti app/page.tsx kreiramo funkciju HomePage
+-u komponenti layout.tsx, u varijablu const metadata dodajemo opis projekta
+-u globals.css fajlu brisemo CSS stil
+-u README.md fajl dodajemo plan rada
