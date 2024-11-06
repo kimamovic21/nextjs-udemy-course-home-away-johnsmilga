@@ -433,3 +433,14 @@ Section 03: HomeAway Project
 
 60. Important Info !!!
 -npm install @clerk/nextjs@5.0.1
+
+61. Setup and Customize Clerk Auth Provider
+-otvorimo web stranicu: https://clerk.com/
+-kreiramo novu aplikaciju sa imenom npr. home-away-nextjs-2024
+-u terminalu instaliramo Clerk paket sa komandom npm i @clerk/nextjs
+-kreiramo fajlove .env.local i .env.local.example
+-u .env.local fajlu kreiramo varijable NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY i CLERK_SECRET_KEY
+-u .env.local.example dodajemo primjer varijabli koje je potrebno kreirati
+-kreiramo middleware.ts fajl
+-u middleware.ts fajl importujemo funkcije clerkMiddleware i createRouteMatcher iz paketa Clerk
+-kad udemo u aplikaciju Home Away prijavimo se sa Github racunom
