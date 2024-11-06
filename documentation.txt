@@ -377,3 +377,7 @@ Section 03: HomeAway Project
 -importujemo komponentu Button iz komponente ui/button.tsx
 -u komponentu NavSearch.tsx importujemo komponentu Input iz komponente ui/input.tsx
 -u jsx-u komponenti Input dodajemo prop type, placeholder i className
+
+57. Change Theme with Shadcn/ui
+-otvorimo link: https://ui.shadcn.com/themes
+-u globals.css fajl kopiramo CSS stil za direktivu @layer base 
