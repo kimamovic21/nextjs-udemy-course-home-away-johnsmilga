@@ -430,3 +430,6 @@ Section 03: HomeAway Project
 -dodajemo metodu links.map()
 -u metodu map() dodajemo komponentu Link sa prop href, className i key
 -u komponentu Link dodajemo komponentu DropdownMenuItem sa otvorenim i zatvorenim tagom
+
+60. Important Info !!!
+-npm install @clerk/nextjs@5.0.1
