@@ -465,3 +465,21 @@ Section 03: HomeAway Project
 -importujemo komponente SignedOut, SignedIn, SignInButton SignUpButton iz paketa Clerk
 -importujemo komponentu SignOutLink.tsx
 -u jsx-u dodajemo logiku za prikazivanje linkova ukoliko smo prijavljeni
+
+64. Create Profile - Setup
+-u fajlovima .env.local i .env.loca.example kreiramo dvije env varijable za prijavu i registraciju
+-u folderu profile kreiramo folder create i komponentu page.tsx
+-u komponenti create/page.tsx kreiramo funkciju CreateProfilePage()
+-kreiramo asinhronu funkciju createProfileAction() sa parametrom formData
+-parametru formData dodajemo tip FormData
+-u funkciju createProfileAction() dodajemo direktivu 'use server'
+-kreiramo varijablu const firstName
+-importujemo komponente Label, Input i Button
+-u funkciji CreateProfilePage() kreiramo section roditelj element
+-u section elementu kreiramo HTML elemente sa Tailwind CSS klasama
+-form elementu dodajemo prop action
+-u prop action proslijedujemo funkciju createProfileAction
+-kreiramo div element za komponente Label i Input
+-komponenti Label dodajemo prop htmlFor
+-komponenta Input dodajemo prop id, name i type
+-dodajemo Button element sa prop type i size
