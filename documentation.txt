@@ -405,3 +405,28 @@ Section 03: HomeAway Project
 -komponenti ThemeProvider dodajemo prop attribute, defaultTheme, enableSystem i disableTransitionOnChange
 -u komponentu DarkMode.tsx dodajemo kod iz dokumentacije
 -promjenimo ime funcije ModeToggle() u DarkMode()
+
+59. LinksDropdown Component
+-u komponentu UserIcon importujemo React ikonicu komponentu LuUser2
+-u jsx-u komponenti LaUser2 dodajemo Tailwind CSS klase
+-kreiramo folder utils
+-u folderu utils kreiramo links.ts fajl
+-u links.ts fajlu kreiramo tip NavLink
+-kreiramo i eksportujemo varijablu niz const links 
+-varijabli links dodajemo tip NavLink[]
+-u varijabli const links kreiramo vise objekt ruti
+-u komponentu LinksDropdown.tsx importujemo komponente iz komponente ui/dropdown-menu
+-importujemo komponentu Button iz komponente ui/button.tsx
+-importujemo niz links iz foldera utils
+-importujemo komponentu Link
+-importujemo komponentu UserIcon
+-u jsx-u dodajemo komponentu DropdownMenu sa otvorenim i zatvorenim tagom
+-u komponentu DropdownMenu dodajemo dvije komponente DropdownMenuTrigger i DropdownMenuContent sa otvorenim i zatvorenim tagom
+-komponenti DropdownMenuTrigger dodajemo prop asChild
+-u komponentu DropdownMenuTrigger dodajemo komponentu Button sa otvorenim i zatvorenim tagom
+-komponenti Button dodajemo prop variant i className
+-u komponentu Button dodajemo komponentu UserIcon
+-komponenti DropdownMenuContent dodajemo prop className, align, sideOffset
+-dodajemo metodu links.map()
+-u metodu map() dodajemo komponentu Link sa prop href, className i key
+-u komponentu Link dodajemo komponentu DropdownMenuItem sa otvorenim i zatvorenim tagom
