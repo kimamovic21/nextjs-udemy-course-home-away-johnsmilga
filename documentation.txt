@@ -367,3 +367,13 @@ Section 03: HomeAway Project
 -u jsx-u, u body elementu kreiramo main element sa Tailwind CSS klasama
 -u body element dodajemo komponentu Navbar
 -u main element dodajemo prop children
+
+56. Logo and NavSearch Components
+-otvorimo web stranicu: https://react-icons.github.io/react-icons/
+-u terminalu instaliramo paket React Icons
+-u terminalu ukucamo komandu npm i react-icons
+-u komponentu Logo.tsx importujemo komponentu Link iz paketa Next
+-importujemo React ikonicu (komponentu) LuTent iz paketa react-icons/lu
+-importujemo komponentu Button iz komponente ui/button.tsx
+-u komponentu NavSearch.tsx importujemo komponentu Input iz komponente ui/input.tsx
+-u jsx-u komponenti Input dodajemo prop type, placeholder i className
