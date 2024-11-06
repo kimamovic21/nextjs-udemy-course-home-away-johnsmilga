@@ -458,3 +458,10 @@ Section 03: HomeAway Project
 -u komponenti SignOutButton kreiramo button element sa Tailwind CSS klasama
 -button elementu dodajemo dogadaj onClick
 -u dogadaj onClick proslijedujemo funkciju handleLogout
+
+63. LinksDropdown Component
+-u komponentu SignOutLink.tsx dodajemo direktivu 'use client'
+-u komponentu LinksDropdown.tsx importujemo komponentu DropdownMenuSeparator iz komponente ui/dropdown-menu.tsx
+-importujemo komponente SignedOut, SignedIn, SignInButton SignUpButton iz paketa Clerk
+-importujemo komponentu SignOutLink.tsx
+-u jsx-u dodajemo logiku za prikazivanje linkova ukoliko smo prijavljeni
