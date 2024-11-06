@@ -381,3 +381,27 @@ Section 03: HomeAway Project
 57. Change Theme with Shadcn/ui
 -otvorimo link: https://ui.shadcn.com/themes
 -u globals.css fajl kopiramo CSS stil za direktivu @layer base 
+
+58. Setup Dark Mode with Shadcn/ui
+-otvorimo link: https://ui.shadcn.com/docs/dark-mode/next
+-u folderu app kreiramo komponentu providers.tsx
+-u komponentu providers.tsx dodajemo direktivu 'use client'
+-kreiramo funkciju Providers()
+-funkciji Providers() dodajemo parametar destruktuirani prop children
+-parametru children dodajemo tip React.ReactNode
+-u jsx-u dodajemo roditelj prazan fragment element
+-u fragment element dodajemo prop children
+-u komponentu layout.tsx importujemo komponentu Providers
+-u jsx-u, dodajemo komponentu Providers sa otvorenim i zatvorenim tagom
+-u komponentu Providers dodajemo komponentu Navbar i main element
+-u terminalu instaliramo paket Next Themes
+-u terminalu ukucamo komandu npm i next-themes
+-kreiramo komponentu theme-provider.tsx
+-u komponentu theme-provider.tsx kopiramo kod iz dokumentacije
+-otvorimo link: https://stackoverflow.com/questions/69238794/cannot-find-module-next-or-its-corresponding-type-declarations
+-u komponentu providers.tsx importujemo komponentu ThemeProvider
+-u jsx-u dodajemo komponentu ThemeProvider sa otvorenim i zatvorenim tagom
+-u komponentu ThemeProvider dodajemo prop children
+-komponenti ThemeProvider dodajemo prop attribute, defaultTheme, enableSystem i disableTransitionOnChange
+-u komponentu DarkMode.tsx dodajemo kod iz dokumentacije
+-promjenimo ime funcije ModeToggle() u DarkMode()
