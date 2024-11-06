@@ -356,3 +356,14 @@ Section 03: HomeAway Project
 -generisan folder hooks i use-toast.ts fajl
 -u folderu components/ui generisano vise jsx komponenti
 -u folderu navbar kreiramo sedam jsx komponenti
+
+55. Navbar Structure
+-u globals.css fajlu dodajemo direktivu @layer components i klasu .container
+-u komponentu Navbar.tsx importujemo komponente Logo, NavSearch, LinksDropdown i DarkMode
+-u jsx-u, kreiramo roditelj nav element sa Tailwind CSS klasom
+-u nav elementu kreiramo div element sa Tailwind CSS klasama
+-u div element dodajemo komponente
+-u komponentu layout.tsx importujemo komponentu Navbar.tsx
+-u jsx-u, u body elementu kreiramo main element sa Tailwind CSS klasama
+-u body element dodajemo komponentu Navbar
+-u main element dodajemo prop children
