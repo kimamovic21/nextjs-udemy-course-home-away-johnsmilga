@@ -444,3 +444,17 @@ Section 03: HomeAway Project
 -kreiramo middleware.ts fajl
 -u middleware.ts fajl importujemo funkcije clerkMiddleware i createRouteMatcher iz paketa Clerk
 -kad udemo u aplikaciju Home Away prijavimo se sa Github racunom
+
+62. SignOutLink Component
+-otvorimo link: https://ui.shadcn.com/docs/components/toast
+-u komponentu SignOutLink.tsx dodajemo direktivu 'use client'
+-importujemo komponentu SignOutButton iz paketa Clerk
+-importujemo i kreiramo funkciju useToast iz use-toast.ts fajla
+-vrijednost funkcije useToast() pohranjujemo u destruktuiranu varijablu const { toast }
+-kreiramo funkciju handleLogout()
+-u funkciju handleLogout() dodajemo funkciju toast()
+-u jsx-u dodajemo roditelj komponentu SignOutButton sa otvorenim i zatvorenim tagom
+-komponenti SignOutButton dodajemo prop redirectUrl
+-u komponenti SignOutButton kreiramo button element sa Tailwind CSS klasama
+-button elementu dodajemo dogadaj onClick
+-u dogadaj onClick proslijedujemo funkciju handleLogout
