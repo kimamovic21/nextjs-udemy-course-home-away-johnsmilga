@@ -597,3 +597,13 @@ Section 03: HomeAway Project
 -u folderu utils kreiramo db.ts fajl
 -otvorimo link: https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/nextjs-prisma-client-dev-practices#solution
 -u db.ts fajl dodajemo kod iz dokumentacije
+
+73. Connect Prisma and Supabase
+-otvorimo link: https://supabase.com/partners/integrations/prisma
+-na web stranici Supabase, otvorimo projekt i odaberemo opciju Connect
+-u .env fajlu kreiramo varijablu DIRECT_URL
+-u .env.example fajlu dodajemo primjer varijable koju je potrebno dodati
+-u schema.prisma fajlu dodajemo model TestProfile
+-u terminalu ukucamo komandu npx prisma db push
+-u terminalu ukucamo komandu npx prisma studio
+-u pretrazivacu otvorimo link: http://localhost:5555/
