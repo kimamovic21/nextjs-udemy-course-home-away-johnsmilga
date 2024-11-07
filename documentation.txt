@@ -575,3 +575,6 @@ Section 03: HomeAway Project
 -dodajemo izjavu return da je profil kreiran
 -u blok koda catch dodajemo izjavu return da je doslo do greske
 -u komponentu create/page.tsx importujemo funkciju createProfileAction 
+
+70. Important Info !!!
+-u bazi Supabase ne korisiti specijalne znakove za sifru
