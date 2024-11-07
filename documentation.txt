@@ -550,3 +550,28 @@ Section 03: HomeAway Project
 -komponentama FormInput dodajemo prop type, name i label
 -u komponentu FormContainer dodajemo komponentu SubmitButton sa prop text i className
 -u funkciju createProfileAction() mozemo dodati uslov if za validaciju polja za varijablu firstName
+
+69. Zod Library
+-otvorimo web stranicu: https://zod.dev
+-otvorimo link: https://www.npmjs.com/package/zod
+-u terminalu instaliramo paket Zod
+-u terminalu ukucamo komandu npm i zod
+-u folderu utils kreiramo schemas.ts fajl
+-u schemas.ts fajl dodajemo import * as z 
+-dodajemo metodu z.object()
+-vrijednost metode z.object() pohranjujemo u varijablu const profileSchema
+-eksportujemo varijablu profileSchema
+-u funkciju objekt() dodajemo konfiguracioni objekt za polja
+-u objekt dodajemo validaciju za polja fill, lastName i username
+-u folderu utils kreiramo actions.ts fajl
+-u actions.ts fajl dodajemo direktivu 'use server'
+-importujemo varijablu profileSchema
+-funkciju createProfileAction() premjestamo iz komponente create/page.tsx u actions.ts fajl
+-u funkciju createProfileAction() dodajemo blokove koda try - catch
+-u bloku koda try dodajemo metodu Object.fromEntries(formData)
+-vrijednost metode Object.fromEntries(formData) pohranjujemo u varijablu const rawData
+-dodajemo metodu profileSchema.parse(rawData)
+-vrijednost metode profileSchema.parse(rawData) pohranjujemo u varijablu const validateFields
+-dodajemo izjavu return da je profil kreiran
+-u blok koda catch dodajemo izjavu return da je doslo do greske
+-u komponentu create/page.tsx importujemo funkciju createProfileAction 
