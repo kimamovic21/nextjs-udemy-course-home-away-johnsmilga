@@ -513,3 +513,28 @@ Section 03: HomeAway Project
 -komponenti Button dodajemo prop type, disableb, className i size
 -u komponentu Button dodajemo uslov ternarni operator za varijablu pending, tj. uslov za pojavljivanje ikone ReloadIcon
 -u komponenti create/page.tsx izbrisemo komponentu Button
+
+67. FormContainer Component
+-u folderu form kreiramo komponentu FormContainer.tsx
+-u komponentu FormContainer.tsx dodajemo direktivu 'use client'
+-importujemo i kreiramo funkciju useFormState() iz paketa react-dom
+-importujemo i kreiramo funkciju useEffect() iz paketa react
+-importujemo i kreiramo funkciju useToast() iz use-toast.ts fajla
+-kreiramo varijablu objekt const initialState
+-funkciji FormContainer() dodajemo parametre destruktuirane prop action i children
+-parametrima dodajemo tipove
+-u jsx-u kreiramo form element sa prop action
+-u form element dodajemo prop children
+-vrijednost funkcije useFormState(action, initialState) pohranjujemo u destruktuirane varijable const [state, formAction]
+-u prop action proslijedujemo funkciju formAction
+-vrijednost funkcije useToast() pohranjujemo u destruktuiranu varijablu const { toast }
+-prvi argument funkcije useEffect() je anonimna funkcija, a drugi niz []
+-u anonimnu funkciju dodajemo uslov if (state.message)
+-u uslov if (state.message) dodajemo funkciju toast()
+-u niz dodajemo varijable state i toast
+-u folderu utils kreiramo types.ts fajl
+-u types.ts fajlu kreiramo i eksporujemo tip actionFunction
+-funkciji actionFunction() dodajemo parametre prevState i formData
+-u komponentu FormContainer.tsx importujemo tip actionFunction iz foldera utils
+-u funkciji FormContainer() parametru action dodajemo tip actionFunction
+-parametru children dodajemo tip React.ReactNode
