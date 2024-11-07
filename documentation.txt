@@ -497,3 +497,19 @@ Section 03: HomeAway Project
 -u prop htmlFor proslijedujemo prop name
 -komponenti Input dodajemo prop id, name, type, defaultValue, placeholder i required
 -u komponenti create/page.tsx izbrisemo komponente Label i Input
+
+66. SubmitButton Component
+-u folderu form kreiramo komponentu Buttons.tsx
+-u komponentu Buttons.tsx dodajemo direktivu 'use client'
+-importujemo React ikonicu ReloadIcon 
+-importujemo i kreiramo funkciju useFormStatus iz paketa react-dom
+-importujemo komponentu Button iz foldera ui
+-kreiramo tip SubmitButtonProps
+-kreiramo i eksportujemo funkciju SubmitButton()
+-funkciji SubmitButton() dodajemo parametre destruktuirane prop className i text
+-parametrima dodajemo tip SubmitButtonProps
+-vrijednost funkcije useFormStatus() pohranjujemo u destruktuiranu varijablu const { pending }
+-u jsx-u dodajemo komponentu Button kao roditelj element
+-komponenti Button dodajemo prop type, disableb, className i size
+-u komponentu Button dodajemo uslov ternarni operator za varijablu pending, tj. uslov za pojavljivanje ikone ReloadIcon
+-u komponenti create/page.tsx izbrisemo komponentu Button

@@ -1,5 +1,3 @@
-import { Button } from '@/components/ui/button';
-
 const createProfileAction = async (formData: FormData) => {
   'use server';
   const firstName = formData.get('firstName') as string;
@@ -12,9 +10,7 @@ function CreateProfilePage() {
       <h2 className='text-2xl font-semibold mb-8 capitalize'>new user</h2>
       <div className='border p-8 rounded-md max-w-lg'>
         <form action={createProfileAction}>
-          <Button type='submit' size='lg'>
-            Create Profile
-          </Button>
+          {/* Form Container Component */}
         </form>
       </div>
     </section>
