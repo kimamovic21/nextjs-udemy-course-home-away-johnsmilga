@@ -578,3 +578,11 @@ Section 03: HomeAway Project
 
 70. Important Info !!!
 -u bazi Supabase ne korisiti specijalne znakove za sifru
+
+71. Supabase Setup
+-otvorimo web stranicu: https://supabase.com/
+-na web stranici Supabase kreiramo bazu podataka home-away
+-kreiramo fajlove .env i .env.example
+-u .env fajlu kreiramo env varijablu DB_PASSWORD
+-u .env.example fajl dodajemo primjer varijable koju je potrebno dodati
+-u .gitignore fajl dodajemo opciju .env za ignorisanje .env fajla
