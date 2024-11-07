@@ -538,3 +538,15 @@ Section 03: HomeAway Project
 -u komponentu FormContainer.tsx importujemo tip actionFunction iz foldera utils
 -u funkciji FormContainer() parametru action dodajemo tip actionFunction
 -parametru children dodajemo tip React.ReactNode
+
+68. Refactor Create Profile
+-u komponentu create/page.tsx importujemo komponente FormContainer.tsx, FormInput.tsx i SubmitButton.tsx
+-u jsx-u dodajemo komponentu FormContainer.tsx sa otvorenim i zatvorenim tagom
+-komponenti FormContainer dodajemo prop action
+-u prop action proslijedujemo funkciju createProfileAction
+-funkciji createProfileAction() dodajemo parametar prevState sa tipom any
+-u komponenti FormContainer kreiramo div element sa Tailwind CSS klasama
+-u div elemente dodajemo tri komponente FormInput
+-komponentama FormInput dodajemo prop type, name i label
+-u komponentu FormContainer dodajemo komponentu SubmitButton sa prop text i className
+-u funkciju createProfileAction() mozemo dodati uslov if za validaciju polja za varijablu firstName
