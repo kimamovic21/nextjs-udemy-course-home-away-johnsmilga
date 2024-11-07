@@ -607,3 +607,6 @@ Section 03: HomeAway Project
 -u terminalu ukucamo komandu npx prisma db push
 -u terminalu ukucamo komandu npx prisma studio
 -u pretrazivacu otvorimo link: http://localhost:5555/
+
+74. Prisma Crud Examples
+-otvorimo link: https://www.prisma.io/docs/orm/prisma-client/queries/crud
