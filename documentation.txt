@@ -586,3 +586,14 @@ Section 03: HomeAway Project
 -u .env fajlu kreiramo env varijablu DB_PASSWORD
 -u .env.example fajl dodajemo primjer varijable koju je potrebno dodati
 -u .gitignore fajl dodajemo opciju .env za ignorisanje .env fajla
+
+72. Prisma Setup
+-otvorimo web stranicu: https://www.prisma.io/
+-u terminalu instaliramo Prisma pakete
+-u terminalu ukucamo komande npm install prisma --save-dev i npm install @prisma/client
+-nakon sto instaliramo pakete u terminalu ukucamo komandu npx prisma init 
+-nakon ove komande generisu se folder prisma i schema.prisma fajl
+-u .env fajlu generisana env varijabla DATABASE_URL
+-u folderu utils kreiramo db.ts fajl
+-otvorimo link: https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/nextjs-prisma-client-dev-practices#solution
+-u db.ts fajl dodajemo kod iz dokumentacije

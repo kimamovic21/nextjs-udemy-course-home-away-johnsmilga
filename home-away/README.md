@@ -880,10 +880,13 @@ export const createProfileAction = async (
 
 - install prisma vs-code extension
 
-Prisma ORM is a database toolkit that simplifies database access in web applications. It allows developers to interact with databases using a type-safe and auto-generated API, making database operations easier and more secure.
+Prisma ORM is a database toolkit that simplifies database access in web applications. 
+It allows developers to interact with databases using a type-safe and auto-generated API, 
+making database operations easier and more secure.
 
 - Prisma server: A standalone infrastructure component sitting on top of your database.
-- Prisma client: An auto-generated library that connects to the Prisma server and lets you read, write and stream data in your database. It is used for data access in your applications.
+- Prisma client: An auto-generated library that connects to the Prisma server and lets you read, 
+  write and stream data in your database. It is used for data access in your applications.
 
 ```sh
 npm install prisma --save-dev
