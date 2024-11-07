@@ -483,3 +483,17 @@ Section 03: HomeAway Project
 -komponenti Label dodajemo prop htmlFor
 -komponenta Input dodajemo prop id, name i type
 -dodajemo Button element sa prop type i size
+
+65. FormInput Component
+-kreiramo folder form 
+-u folderu form kreiramo komponentu FormInput.tsx
+-u komponentu FormInput.tsx importujemo komponente Label i Input iz foldera ui
+-kreiramo tip FormInputProps
+-u jsx-u kreiramo roditelj div element
+-u div element dodajemo komponente Label i Input
+-funkciji FormInput() dodajemo parametre destruktuirane prop label, name, type, defaultValue i placeholder
+-parametrima dodajemo tip FormInputProps
+-komponenti Label dodajemo prop htmlFor i className
+-u prop htmlFor proslijedujemo prop name
+-komponenti Input dodajemo prop id, name, type, defaultValue, placeholder i required
+-u komponenti create/page.tsx izbrisemo komponente Label i Input
