@@ -643,3 +643,11 @@ Section 03: HomeAway Project
 -u uslov if (profileImage) dodajemo komponentu Image
 -komponenti Image dodajemo prop src, alt width, height i className
 -u next.config.mjs fajl dodajemo objekt images
+
+77. Modify Create Profile Page
+-u komponentu create/page.tsx importujemo funkciju redirect iz paketa next/navigation
+-importujemo i kreiramo funkciju currentUser iz paketa Clerk
+-vrijednost funkcije await currentUser() pohranjujemo u varijablu const user
+-funkciji CreateProfilePage() dodajemo asinhronost
+-dodajemo uslov if (user?.privateMetadata?.hasProfile)
+-u uslov if dodajemo funkciju redirect('/')
