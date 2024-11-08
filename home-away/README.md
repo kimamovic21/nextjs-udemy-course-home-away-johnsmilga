@@ -1064,7 +1064,6 @@ model Profile {
   profileImage String
   createdAt    DateTime   @default(now())
   updatedAt    DateTime   @updatedAt
-
 }
 ```
 

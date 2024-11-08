@@ -610,3 +610,19 @@ Section 03: HomeAway Project
 
 74. Prisma Crud Examples
 -otvorimo link: https://www.prisma.io/docs/orm/prisma-client/queries/crud
+
+75. Create Profile Model and createProfileAction
+-u schema.prisma fajlu kreiramo model Profile
+-u terminalu ukucamo komandu npx prisma db push
+-u terminalu ukucamo komandu npx prisma studio
+-otvorimo link: https://clerk.com/docs/users/metadata
+-u actions.ts fajl importujemo instancu db iz db.ts fajla
+-importujemo funkcije clerkClient i currentUser iz paketa Clerk
+-importujemo funkciju redirect iz paketa Next
+-u funkciji createProfileAction() kreiramo varijablu const user
+-dodajemo metodu await db.profile.create()
+-dodajemo uslov if (!user)
+-u uslov if (!user) dodajemo metodu throw new Error()
+-dodajemo metodu  await clerkClient.users.updateUserMetadata()
+-u bloku koda catch dodajemo izjavu return objekt poruku 
+-nakon bloka koda catch dodajemo funkciju redirect('/')
