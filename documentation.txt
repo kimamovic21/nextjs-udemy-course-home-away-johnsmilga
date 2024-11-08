@@ -626,3 +626,20 @@ Section 03: HomeAway Project
 -dodajemo metodu  await clerkClient.users.updateUserMetadata()
 -u bloku koda catch dodajemo izjavu return objekt poruku 
 -nakon bloka koda catch dodajemo funkciju redirect('/')
+
+76. Fetch Profile Image Action
+-u actions.ts fajlu kreiramo i eksportujemo asinhronu funkciju fetchProfileImage()
+-u funkciju fetchProfileImage() dodajemo metodu await currentUser()
+-vrijednost metode await currentUser() pohranjujemo u varijablu const user
+-dodajemo uslov if (!user) return null
+-dodajemo metodu await db.profile.findUnique()
+-vrijednost metode await db.profile.findUnique() pohranjujemo u varijablu const profile
+-dodajemo izjavu return profile?.profileImage
+-u komponenta UserIcon.tsx importujemo i kreiramo funkciju fetchProfileImage
+-vrijednost funkcije await fetchProfileImage() pohranjujemo u varijablu const profileImage
+-funkciji UserIcon() dodajemo asinhronost
+-dodajemo uslov if (profileImage)
+-importujemo komponentu Image 
+-u uslov if (profileImage) dodajemo komponentu Image
+-komponenti Image dodajemo prop src, alt width, height i className
+-u next.config.mjs fajl dodajemo objekt images
