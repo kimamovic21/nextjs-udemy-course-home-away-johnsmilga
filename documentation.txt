@@ -651,3 +651,26 @@ Section 03: HomeAway Project
 -funkciji CreateProfilePage() dodajemo asinhronost
 -dodajemo uslov if (user?.privateMetadata?.hasProfile)
 -u uslov if dodajemo funkciju redirect('/')
+
+78. Fetch User Profile
+-u actions.ts fajlu kreiramo i eksportujemo asinhronu funkciju fetchProfile()
+-kreiramo asinhronu funkciju getAuthUser()
+-u funkciju getAuthUser() dodajemo metodu await currentUser()
+-vrijednost metode await currentUser() pohranjujemo u varijablu const user
+-dodajemo uslov if (!user)
+-u uslov if dodajemo metodu throw new Error()
+-dodajemo uslov if (!user.privateMetadata.hasProfile)
+-u uslov if if (!user.privateMetadata.hasProfile) dodajemo funkciju redirect()
+-dodajemo izjavu return user
+-u funkciju fetchProfile() dodajemo metodu await getAuthUser()
+-vrijednost metode await getAuthUser() pohranjujemo u varijablu const user
+-dodajemo metodu await db.profile.findUnique()
+-vrijednost metode await db.profile.findUnique() pohranjujemo u varijablu const profile
+-dodajemo uslov if (!profile)
+-u uslov if (!profile) dodajemo izjavu return redirect()
+-dodajemo izjavu return profile
+-kreiramo i eksportujemo asinhronu funkciju updateProfileAction()
+-funkciji updateProfileAction() dodajemo parametre prevState i formData
+-parametru prevState dodajemo tip any
+-parametru formData dodajemo tip FormData
+-funkciji updateProfileAction() dodajemo tip Promise
