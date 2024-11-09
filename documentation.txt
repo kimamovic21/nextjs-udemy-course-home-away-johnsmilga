@@ -703,3 +703,10 @@ Section 03: HomeAway Project
 -dodajemo izjavu return objekt poruku da je doslo do greske
 -u funkciju createProfileAction(), u blok koda catch dodajemo funkciju renderError()
 -u funkciju updateProfileAction(), u blok koda catch dodajemo funkciju renderError()
+
+80. Zod SafeParse Method
+-u actions.ts fajlu u funkciju updateProfileAction(), u blok koda try umjesto metode parse() dodajemo metodu safeParse()
+-dodajemo uslov if (!validatedFields.success)
+-u uslovu if (!validatedFields.success) kreiramo varijablu const errors
+-dodajemo metodu throw new Error()
+-u schemas.ts fajlu, u funkcije min() dodajemo objekte message
