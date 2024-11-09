@@ -1574,8 +1574,9 @@ function validateFile() {
 
 The .refine() method in Zod is used to add custom validation to a Zod schema. It takes two arguments:
 
-A function that takes a value and returns a boolean. This function is the validation rule. If it returns true, the validation passes. If it returns false, the validation fails.
-A string that is the error message to be returned when the validation fails.
+- A function that takes a value and returns a boolean. This function is the validation rule. If it returns true, 
+  the validation passes. If it returns false, the validation fails.
+- A string that is the error message to be returned when the validation fails.
 
 ### updateProfileImageAction
 

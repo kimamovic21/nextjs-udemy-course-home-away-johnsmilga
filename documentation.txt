@@ -785,3 +785,12 @@ Section 03: HomeAway Project
 -u prop image proslijedujemo vrijednost varijable profile.profileImage
 -u prop name proslijedujemo vrijednost varijable profile.username
 -u prop action proslijedujemo vrijednost funkcije updateProfileImageAction
+
+84. Image Zod Validation
+-u schemas.ts fajlu kreiramo i eksportujemo varijablu const imageSchema
+-kreiramo funkciju validateFile()
+-u metodu z.object() dodajemo opciju image:validatedFile()
+-u funkciji validatedFile() kreiramo varijable const maxUploadSize i const acceptedFilesTypes
+-u izjavi return dodajemo varijabli z metode instanceof() i refine()
+-u actions.ts fajl importujemo varijablu imageSchema
+-u funkciji updatePropertyAction() kreiramo varijable const image i const validatedFields
