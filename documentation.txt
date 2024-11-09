@@ -727,3 +727,12 @@ Section 03: HomeAway Project
 -funkciji validateWithZodSchema() dodajemo dva argumenta profileSchema i rawData
 -vrijednost funkcije validateWithZodSchema() pohranjujemo u varijablu const validatedFields
 -ponovimo isti postupak u funkciji createProfileAction()
+
+82. Image Input
+-u folderu components kreiramo komponentu ImageInput()
+-importujemo komponente Label i Input iz foldera ui
+-u jsx-u kreiramo roditelj div element
+-u div element dodajemo komponente Label i Input
+-kreiramo varijablu const name
+-komponenti Label dodajemo prop htmlFor i className
+-komponenti Input dodajemo prop id, name, type, required, accept i className
