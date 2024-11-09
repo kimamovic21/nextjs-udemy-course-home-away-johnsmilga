@@ -736,3 +736,52 @@ Section 03: HomeAway Project
 -kreiramo varijablu const name
 -komponenti Label dodajemo prop htmlFor i className
 -komponenti Input dodajemo prop id, name, type, required, accept i className
+
+83. Image Input Container
+-u komponenti Buttons.tsx kreiramo tip BtnSize
+-u tip SubmitButtonProps dodajemo polje size i tip btnSize
+-funkciji SubmitButton() dodajemo parametar size
+-u jsx-u komponenti Button dodajemo prop size
+-u prop size proslijedujemo vrijednost parametra size
+-u folderu form kreiramo komponentu ImageInputContainer.tsx
+-u komponentu ImageInputContainer.tsx dodajemo direktivu 'use client'
+-kreiramo tip ImageInputContainerProps
+-importujemo tip actionFunction iz foldera utils
+-funkciji ImageInputContainer() dodajemo parametar props sa tipom ImageInputContainerProps
+-iz parametra props destruktuiramo varijable const { image, name, action, text }
+-importujemo i kreiramo funkciju useState()
+-vrijednost funkcije useState() pohranjujemo u varijable const [isUpdateFormVisible, setUpdateFormVisible]
+-importujemo React ikonicu komponentu LuUser2
+-komponenti LaUser2 dodajemo prop className i Tailwind CSS klase
+-kreiramo varijablu const userIcon
+-u jsx-u, u roditelj div element dodajemo ternarni uslov za varijablu image
+-importujemo komponentu Image
+-u prvi dio ternarnog uslova dodajemo komponentu Image, dok u drugi dodajemo varijablu userIcon
+-komponenti Image dodajemo prop src, alt, width, height i className
+-importujemo komponentu Button iz komponente ui/button.tsx
+-nakon ternarnog uslova, dodajemo komponentu Button sa otvorenim i zatvorenim tagom
+-komponenti Button dodajemo prop variant, size i dogadaj onClick
+-u dogadaj onClick proslijedujemo anonimnu funkciju 
+-u anonimnu funkciju proslijedujemo funkciju setUpdateFormVisible
+-u komponentu Button dodajemo vrijednost varijable text
+-importujemo komponente FormContainer.tsx i ImageInput.tsx
+-dodajemo uslov {isUpdateFormVisible && (<div>...</div>)}
+-u div element dodajemo komponentu FormContainer sa otvorenim i zatvorenim tagom
+-komponenti FormContainer dodajemo prop action
+-u komponentu FormContainer dodajemo prop props.children
+-u prop action proslijedujemo funkciju action
+-dodajemo komponente ImageInput i SubmitButton
+-komponenti SubmitButton dodajemo prop size
+-u actions.ts fajlu kreiramo i eksportujemo asinhronu funkciju updateProfileImageAction()
+-funkciji updateProfileImageAction() dodajemo parametre prevState i formData
+-parametru prevState dodajemo tip any
+-parametru formData dodajemo tip FormData
+-funkciji updateProfileImageAction() dodajemo tip Promise<>
+-u funkciju dodajemo izjavu return objekt poruku da je slika uspjesno izmijenjana
+-u komponentu profile/page.tsx importujemo funkciju updateProfileImageAction
+-importujemo komponentu ImageInputContainer.tsx iz foldera form
+-u div element dodajemo komponentu ImageInputContainer
+-komponenti ImageInputContainer dodajemo prop image, name, action i text
+-u prop image proslijedujemo vrijednost varijable profile.profileImage
+-u prop name proslijedujemo vrijednost varijable profile.username
+-u prop action proslijedujemo vrijednost funkcije updateProfileImageAction
