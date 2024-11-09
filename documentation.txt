@@ -794,3 +794,12 @@ Section 03: HomeAway Project
 -u izjavi return dodajemo varijabli z metode instanceof() i refine()
 -u actions.ts fajl importujemo varijablu imageSchema
 -u funkciji updatePropertyAction() kreiramo varijable const image i const validatedFields
+
+85. Supabase Bucket and Keys
+-na web stranici Supabase otvorimo opciju Storage
+-u opciji Storage odaberemo opciju New Bucket
+-kreiramo bucket home-away
+-odaberemo opciju Policy 
+-u opciji Policy odaberemo opciju INSERT
+-u .env fajlu kreiramo dvije varijable SUPABASE_URL i SUPABASE_KEY
+-u .env.example fajl dodajemo primjer varijabli koje je potrebno dodati
