@@ -710,3 +710,20 @@ Section 03: HomeAway Project
 -u uslovu if (!validatedFields.success) kreiramo varijablu const errors
 -dodajemo metodu throw new Error()
 -u schemas.ts fajlu, u funkcije min() dodajemo objekte message
+
+81. ValidateWithZodSchema - Helper Function
+-u schemas.ts fajl importujemo tip ZodSchema iz paketa zod
+-kreiramo i eksportujemo funkciju validateWithZodSchema<T>() sa parametrima schema i data
+-parametru schema dodajemo tip ZodSchema<T>
+-parametru data dodajemo tip unknown
+-u funkciji validateWithZodSchema() dodajemo metodu schema.safeParse(data)
+-vrijednost metode schema.safeParse(data) pohranjujemo u varijablu const result
+-dodajemo uslov if (!result.success)
+-u uslovu if (!result.success) kreiramo varijablu const errors
+-dodajemo metodu throw new Error()
+-nakon uslova if dodajemo izjavu return result.data
+-u actions.ts fajl importujemo funkciju validateWithZodSchema()
+-u funkciju updateProfileAction() dodajemo funkciju validateWithZodSchema()
+-funkciji validateWithZodSchema() dodajemo dva argumenta profileSchema i rawData
+-vrijednost funkcije validateWithZodSchema() pohranjujemo u varijablu const validatedFields
+-ponovimo isti postupak u funkciji createProfileAction()
