@@ -324,43 +324,46 @@ Section 02: Next.js Tutorial
 
 Section 03: HomeAway Project
 
-47. Project Overview
+48. Project Overview
 
-48. Install New Next.js Application
+49. Update !!!
+-kreirati Next.js aplikaciju sa komandom npx create-next-app@14
+
+50. Install New Next.js Application
 -u terminalu instaliramo Next.js aplikaciju home-away verziju 14.2.1.
 
-49. Remove Boilerplate
+51. Remove Boilerplate
 -u komponenti app/page.tsx kreiramo funkciju HomePage
 -u komponenti layout.tsx, u varijablu const metadata dodajemo opis projekta
 -u globals.css fajlu brisemo CSS stil
 -u README.md fajl dodajemo plan rada
 
-50. Create Pages
+52. Create Pages
 -u folderu app kreiramo foldere: bookings, checkout, favorites, profile, properties, rentals i reviews
 -u kreiranim folderima kreiramo komponente page.tsx
 
-51. Important Update !!!
+53. Important Update !!!
 
-52. Install Shadcn/ui Library
+54. Install Shadcn/ui Library
 -otvorimo web stranicu: https://ui.shadcn.com/
 -u terminalu ukucamo komandu npx shadcn@latest init
 -manje izmjene u fajlovima globals.css i tailwind.config.ts
 -generisani folder lib, fajlovi utils.ts i components.json
 
-53. Shadcn/ui Button Component
+55. Shadcn/ui Button Component
 -u terminalu ukucamo komandu npx shadcn@latest add button
 -generisani folderi components, ui i komponenta button.tsx
 -u komponentu app/page.tsx importujemo komponentu Button iz foldera components 
 -u jsx-u, komponenti Button dodajemo prop variant, size i className
 
-54. Install More Shadcn/ui Components
+56. Install More Shadcn/ui Components
 -u folderu components kreiramo foldere card, form, home, properties i navbar
 -u terminalu instaliramo vise Shadcn/ui komponenti
 -generisan folder hooks i use-toast.ts fajl
 -u folderu components/ui generisano vise jsx komponenti
 -u folderu navbar kreiramo sedam jsx komponenti
 
-55. Navbar Structure
+57. Navbar Structure
 -u globals.css fajlu dodajemo direktivu @layer components i klasu .container
 -u komponentu Navbar.tsx importujemo komponente Logo, NavSearch, LinksDropdown i DarkMode
 -u jsx-u, kreiramo roditelj nav element sa Tailwind CSS klasom
@@ -371,7 +374,7 @@ Section 03: HomeAway Project
 -u body element dodajemo komponentu Navbar
 -u main element dodajemo prop children
 
-56. Logo and NavSearch Components
+58. Logo and NavSearch Components
 -otvorimo web stranicu: https://react-icons.github.io/react-icons/
 -u terminalu instaliramo paket React Icons
 -u terminalu ukucamo komandu npm i react-icons
@@ -381,11 +384,11 @@ Section 03: HomeAway Project
 -u komponentu NavSearch.tsx importujemo komponentu Input iz komponente ui/input.tsx
 -u jsx-u komponenti Input dodajemo prop type, placeholder i className
 
-57. Change Theme with Shadcn/ui
+59. Change Theme with Shadcn/ui
 -otvorimo link: https://ui.shadcn.com/themes
 -u globals.css fajl kopiramo CSS stil za direktivu @layer base 
 
-58. Setup Dark Mode with Shadcn/ui
+60. Setup Dark Mode with Shadcn/ui
 -otvorimo link: https://ui.shadcn.com/docs/dark-mode/next
 -u folderu app kreiramo komponentu providers.tsx
 -u komponentu providers.tsx dodajemo direktivu 'use client'
@@ -409,7 +412,7 @@ Section 03: HomeAway Project
 -u komponentu DarkMode.tsx dodajemo kod iz dokumentacije
 -promjenimo ime funcije ModeToggle() u DarkMode()
 
-59. LinksDropdown Component
+61. LinksDropdown Component
 -u komponentu UserIcon importujemo React ikonicu komponentu LuUser2
 -u jsx-u komponenti LaUser2 dodajemo Tailwind CSS klase
 -kreiramo folder utils
@@ -434,10 +437,10 @@ Section 03: HomeAway Project
 -u metodu map() dodajemo komponentu Link sa prop href, className i key
 -u komponentu Link dodajemo komponentu DropdownMenuItem sa otvorenim i zatvorenim tagom
 
-60. Important Info !!!
+62. Important Info !!!
 -npm install @clerk/nextjs@5.0.1
 
-61. Setup and Customize Clerk Auth Provider
+63. Setup and Customize Clerk Auth Provider
 -otvorimo web stranicu: https://clerk.com/
 -kreiramo novu aplikaciju sa imenom npr. home-away-nextjs-2024
 -u terminalu instaliramo Clerk paket sa komandom npm i @clerk/nextjs
@@ -448,7 +451,7 @@ Section 03: HomeAway Project
 -u middleware.ts fajl importujemo funkcije clerkMiddleware i createRouteMatcher iz paketa Clerk
 -kad udemo u aplikaciju Home Away prijavimo se sa Github racunom
 
-62. SignOutLink Component
+64. SignOutLink Component
 -otvorimo link: https://ui.shadcn.com/docs/components/toast
 -u komponentu SignOutLink.tsx dodajemo direktivu 'use client'
 -importujemo komponentu SignOutButton iz paketa Clerk
@@ -462,14 +465,14 @@ Section 03: HomeAway Project
 -button elementu dodajemo dogadaj onClick
 -u dogadaj onClick proslijedujemo funkciju handleLogout
 
-63. LinksDropdown Component
+65. LinksDropdown Component
 -u komponentu SignOutLink.tsx dodajemo direktivu 'use client'
 -u komponentu LinksDropdown.tsx importujemo komponentu DropdownMenuSeparator iz komponente ui/dropdown-menu.tsx
 -importujemo komponente SignedOut, SignedIn, SignInButton SignUpButton iz paketa Clerk
 -importujemo komponentu SignOutLink.tsx
 -u jsx-u dodajemo logiku za prikazivanje linkova ukoliko smo prijavljeni
 
-64. Create Profile - Setup
+66. Create Profile - Setup
 -u fajlovima .env.local i .env.loca.example kreiramo dvije env varijable za prijavu i registraciju
 -u folderu profile kreiramo folder create i komponentu page.tsx
 -u komponenti create/page.tsx kreiramo funkciju CreateProfilePage()
@@ -487,7 +490,7 @@ Section 03: HomeAway Project
 -komponenta Input dodajemo prop id, name i type
 -dodajemo Button element sa prop type i size
 
-65. FormInput Component
+67. FormInput Component
 -kreiramo folder form 
 -u folderu form kreiramo komponentu FormInput.tsx
 -u komponentu FormInput.tsx importujemo komponente Label i Input iz foldera ui
@@ -501,7 +504,7 @@ Section 03: HomeAway Project
 -komponenti Input dodajemo prop id, name, type, defaultValue, placeholder i required
 -u komponenti create/page.tsx izbrisemo komponente Label i Input
 
-66. SubmitButton Component
+68. SubmitButton Component
 -u folderu form kreiramo komponentu Buttons.tsx
 -u komponentu Buttons.tsx dodajemo direktivu 'use client'
 -importujemo React ikonicu ReloadIcon 
@@ -517,7 +520,7 @@ Section 03: HomeAway Project
 -u komponentu Button dodajemo uslov ternarni operator za varijablu pending, tj. uslov za pojavljivanje ikone ReloadIcon
 -u komponenti create/page.tsx izbrisemo komponentu Button
 
-67. FormContainer Component
+69. FormContainer Component
 -u folderu form kreiramo komponentu FormContainer.tsx
 -u komponentu FormContainer.tsx dodajemo direktivu 'use client'
 -importujemo i kreiramo funkciju useFormState() iz paketa react-dom
@@ -542,7 +545,7 @@ Section 03: HomeAway Project
 -u funkciji FormContainer() parametru action dodajemo tip actionFunction
 -parametru children dodajemo tip React.ReactNode
 
-68. Refactor Create Profile
+70. Refactor Create Profile
 -u komponentu create/page.tsx importujemo komponente FormContainer.tsx, FormInput.tsx i SubmitButton.tsx
 -u jsx-u dodajemo komponentu FormContainer.tsx sa otvorenim i zatvorenim tagom
 -komponenti FormContainer dodajemo prop action
@@ -554,7 +557,7 @@ Section 03: HomeAway Project
 -u komponentu FormContainer dodajemo komponentu SubmitButton sa prop text i className
 -u funkciju createProfileAction() mozemo dodati uslov if za validaciju polja za varijablu firstName
 
-69. Zod Library
+71. Zod Library
 -otvorimo web stranicu: https://zod.dev
 -otvorimo link: https://www.npmjs.com/package/zod
 -u terminalu instaliramo paket Zod
@@ -579,10 +582,10 @@ Section 03: HomeAway Project
 -u blok koda catch dodajemo izjavu return da je doslo do greske
 -u komponentu create/page.tsx importujemo funkciju createProfileAction 
 
-70. Important Info !!!
+72. Important Info !!!
 -u bazi Supabase ne korisiti specijalne znakove za sifru
 
-71. Supabase Setup
+73. Supabase Setup
 -otvorimo web stranicu: https://supabase.com/
 -na web stranici Supabase kreiramo bazu podataka home-away
 -kreiramo fajlove .env i .env.example
@@ -590,7 +593,7 @@ Section 03: HomeAway Project
 -u .env.example fajl dodajemo primjer varijable koju je potrebno dodati
 -u .gitignore fajl dodajemo opciju .env za ignorisanje .env fajla
 
-72. Prisma Setup
+74. Prisma Setup
 -otvorimo web stranicu: https://www.prisma.io/
 -u terminalu instaliramo Prisma pakete
 -u terminalu ukucamo komande npm install prisma --save-dev i npm install @prisma/client
@@ -601,7 +604,7 @@ Section 03: HomeAway Project
 -otvorimo link: https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/nextjs-prisma-client-dev-practices#solution
 -u db.ts fajl dodajemo kod iz dokumentacije
 
-73. Connect Prisma and Supabase
+75. Connect Prisma and Supabase
 -otvorimo link: https://supabase.com/partners/integrations/prisma
 -na web stranici Supabase, otvorimo projekt i odaberemo opciju Connect
 -u .env fajlu kreiramo varijablu DIRECT_URL
@@ -611,10 +614,10 @@ Section 03: HomeAway Project
 -u terminalu ukucamo komandu npx prisma studio
 -u pretrazivacu otvorimo link: http://localhost:5555/
 
-74. Prisma Crud Examples
+76. Prisma Crud Examples
 -otvorimo link: https://www.prisma.io/docs/orm/prisma-client/queries/crud
 
-75. Create Profile Model and createProfileAction
+77. Create Profile Model and createProfileAction
 -u schema.prisma fajlu kreiramo model Profile
 -u terminalu ukucamo komandu npx prisma db push
 -u terminalu ukucamo komandu npx prisma studio
@@ -630,7 +633,7 @@ Section 03: HomeAway Project
 -u bloku koda catch dodajemo izjavu return objekt poruku 
 -nakon bloka koda catch dodajemo funkciju redirect('/')
 
-76. Fetch Profile Image Action
+78. Fetch Profile Image Action
 -u actions.ts fajlu kreiramo i eksportujemo asinhronu funkciju fetchProfileImage()
 -u funkciju fetchProfileImage() dodajemo metodu await currentUser()
 -vrijednost metode await currentUser() pohranjujemo u varijablu const user
@@ -647,7 +650,7 @@ Section 03: HomeAway Project
 -komponenti Image dodajemo prop src, alt width, height i className
 -u next.config.mjs fajl dodajemo objekt images
 
-77. Modify Create Profile Page
+79. Modify Create Profile Page
 -u komponentu create/page.tsx importujemo funkciju redirect iz paketa next/navigation
 -importujemo i kreiramo funkciju currentUser iz paketa Clerk
 -vrijednost funkcije await currentUser() pohranjujemo u varijablu const user
@@ -655,7 +658,7 @@ Section 03: HomeAway Project
 -dodajemo uslov if (user?.privateMetadata?.hasProfile)
 -u uslov if dodajemo funkciju redirect('/')
 
-78. Fetch User Profile
+80. Fetch User Profile
 -u actions.ts fajlu kreiramo i eksportujemo asinhronu funkciju fetchProfile()
 -kreiramo asinhronu funkciju getAuthUser()
 -u funkciju getAuthUser() dodajemo metodu await currentUser()
@@ -678,7 +681,7 @@ Section 03: HomeAway Project
 -parametru formData dodajemo tip FormData
 -funkciji updateProfileAction() dodajemo tip Promise
 
-79. Update Profile Page
+81. Update Profile Page
 -u komponentu profile/page.tsx importujemo funkcije updateProfileAction i fetchProfile iz foldera utils
 -importujemo komponentu SubmitButton iz komponente Buttons.tsx
 -importujemo komponente FormContainer i FormInput iz foldera form
@@ -707,14 +710,14 @@ Section 03: HomeAway Project
 -u funkciju createProfileAction(), u blok koda catch dodajemo funkciju renderError()
 -u funkciju updateProfileAction(), u blok koda catch dodajemo funkciju renderError()
 
-80. Zod SafeParse Method
+82. Zod SafeParse Method
 -u actions.ts fajlu u funkciju updateProfileAction(), u blok koda try umjesto metode parse() dodajemo metodu safeParse()
 -dodajemo uslov if (!validatedFields.success)
 -u uslovu if (!validatedFields.success) kreiramo varijablu const errors
 -dodajemo metodu throw new Error()
 -u schemas.ts fajlu, u funkcije min() dodajemo objekte message
 
-81. ValidateWithZodSchema - Helper Function
+83. ValidateWithZodSchema - Helper Function
 -u schemas.ts fajl importujemo tip ZodSchema iz paketa zod
 -kreiramo i eksportujemo funkciju validateWithZodSchema<T>() sa parametrima schema i data
 -parametru schema dodajemo tip ZodSchema<T>
@@ -731,7 +734,7 @@ Section 03: HomeAway Project
 -vrijednost funkcije validateWithZodSchema() pohranjujemo u varijablu const validatedFields
 -ponovimo isti postupak u funkciji createProfileAction()
 
-82. Image Input
+84. Image Input
 -u folderu components kreiramo komponentu ImageInput()
 -importujemo komponente Label i Input iz foldera ui
 -u jsx-u kreiramo roditelj div element
@@ -740,7 +743,7 @@ Section 03: HomeAway Project
 -komponenti Label dodajemo prop htmlFor i className
 -komponenti Input dodajemo prop id, name, type, required, accept i className
 
-83. Image Input Container
+85. Image Input Container
 -u komponenti Buttons.tsx kreiramo tip BtnSize
 -u tip SubmitButtonProps dodajemo polje size i tip btnSize
 -funkciji SubmitButton() dodajemo parametar size
@@ -789,7 +792,7 @@ Section 03: HomeAway Project
 -u prop name proslijedujemo vrijednost varijable profile.username
 -u prop action proslijedujemo vrijednost funkcije updateProfileImageAction
 
-84. Image Zod Validation
+86. Image Zod Validation
 -u schemas.ts fajlu kreiramo i eksportujemo varijablu const imageSchema
 -kreiramo funkciju validateFile()
 -u metodu z.object() dodajemo opciju image:validatedFile()
@@ -798,7 +801,7 @@ Section 03: HomeAway Project
 -u actions.ts fajl importujemo varijablu imageSchema
 -u funkciji updatePropertyAction() kreiramo varijable const image i const validatedFields
 
-85. Supabase Bucket and Keys
+87. Supabase Bucket and Keys
 -na web stranici Supabase otvorimo opciju Storage
 -u opciji Storage odaberemo opciju New Bucket
 -kreiramo bucket home-away
