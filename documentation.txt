@@ -826,3 +826,17 @@ Section 03: HomeAway Project
 -vrijednost metode await supabase.storage pohranjujemo u destruktuiranu varijablu const { data }
 -dodajemo uslov if (!data) 
 -dodajemo izjavu return supabase.storage
+
+89. Update Profile Image Action - Complete
+-u actions.ts fajl importujemo funkciju uploadImage() iz supabase.ts fajla
+-u funkciji updateProfileImageAction() kreiramo varijablu const user
+-dodajemo blokova koda try - catch
+-u blok koda try dodajemo varijable const image i const validatedFields
+-dodajemo metodu await uploadImage()
+-vrijednost metode await uploadImage() pohranjujemo u varijablu const fullPath
+-dodajemo metodu await db.profile.update()
+-dodajemo funkciju revalidatePath()
+-dodajemo izjevu return objekt poruku
+-u blok koda catch dodajemo izjavu return i funkciju renderError()
+-otvorimo link: https://stackoverflow.com/questions/64909447/got-an-error-invalid-src-prop-here-is-a-link-on-next-image-hostname-loca
+-u next.config.mjs fajl dodajemo konfiguracioni objekt za Supabase sliku
