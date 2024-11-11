@@ -870,3 +870,16 @@ Section 03: HomeAway Project
 -u div element dodajemo dvije komponente FormInput
 -komponentama FormInput dodajemo prop name, type, label i defaultValue
 -dodajemo komponentu SubmitButton sa prop text i className
+
+92. Price Input
+-u folderu form kreiramo komponentu PriceInput.tsx
+-u komponentu PriceInput.tsx importujemo komponente Label i Input iz foldera ui
+-kreiramo varijablu const name
+-u jsx-u kreiramo roditelj div element sa Tailwind CSS klasom
+-u div element dodajemo komponentu Label sa otvorenim i zatvorenim tagom
+-komponenti Label dodajemo prop htmlFor i className
+-dodajemo komponentu Input prop id, type, name, min, defaultValue i required
+-kreiramo tip FormInputNumberProps
+-funkciji PriceInput() dodajemo parametar destruktuirani prop defaultValue
+-parametru defaultValue dodajemo tip FormInputNumberProps
+-u komponentu create/page.tsx importujemo komponentu PriceInput.tsx
