@@ -883,3 +883,29 @@ Section 03: HomeAway Project
 -funkciji PriceInput() dodajemo parametar destruktuirani prop defaultValue
 -parametru defaultValue dodajemo tip FormInputNumberProps
 -u komponentu create/page.tsx importujemo komponentu PriceInput.tsx
+
+93. Categories Input
+-u folderu utils kreiramo categories.ts fajl
+-u categories.ts fajl importujemo React ikonice iz paketa React Icons
+-kreiramo tip Category
+-kreiramo i eksportujemo tip CategoryLabel
+-kreiramo i eksportujemo varijablu niz const categories
+-varijabli const categories dodajemo tip Category[]
+-u folderu form kreiramo komponentu CategoriesInput.tsx
+-u komponentu CategoriesInput.tsx importujemo niz categories iz categories.ts fajla
+-importujemo komponentu Label iz komponente ui/label.tsx
+-importujemo Shadcn komponente iz komponente ui/select.tsx
+-kreiramo varijablu const name 
+-funkciji CategoriesInput() dodajemo parametar destruktuirani prop defaultValue
+-u jsx-u kreiramo roditelj div element sa Tailwind CSS klasom
+-u div element dodajemo komponentu Label sa prop htmlFor i className
+-u div element dodajemo komponentu Select sa otvorenim i zatvorenim tagom
+-komponenti Select dodajemo prop defaultTheme, name i required
+-u komponentu Select dodajemo komponentu SelectTrigger sa otvorenim i zatvorenim tagom
+-komponenti SelectTrigger dodajemo prop id
+-u komponentu SelectTrigger dodajemo komponentu SelectValue
+-u komponentu Select dodajemo komponentu SelectContent sa otvorenim i zatvorenim tagom
+-u komponentu SelectContent dodajemo metodu categories.map()
+-u funkciju map() dodajemo komponentu SelectItem sa prop key i value
+-u komponenti SelectItem kreiramo span element sa Tailwind CSS klasama
+-u komponentu create/page.tsx importujemo komponentu CategoriesInput.tsx
