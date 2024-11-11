@@ -840,3 +840,9 @@ Section 03: HomeAway Project
 -u blok koda catch dodajemo izjavu return i funkciju renderError()
 -otvorimo link: https://stackoverflow.com/questions/64909447/got-an-error-invalid-src-prop-here-is-a-link-on-next-image-hostname-loca
 -u next.config.mjs fajl dodajemo konfiguracioni objekt za Supabase sliku
+
+90. Property Schema
+-u schema.prisma fajlu kreiramo model Property
+-modelu Profile dodajemo opciju properties
+-u terminalu ukucamo komandu npx prisma db push
+-u terminalu ukucamo komandu npx prisma studio
