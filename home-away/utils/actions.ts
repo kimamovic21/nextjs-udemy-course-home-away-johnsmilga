@@ -3,7 +3,12 @@
 import { redirect } from 'next/navigation';
 import { clerkClient, currentUser } from '@clerk/nextjs/server';
 import { revalidatePath } from 'next/cache';
-import { profileSchema, validateWithZodSchema, imageSchema } from './schemas';
+import { 
+  profileSchema, 
+  validateWithZodSchema, 
+  imageSchema, 
+  propertySchema 
+} from './schemas';
 import { uploadImage } from './supabase';
 import db from './db';
 
@@ -131,6 +136,22 @@ export const updateProfileImageAction = async (
     
     revalidatePath('/profile');
     return { message: 'Profile image updated successfully' };
+  } catch (error) {
+    return renderError(error);
+  };
+};
+
+export const createPropertyAction = async (
+  prevState: any,
+  formData: FormData
+): Promise<{ message: string }> => {
+  const user = await getAuthUser();
+
+  try {
+    const rawData = Object.fromEntries(formData);
+    const validatedFields = validateWithZodSchema(propertySchema, rawData);
+
+    return { message: 'property created' };
   } catch (error) {
     return renderError(error);
   };

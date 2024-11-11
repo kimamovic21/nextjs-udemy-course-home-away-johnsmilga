@@ -846,3 +846,27 @@ Section 03: HomeAway Project
 -modelu Profile dodajemo opciju properties
 -u terminalu ukucamo komandu npx prisma db push
 -u terminalu ukucamo komandu npx prisma studio
+
+91. Create Property Page - Setup
+-u schemas.ts fajlu kreiramo i eksportujemo varijablu propertySchema za validaciju polja za imovinu
+-u actions.ts fajl importujemo varijablu propertySchema
+-kreiramo i eksportujemo asinhronu funkciju createPropertyAction()
+-funkciji createPropertyAction() dodajemo parametre prevState sa tipom any i formData sa tipm FormData
+-funkciji createPropertyAction() dodajemo tip Promise<>
+-u funkciji createBookingAction() kreiramo varijablu const user
+-dodajemo blkove koda try - catch
+-u bloku koda try kreiramo varijable const rawData i const validatedFields
+-u blok koda catch dodajemo izjavu return renderError()
+-u folderu rentals kreiramo komponentu page.tsx
+-u jsx-u kreiramo section element kao roditelj element
+-u section elementu kreiramo h1 i div element sa Tailwind CSS klasama
+-importujemo komponente FormContainer.tsx i FormInput.tsx
+-importujemo komponentu SubmitButton iz komponente Buttons.tsx
+-importujemo funkciju createPropertyAction
+-u div element dodajemo komponentu FormContainer sa otvorenim i zatvorenim tagom
+-komponenti FormContainer dodajemo prop action
+-u prop action proslijedujemo funkciju createPropertyAction
+-u komponenti FormContainer kreiramo div element sa Tailwind CSS klasama
+-u div element dodajemo dvije komponente FormInput
+-komponentama FormInput dodajemo prop name, type, label i defaultValue
+-dodajemo komponentu SubmitButton sa prop text i className
