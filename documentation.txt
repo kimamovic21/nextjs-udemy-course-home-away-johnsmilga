@@ -809,3 +809,20 @@ Section 03: HomeAway Project
 -u opciji Policy odaberemo opciju INSERT
 -u .env fajlu kreiramo dvije varijable SUPABASE_URL i SUPABASE_KEY
 -u .env.example fajl dodajemo primjer varijabli koje je potrebno dodati
+
+88. Supabase Upload Image
+-otvorimo link: https://www.npmjs.com/package/@supabase/supabase-js
+-u terminalu instaliramo paket Supabase Js
+-u terminalu ukucamo komandu npm install @supabase/supabase-js
+-u folderu utils kreiramo supabase.ts fajl
+-u supabase.ts fajlu importujemo i kreiramo funkciju createClient
+-kreiramo varijable const bucket, const url i const key
+-funkciji createClient() dodajemo argumente url i key
+-vrijednost funkcije createClient() pohranjujemo u varijablu const supabase
+-kreiramo i eksportujemo asinhronu funkciju uploadImage() sa parametrom image
+-parametru image dodajemo tip File
+-u funkciji uploadImage() kreiramo varijable const timestamp i const newName
+-dodajemo metodu await supabase.storage
+-vrijednost metode await supabase.storage pohranjujemo u destruktuiranu varijablu const { data }
+-dodajemo uslov if (!data) 
+-dodajemo izjavu return supabase.storage
