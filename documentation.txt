@@ -1028,3 +1028,10 @@ Countries Input - fixed
 -u komponentu create/page.tsx importujemo komponentu AmenitiesInput.tsx
 -u jsx-u kreiramo element h3 Amenities
 -dodajemo komponentu AmenitiesInput ispod h3 elementa
+
+98. Create Property
+-u folder public dodan folder images sa slikama
+-u actions.ts fajlu, u funkciji createProfileAction(), u bloku koda try kreiramo tri varijable const file, const validatedFile i const fullPath
+-dodajemo metodu await db.property.create()
+-nakon blokova koda try - catch dodajemo funkciju redirect('/')
+-u terminalu ukucamo komandu npx prisma studio
