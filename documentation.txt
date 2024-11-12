@@ -962,3 +962,35 @@ Countries Input - fixed
 -kreiramo varijablu const Flag sa tipom React.FC<FlagProps>
 -varijablu Flag eksportujemo kao default
 -u komponentu CountriesInput.tsx importujemo komponentu Flags iz paketa React World Flags
+
+96. Counter Input
+-u folderu form kreiramo komponentu CounterInput.tsx
+-u komponentu CounterInput.tsx importujemo i kreiramo funkciju useState
+-importujemo React ikonice LuMinus i LuPlus iz paketa React Icons
+-importujemo komponente Card, CardHeader i Button iz foldera ui
+-dodajemo direktivu 'use client'
+-funkciji CounterInput() dodajemo parametre destruktuirane prop detail i defaultValue
+-parametrima dodajemo tipove
+-vrijednost funkcije useState() pohranjujemo u varijable const [count, setCount] 
+-kreiramo funkcije increaseCount() i decreaseCount()
+-u jsx-u dodajemo komponentu Card sa otvorenim i zatvorenim tagom
+-komponenti Card dodajemo Tailwind CSS klasu
+-u komponentu Card dodajemo komponentu CardHeader sa otvorenim i zatvorenim tagom
+-komponenti CardHeader dodajemo Tailwind CSS klase
+-u komponenti CardHeader kreiramo div elemente sa Tailwind CSS klasama
+-u div elementu kreiramo dva div elementa
+-u drugom div elementu kreiramo h2 i p elemente
+-u treci div element dodajemo komponente Button
+-u komponentu Button dodajemo komponentu LuMinus
+-komponenti Button dodajemo prop, variant, size, type i dogadaj onClick
+-u dogadaj onClick proslijedujemo funkciju decreaseCount
+-kreiramo span element sa Tailwind klasama
+-u span element dodajemo vrijednost varijable count
+-nakon span elementa dodajemo jos jednu komponentu Button 
+-komponenti Button dodajemo prop, variant, size, type i dogadaj onClick
+-u dogadaj onClick proslijedujemo funkciju increaseCount
+-u komponentu Button dodajemo komponentu LuPlus
+-u komponentu create/page.tsx importujemo komponentu CounterInput.tsx
+-u jsx-u kreiramo h3 element sa Tailwind CSS klasama
+-dodajemo cetiri komponente CounterInput sa prop detail
+-u komponenti CounterInput.tsx kreiramo input element sa prop type, name i value
