@@ -953,3 +953,12 @@ Section 03: HomeAway Project
 -komponenti SelectItem dodajemo prop key i value
 -u komponenti SelectItem kreiramo span element sa Tailwind CSS klasama
 -u komponentu create/page.tsx dodajemo komponente CountriesInput.tsx i ImageInput.tsx
+
+Countries Input - fixed
+-u terminalu instaliramo paket React World Flags
+-u terminalu ukucamo komandu npm i react-world-flags
+-kreiramo folder types i react-world-flags.d.ts fajl
+-u react-world-flags.d.ts fajlu kreiramo interfejs FlagProps
+-kreiramo varijablu const Flag sa tipom React.FC<FlagProps>
+-varijablu Flag eksportujemo kao default
+-u komponentu CountriesInput.tsx importujemo komponentu Flags iz paketa React World Flags
