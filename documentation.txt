@@ -994,3 +994,37 @@ Countries Input - fixed
 -u jsx-u kreiramo h3 element sa Tailwind CSS klasama
 -dodajemo cetiri komponente CounterInput sa prop detail
 -u komponenti CounterInput.tsx kreiramo input element sa prop type, name i value
+
+97. Amenities Input
+-u folderu utils kreiramo amenities.ts fajl
+-u amenities.ts fajl importujemo tip IconType iz paketa React Icons
+-importujemo React ikonice iz paketa React Icons
+-kreiramo varijablu const amenities sa tipom Amenity[]
+-eksportujemo varijablu const amenities
+-kreiramo komponentu AmenitiesInput.tsx
+-u komponentu AmenitiesInput.tsx dodajemo direktivu 'use client'
+-importujemo i kreiramo funkciju useState
+-importujemo komponentu Checkbox iz komponente ui/checkbox.tsx
+-importujemo varijablu amenities i tip Amenity
+-funkciji AmenitiesInput() dodajemo parametar destruktuirani prop defaultValue 
+-parametru defaultValue dodajemo tip Amenity
+-vrijednost funkcije useState() pohranjujemo u varijable const [selectedAmenities, setSelectedAmenities] 
+-funkciji useState() dodajemo tip <Amenity[]>
+-kreiramo funkciju handleChange() sa parametrom amenity
+-parametru amenity dodajemo tip Amenity
+-u funkciju handleChange() dodajemo funkciju setSelectedAmenities()
+-u jsx-u kreiramo section element kao roditelj element
+-u section element kreiramo input element 
+-input elementu dodajemo prop type, name i value
+-kreiramo div element sa Tailwind CSS klasama
+-u div element dodajemo metodu selectedAmenities.map()
+-u funkciji map() kreiramo div element sa Tailwind CSS klasama
+-u div elementu kreiramo label element i dodajemo komponentu Checkbox
+-komponenti Checkbox dodajemo prop id, checked i onCheckedChange
+-u prop onCheckedChange proslijedujemo anonimnu funkciju 
+-u anonimnu funkciju proslijedujemo funkciju handleChange(amenity)
+-label elementu dodajemo prop htmlFor i className
+-u label element dodajemo ime i ikonicu
+-u komponentu create/page.tsx importujemo komponentu AmenitiesInput.tsx
+-u jsx-u kreiramo element h3 Amenities
+-dodajemo komponentu AmenitiesInput ispod h3 elementa
