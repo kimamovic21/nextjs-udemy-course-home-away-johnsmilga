@@ -922,3 +922,34 @@ Section 03: HomeAway Project
 -kreiramo varijablu const tempDefaultDescription
 -u komponentu create/page.tsx importujemo komponentu TextAreaInput.tsx
 -u jsx-u komponenti TextAreaInput dodajemo prop name i labelText
+
+95. Countries Input
+-otvorimo link: https://www.npmjs.com/package/world-countries
+-u terminalu instaliramo paket World Countries
+-u terminalu ukucamo komandu npm i world-countries
+-u folderu utils kreiramo countries.ts fajl
+-u countries.ts fajl importujemo instancu countries
+-dodajemo metodu countries.map()
+-vrijednost metode countries.map() pohranjujemo u varijablu const formattedCountries
+-eksportujemo varijablu const formattedCountries
+-kreiramo i eksportujemo funkciju findCountryByCode() sa parametrom code
+-parametru code dodajemo tip string
+-u funkciju findCountryByCode() dodajemo izjavu return formattedCountries.find()
+-u folderu form kreiramo komponentu CountriesInput.tsx
+-u komponentu CountriesInput.tsx importujemo komponentu Label iz komponente ui/label.tsx
+-importujemo funkciju formattedCountries iz foldera utils
+-importujemo Shadcn iz komponente ui/select.tsx
+-kreiramo varijablu const name
+-kreiramo roditelj div element sa Tailwind CSS klasom
+-u div element dodajemo komponentu Label sa prop htmlFor i className
+-dodajemo komponentu Select sa otvorenim i zatvorenim tagom
+-komponenti Select dodajemo prop defaultValue, name i required
+-u komponentu Select dodajemo komponentu SelectTrigger sa otvorenim i zatvorenim tagom
+-komponenti SelectTrigger dodajemo prop id
+-u komponentu SelectTrigger dodajemo komponentu SelectValue
+-u komponentu Select dodajemo komponentu SelectContent sa otvorenim i zatvorenim tagom
+-u komponentu SelectContent dodajemo metodu formattedCountries.map()
+-u funkciju map() dodajemo komponentu SelectItem sa otvorenim i zatvorenim tagom
+-komponenti SelectItem dodajemo prop key i value
+-u komponenti SelectItem kreiramo span element sa Tailwind CSS klasama
+-u komponentu create/page.tsx dodajemo komponente CountriesInput.tsx i ImageInput.tsx
