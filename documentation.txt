@@ -1035,3 +1035,15 @@ Countries Input - fixed
 -dodajemo metodu await db.property.create()
 -nakon blokova koda try - catch dodajemo funkciju redirect('/')
 -u terminalu ukucamo komandu npx prisma studio
+
+99. Fetch Properties
+-u types.ts fajlu kreiramo i eksportujemo tip PropertyCardProps
+-u actions.ts fajl kreiramo i eksportujemo asinhronu funkciju fetchProperties()
+-u funkciju fetchProperties() dodajemo metodu await db.property.findMany()
+-vrijednost metode await db.property.findMany() pohranjujemo u varijablu const properties
+-u funkciju findMany() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo metodu select
+-funkciji fetchProperties() dodajemo parametre destruktuirane prop search i category
+-parametrima search i category dodajemo tipove
+-u funkciju findMany(), u konfiguracioni objekt dodajemo metode where i orderBy
+-dodajemo izjavu return properties
