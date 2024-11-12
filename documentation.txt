@@ -909,3 +909,16 @@ Section 03: HomeAway Project
 -u funkciju map() dodajemo komponentu SelectItem sa prop key i value
 -u komponenti SelectItem kreiramo span element sa Tailwind CSS klasama
 -u komponentu create/page.tsx importujemo komponentu CategoriesInput.tsx
+
+94. Description Input
+-u folderu form kreiramo komponentu TextAreaInput.tsx
+-u komponentu TextAreaInput.tsx importujemo komponente Label i Textarea iz foldera ui
+-kreiramo tip TextAreaInputProps
+-funkciji TextAreaInput() dodajemo parametre destruktuirane prps name, labelText i defaultValue
+-parametrima dodajemo tip TextAreaInputProps
+-u jsx-u kreiramo div roditelj element sa Tailwind CSS klasom
+-u div element dodajemo komponentu Label sa prop htmlFor i className
+-dodajemo komponentu Textarea sa prop id, name, defaultValue, rows, required i className
+-kreiramo varijablu const tempDefaultDescription
+-u komponentu create/page.tsx importujemo komponentu TextAreaInput.tsx
+-u jsx-u komponenti TextAreaInput dodajemo prop name i labelText
