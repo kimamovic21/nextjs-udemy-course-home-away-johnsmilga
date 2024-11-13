@@ -1166,3 +1166,8 @@ Countries Input - fixed
 -kreiramo varijablu countryName
 -u komponentu PropertyCard.tsx importujemo komponentu CountryFlagAndName.tsx
 -u jsx-u komponenti CountryFlagAndName dodajemo prop countryCode
+
+Country Name and Flag - fixed
+-u komponentu CountryFlagAndName.tsx importujemo komponentu Flag iz paketa React World Flags
+-u span element dodajemo komponentu Flag
+-komponenti Flag dodajemo prop code i style

@@ -1,3 +1,4 @@
+import Flag from 'react-world-flags';
 import { findCountryByCode } from '@/utils/countries';
 
 function CountryFlagAndName({ countryCode }: { countryCode: string }) {
@@ -9,7 +10,8 @@ function CountryFlagAndName({ countryCode }: { countryCode: string }) {
 
   return (
     <span className='flex justify-between items-center gap-2 text-sm '>
-      {validCountry?.flag} {countryName}
+      <Flag code={countryCode} style={{ width: 20, height: 20 }} />
+      {countryName}
     </span>
   );
 };
