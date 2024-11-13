@@ -11,7 +11,6 @@ async function PropertiesContainer({
   search?: string;
 }) {
   const properties: PropertyCardProps[] = await fetchProperties({ category, search });
-  console.log(properties);
   
   if (properties.length === 0) {
     return (

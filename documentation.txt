@@ -1105,3 +1105,14 @@ Countries Input - fixed
 -u uslov if dodajemo komponentu EmptyList
 -komponenti EmptyList dodajemo prop heading, message i btnText
 -u jsx-u dodajemo komponentu PropertiesList sa prop properties
+
+104. PropertyCard - Setup
+-kreiramo folder card i sest tsx komponenti: CountryFlagAndName.tsx, FavoriteToggleButton.tsx, 
+ FavoriteToggleForm.tsx, LoadingCards.tsx, PropertyCard.tsx i PropertyRating.tsx
+-u komponentu PropertiesList.tsx importujemo komponentu PropertyCard.tsx
+-importujemo tip PropertyCardProps iz foldera utils
+-funkciji PropertiesList() dodajemo parametar destruktuirani prop properties
+-parametru properties dodajemo tip PropertyCardProps[]
+-u jsx-u kreiramo roditelj section element
+-u section element dodajemo metodu properties.map()
+-u funkciju map() dodajemo komponentu PropertyCard sa prop key i property
