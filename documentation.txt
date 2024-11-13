@@ -244,7 +244,7 @@ Section 02: Next.js Tutorial
 -u komponentu Form.tsx importujemo i kreiramo funkciju useFormState iz paketa react-dom
 -vrijednost funkcije useFormState() pohranjujemo u varijable const [message, formAction]
 -u prop action proslijedujemo vrijednost funkcije formAction
--u form elementu dodajemo uslov {message && <p>{messaeg}</p>}
+-u form elementu dodajemo uslov {message && <p>{message}</p>}
 -u actions.ts fajlu, funkciji createUser() dodajemo parametar prevState sa tipom any
 -u blokove koda try - catch dodajemo izjave return
 
@@ -1091,3 +1091,17 @@ Countries Input - fixed
 -u div element dodajemo komponentu Button
 -komponenti Button dodajemo prop asChild, className i size
 -u komponentu Button dodajemo komponentu Link
+
+103. Properties Container
+-u komponenti PropertiesContainer.tsx, funkciji PropertiesContainer() dodajemo parametre destruktuiramo prop category i search
+-parametrima dodajemo tipove
+-funkciji PropertiesContainer() dodajemo asinhronost
+-importujemo i kreiramo funkciju fetchProperties iz foldera utils
+-importujemo tip PropertyCardProps iz foldera utils
+-importujemo komponente PropertiesList.tsx i EmptyList.tsx
+-vrijednost funkcije await fetchProperties() pohranjujemo u varijablu const properties
+-varijabli const properties dodajemo tip PropertyCardProps[]
+-dodajemo uslov if (properties.length === 0)
+-u uslov if dodajemo komponentu EmptyList
+-komponenti EmptyList dodajemo prop heading, message i btnText
+-u jsx-u dodajemo komponentu PropertiesList sa prop properties
