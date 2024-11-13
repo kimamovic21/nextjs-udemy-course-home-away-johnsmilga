@@ -1139,3 +1139,12 @@ Countries Input - fixed
 -u p elementu kreiramo span element
 -u span element dodajemo funkciju formatCurrency(price)
 -u article elementu kreiramo div element sa Tailwind CSS klasama za favorite logiku
+
+106. Property Rating
+-u komponenti PropertyRating.tsx, funkciji PropertyRating() dodajemo parametre destruktuirane prop propertyId i inPage
+-parametrima dodajemo tipove
+-kreiramo varijable const rating i const count
+-kreiramo varijable const className, countText i countValue
+-u jsx-u kreiramo span element sa prop className
+-importujemo React ikonicu FaStar
+-u span element dodajemo komponentu FaStar, varijable rating i countValue

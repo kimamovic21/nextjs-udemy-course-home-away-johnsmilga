@@ -2,6 +2,7 @@ import { type PropertyCardProps } from '@/utils/types';
 import { formatCurrency } from '@/utils/format';
 import Image from 'next/image';
 import Link from 'next/link';
+import PropertyRating from './PropertyRating';
 
 function PropertyCard({ property }: { property: PropertyCardProps }) {
   const { 
@@ -30,7 +31,10 @@ function PropertyCard({ property }: { property: PropertyCardProps }) {
             {name.substring(0, 30)}
           </h3>
           {/* property rating */}
-          rating
+          <PropertyRating 
+            inPage={false} 
+            propertyId={propertyId} 
+          />
         </div>
         <p className='text-sm mt-1 text-muted-foreground '>
           {tagline.substring(0, 40)}
