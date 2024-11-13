@@ -1080,3 +1080,14 @@ Countries Input - fixed
 -u element article dodajemo ikonicu i kreiramo p element
 -u komponentu ScrollArea dodajemo komponentu ScrollBar
 -komponenti ScrollBar dodajemo prop orientation
+
+102. Empty List
+-u komponentu EmptyList.tsx importujemo komponentu Link 
+-importujemo komponentu Button iz komponente ui/button.tsx
+-funkciji EmptyList() dodajemo parametre destruktuirane prop heading, message i btnText
+-parametrima dodajemo tipove
+-roditelj div elementu dodajemo Tailwind CSS klasu
+-u div elementu kreiramo elemente h2 i p 
+-u div element dodajemo komponentu Button
+-komponenti Button dodajemo prop asChild, className i size
+-u komponentu Button dodajemo komponentu Link
