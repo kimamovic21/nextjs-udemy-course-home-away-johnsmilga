@@ -1171,3 +1171,17 @@ Country Name and Flag - fixed
 -u komponentu CountryFlagAndName.tsx importujemo komponentu Flag iz paketa React World Flags
 -u span element dodajemo komponentu Flag
 -komponenti Flag dodajemo prop code i style
+
+109. Loading Cards
+-u pretrazivacu otvorimo link: https://ui.shadcn.com/docs/components/skeleton
+-u komponentu LoadingCards.tsx importujemo komponentu Skeleton iz komponente ui/skeleton.tsx
+-u jsx-u kreiramo section element sa Tailwind CSS klasama
+-kreiramo i eksportujemo funkciju SkeletonCard()
+-u funkciju SkeletonCard() dodajemo tri komponente Skeleton sa prop className
+-u funkciju LoadingCards() dodajemo cetiri komponente SkeletonCard
+-u komponentu app/page.tsx importujemo komponentu Suspense iz paketa React
+-importujemo komponentu LoadingCards.tsx
+-u jsx-u dodajemo komponentu Suspense sa otvorenim i zatvorenim tagom
+-komponenti Suspense dodajemo prop fallback
+-u prop fallback proslijedujemo komponentu LoadingCards
+-u komponentu Suspense dodajemo komponentu PropertiesContainer
