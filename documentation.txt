@@ -1057,3 +1057,26 @@ Countries Input - fixed
 -parametru searchParams dodajemo tipove
 -u pretrazivacu otvorimo link: http://localhost:3000/?search=someValue
 -u jsx-u komponentama CategoriesList i PropertiesContainer dodajemo prop category i search
+
+101. Categories List
+-otvorimo link: https://ui.shadcn.com/docs/components/scroll-area
+-u komponenti CategoriesList.tsx, funkciji CategoriesList() dodajemo parametre destruktuirane prop category i search
+-parametrima dodajemo tipove
+-importujemo komponentu Link
+-importujemo komponente ScrollArea i ScrollBar iz komponente ui/scroll-area.tsx
+-importujemo niz categories iz foldera utils
+-kreiramo varijablu const searchTerm
+-u jsx-u kreiramo section roditelj element
+-u section element dodajemo komponentu ScrollArea sa otvorenim i zatvorenim tagom
+-komponenti ScrollArea dodajemo prop className
+-u komponenti ScrollArea kreiramo div element sa Tailwind CSS Flex klasama
+-u div element dodajemo metodu categories.map()
+-u funkciji map() kreiramo varijablu const isActive
+-u izjavu return dodajemo komponentu Link
+-komponenti Link dodajemo prop key i href
+-u prop href dodajemo dinamicki link
+-u komponenti Link kreiramo article element sa Tailwind CSS klasama
+-elementu article dodajemo dinamicku klasu isActive
+-u element article dodajemo ikonicu i kreiramo p element
+-u komponentu ScrollArea dodajemo komponentu ScrollBar
+-komponenti ScrollBar dodajemo prop orientation
