@@ -1116,3 +1116,26 @@ Countries Input - fixed
 -u jsx-u kreiramo roditelj section element
 -u section element dodajemo metodu properties.map()
 -u funkciju map() dodajemo komponentu PropertyCard sa prop key i property
+
+105. PropertyCard - Structure
+-u folderu utils kreiramo format.ts fajl
+-u format.ts fajlu kreiramo i eksportujemo funkciju formatCurrency() sa parametrom amount
+-parametru amount dodajemo tipove number | null
+-u funkciji formatCurrency() kreiramo varijablu const value
+-u return izjavu dodajemo metodu new Intl.NumberFormat()
+-u komponentu PropertyCard.tsx importujemo komponente Image i Link
+-importujemo tip PropertyCardProps i funkciju formatCurrency iz foldera utils
+-funkciji PropertyCard() dodajemo parametar destruktuirani prop property
+-parametru property dodajemo tip PropertyCardProps
+-iz varijable property destruktuiramo varijable const { name, image, price, country, id: propertyId, tagline }
+-u jsx-u kreiramo roditelj article element sa Tailwind CSS klasama
+-u komponentu article dodajemo komponentu Link 
+-komponenti Link dodajemo dinamicki prop href
+-u komponenti Link kreiramo tri div elementa sa Tailwind CSS klasama
+-u prvi div element dodajemo komponentu Image
+-komponenti Image dodajemo prop src, fill, sizes, alt i className
+-u drugom div elementu kreiramo h3 element
+-u trecem div elementu kreiramo p element
+-u p elementu kreiramo span element
+-u span element dodajemo funkciju formatCurrency(price)
+-u article elementu kreiramo div element sa Tailwind CSS klasama za favorite logiku
