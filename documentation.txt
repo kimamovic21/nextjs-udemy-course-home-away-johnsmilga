@@ -1047,3 +1047,13 @@ Countries Input - fixed
 -parametrima search i category dodajemo tipove
 -u funkciju findMany(), u konfiguracioni objekt dodajemo metode where i orderBy
 -dodajemo izjavu return properties
+
+100. Home Page - Setup
+-u folderu components kreiramo cetiri komponente CategoriesList.tsx, EmptyList.tsx, PropertiesContainer.tsx i PropertiesList.tsx
+-u komponentu app/page.tsx importujemo komponente CategoriesList.tsx i PropertiesContainer.tsx
+-u jsx-u kreiramo section roditelj element
+-u section element dodajemo komponente CategoriesList i PropertiesContainer
+-funkciji HomePage() dodajemo parametar destruktuirani prop searchParams
+-parametru searchParams dodajemo tipove
+-u pretrazivacu otvorimo link: http://localhost:3000/?search=someValue
+-u jsx-u komponentama CategoriesList i PropertiesContainer dodajemo prop category i search
