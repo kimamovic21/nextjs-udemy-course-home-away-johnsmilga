@@ -1148,3 +1148,12 @@ Countries Input - fixed
 -u jsx-u kreiramo span element sa prop className
 -importujemo React ikonicu FaStar
 -u span element dodajemo komponentu FaStar, varijable rating i countValue
+
+107. Favorites Toggle Button
+-u komponentu FavoriteToggleButton.tsx importujemo React ikonicu FaHeart i komponentu Button
+-funkciji FavoriteToggleButton() dodajemo parametar destruktuirani prop propertyId
+-parametru propertyId dodajemo tip string
+-u jsx-u dodajemo komponentu Button sa prop size, variant i className
+-u komponentu Button dodajemo komponentu FaHeart
+-u komponentu PropertyCard.tsx importujemo komponentu FavoriteToggleButton.tsx
+-u jsx-u komponenti FavoriteToggleButton dodajemo prop propertyId
