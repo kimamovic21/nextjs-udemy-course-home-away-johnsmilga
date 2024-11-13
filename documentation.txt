@@ -1157,3 +1157,12 @@ Countries Input - fixed
 -u komponentu Button dodajemo komponentu FaHeart
 -u komponentu PropertyCard.tsx importujemo komponentu FavoriteToggleButton.tsx
 -u jsx-u komponenti FavoriteToggleButton dodajemo prop propertyId
+
+108. Country Name and Flag
+-u komponentu CountryFlagAndName.tsx importujemo i kreiramo funkciju findCountryByCode iz foldera utils
+-funkciji CountryFlagAndName() dodajemo parametar destruktuirani prop countryCode 
+-parametru countryCode dodajemo tip string
+-vrijednost funkcije findCountryByCode(countryCode) pohranjujemo u varijablu const validCountry
+-kreiramo varijablu countryName
+-u komponentu PropertyCard.tsx importujemo komponentu CountryFlagAndName.tsx
+-u jsx-u komponenti CountryFlagAndName dodajemo prop countryCode

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PropertyRating from './PropertyRating';
 import FavoriteToggleButton from './FavoriteToggleButton';
+import CountryFlagAndName from './CountryFlagAndName';
 
 function PropertyCard({ property }: { property: PropertyCardProps }) {
   const { 
@@ -48,7 +49,7 @@ function PropertyCard({ property }: { property: PropertyCardProps }) {
             night
           </p>
           {/* country & flag */}
-          country & flag
+          <CountryFlagAndName countryCode={country} />
         </div>
       </Link>
 
