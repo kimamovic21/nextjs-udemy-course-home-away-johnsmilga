@@ -1271,3 +1271,13 @@ Country Name and Flag - fixed
 -u actions.ts fajlu, funkciji toggleFavoriteAction() dodajemo parametar prevState
 -parametru prevState dodajemo tip
 -destruktuiramo varijable const { propertyId, favoriteId, pathname } iz varijable prevState
+
+114. Toggle Favorites - Functionality
+-u actions.ts fajlu, u funkciji toggleFavoriteAction() vrijednost funkcije await getAuthUser() pohranjujemo u varijablu const user
+-dodajemo blokove koda try - catch
+-u blok koda try dodajemo uslov if (favoriteId) - else
+-u uslov if (favoriteId) dodajemo metodu db.favorite.delete()
+-u blok koda else dodajemo metodu await db.favorite.create()
+-u return izjavu dodajemo ternarni operator za varijablu favoriteId
+-dodajemo funkciju revalidatePath(pathname)
+-u blok koda catch dodajemo izjavu return renderError(error)
