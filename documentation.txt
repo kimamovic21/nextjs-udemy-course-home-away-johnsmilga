@@ -1281,3 +1281,23 @@ Country Name and Flag - fixed
 -u return izjavu dodajemo ternarni operator za varijablu favoriteId
 -dodajemo funkciju revalidatePath(pathname)
 -u blok koda catch dodajemo izjavu return renderError(error)
+
+115. Favorites Page
+-otvorimo link: https://stackoverflow.com/questions/69274503/property-does-not-exist-when-i-want-to-use-model-added-in-prisma-schema
+-u actions.ts fajlu kreiramo i eksportujemo asinhronu funkciju fetchFavorites()
+-u funkciji fetchFavorites(), vrijednost funkcije getAuthUser() pohranjujemo u varijablu const user
+-dodajemo metodu await db.favorite.findMany()
+-vrijednost metode await db.favorite.findMany() pohranjujemo u varijablu const favorites
+-u funkciju findMany() dodajemo metode where i select
+-dodajemo izjavu return favorites.map()
+-u folderu favorites kreiramo komponentu loading.tsx
+-u komponentu loading dodajemo direktivu 'use client'
+-importujemo komponentu LoadingCards.tsx
+-u komponenti favorites/page.tsx, funkciji FavoritesPage() dodajemo asinhronost
+-importujemo funkciju fetchFavorites() iz foldera utils
+-dodajemo funkciju await fetchFavorites()
+-vrijednost funkcije await fetchFavorites() pohranjujemo u varijablu const favorites
+-dodajemo uslov if (favorites.length === 0)
+-importujemo komponente EmptyList.tsx i PropertiesList.tsx
+-u jsx-u dodajemo komponentu PropertiesList
+-komponenti PropertiesList dodajemo prop properties
