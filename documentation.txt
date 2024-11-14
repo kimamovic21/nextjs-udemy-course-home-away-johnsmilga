@@ -1230,3 +1230,19 @@ Country Name and Flag - fixed
 -vrijednost funkcije auth() pohranjujemo u destruktuiranu varijablu const { userId }
 -dodajemo uslov if (!userId)
 -u uslov if (!userId) dodajemo komponentu CardSignInButton
+
+112. Fetch Favorites
+-u actions.ts fajlu kreiramo i eksportujemo asinhronu funkciju fetchFavoriteId()
+-funkciji fetchFavoriteId() dodajemo parametar destruktuirani parametar propertyId sa tipom string
+-u funkciji fetchFavoriteId() kreiramo varijablu const user
+-dodajemo metodu await db.favorite.findFirst({})
+-vrijednost metode await db.favorite.findFirst({}) pohranjujemo u varijablu const favorite
+-u funkciju findFirst() dodajemo metode where i select
+-dodajemo izjavu return favorite?.id || null
+-kreiramo i eksportujemo asinhronu funkciju toggleFavoriteAction()
+-u komponentu FavoriteToggleButton.tsx importujemo funkciju fetchFavoriteId
+-funkciji FavoriteToggleButton() dodajemo asinhronost
+-vrijednost funkcije await fetchFavoriteId() pohranjujemo u varijablu const favoriteId
+-importujemo komponentu FavoriteToggleForm.tsx
+-u jsx-u dodajemo komponentu FavoriteToggleForm umjesto komponentu Button
+-komponenti FavoriteToggleForm dodajemo prop favoriteId i propertyId
