@@ -1185,3 +1185,29 @@ Country Name and Flag - fixed
 -komponenti Suspense dodajemo prop fallback
 -u prop fallback proslijedujemo komponentu LoadingCards
 -u komponentu Suspense dodajemo komponentu PropertiesContainer
+
+110. NavSearch Component
+-otvorimo link: https://www.npmjs.com/package/use-debounce
+-u terminalu instaliramo paket Use Debouce
+-u terminalu ukucamo komandu npm i use-debounce
+-u komponentu NavSearch.tsx importujemo funkcije useSearchParams, usePathname i useRouter iz paketa Next Navigation
+-importujemo i kreiramo funkcije useDebouncedCallback iz paketa Use Debouce
+-importujemo funkcije useState i useEffect iz paketa React
+-vrijednost funkcije useSearchParams() pohranjujemo u varijablu const searchParams
+-vrijednost funkcije usePathname() pohranjujemo u varijablu const pathname
+-vrijednost funkcije useRouter() pohranjujemo u destruktuiranu varijablu const { replace }
+-kreiramo varijablu search i set funkciju setSearch
+-u jsx-u komponenti Input dodajemo prop onChange
+-u prop onChange proslijedujemo anonimnu funkciju sa parametrom e
+-u anonimnu funkciju proslijedujemo funcije setSearch
+-kreiramo funkciju handleSearch() sa parametrom value
+-parametru value dodajemo tip string
+-u funkciji handleSearch() kreiramo varijablu const params
+-dodajemo uslove if (value) i else
+-u uslov else dodajemo metodu params.delete()
+-nakon uslova if - else dodajemo funkciju replace()
+-u funkciju handleSearch() dodajemo funkciju useDebouncedCallback()
+-u dogadaj onChange dodajemo funkciju handleSearch()
+-dodajemo funkciju useEffect() sa dva argumenta
+-prvi argument je anonimna funkcija, a drugi argument je prazan niz
+-u anonimnu funkcija dodajemo uslov if (!searchParams.get('search'))
