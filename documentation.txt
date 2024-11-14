@@ -1211,3 +1211,22 @@ Country Name and Flag - fixed
 -dodajemo funkciju useEffect() sa dva argumenta
 -prvi argument je anonimna funkcija, a drugi argument je prazan niz
 -u anonimnu funkcija dodajemo uslov if (!searchParams.get('search'))
+
+111. Favorites SignIn Button
+-u schema.prisma fajlu kreiramo model Prisma
+-u modele Profile i Property dodajemo polje favorites
+-u terminalu ukucamo komandu npx prisma db push
+-u terminalu ukucamo komandu npx prisma studio
+-u komponentu Buttons.tsx importujemo komponentu SignInButton iz paketa Clerk
+-importujemo React ikonice FaRegHeart i FaHeart iz paketa React Icons
+-kreiramo i eksportujemo funkciju CardSignInButton()
+-u funkciju CardSignInButton() dodajemo komponentu SignInButton sa otvorenim i zatvorenim tagom
+-komponenti SignInButton dodajemo prop mode
+-u komponentu SignInButton dodajemo komponenta Button sa otvorenim i zatvorenim tagom
+-komponenti Button dodajemo prop type, size, variant i className
+-u komponentu Button dodajemo komponentu FaRegHeart
+-u komponentu FavoriteToggleButton.tsx importujemo i kreiramo funkciju auth iz paketa Clerk
+-importujemo komponentu CardSignInButton.tsx
+-vrijednost funkcije auth() pohranjujemo u destruktuiranu varijablu const { userId }
+-dodajemo uslov if (!userId)
+-u uslov if (!userId) dodajemo komponentu CardSignInButton
