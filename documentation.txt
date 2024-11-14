@@ -1246,3 +1246,28 @@ Country Name and Flag - fixed
 -importujemo komponentu FavoriteToggleForm.tsx
 -u jsx-u dodajemo komponentu FavoriteToggleForm umjesto komponentu Button
 -komponenti FavoriteToggleForm dodajemo prop favoriteId i propertyId
+
+113. Favorites Toggle Form
+-u komponenti Buttons.tsx kreiramo i eksportujemo funkciju CardSubmitButton() sa parametrom destruktuirani prop isFavorite
+-parametru isFavorite dodajemo tip boolean
+-u funkciji CardSubmitButton(), iz funkcije useFormStatus() destruktuiramo varijablu const { pending }
+-u jsx dodajemo komponentu Button sa prop type, size, variant i className
+-u komponentu Button dodajemo ternarne operatore za varijable pending i isFavorite
+-u komponentu FavoriteToggleForm.tsx dodajemo direktivu 'use client'
+-importujemo funkcije usePathname i toggleFavoriteAction
+-importujemo komponente FormContainer.tsx i CardSubmitButton iz komponente Buttons.tsx
+-kreiramo tip FavoriteToggleFormProps
+-funkciji FavoriteToggleForm() dodajemo parametre destruktuirane prop propertyId i favoriteId
+-parametrima dodajemo tip FavoriteToggleFormProps
+-kreiramo varijablu const pathname
+-u jsx-u dodajemo komponentu FormContainer kao roditelj elemente
+-u komponentu FormContainer dodajemo komponentu CardSubmitButton
+-komponenti CardSubmitButton dodajemo prop isFavorite
+-u prop isFavorite dodajemo ternarni uslov za varijablu favoriteId
+-dodajemo metodu toggleFavoriteAction.bind()
+-vrijednost metode toggleFavoriteAction.bind() pohranjujemo u varijablu const toggleAction
+-komponenti FormContainer dodajemo prop action
+-u prop action proslijedujemo funkciju toggleAction 
+-u actions.ts fajlu, funkciji toggleFavoriteAction() dodajemo parametar prevState
+-parametru prevState dodajemo tip
+-destruktuiramo varijable const { propertyId, favoriteId, pathname } iz varijable prevState
