@@ -1408,3 +1408,16 @@ Country Name and Flag - fixed
 -u prva tri span elementa dodajemo komponentu LuDot
 -u komponentu properties/[id]/page.tsx importujemo komponentu PropertyDetails.tsx
 -u jsx-u komponenti PropertyDetails dodajemo prop details
+
+122. UserInfo Component
+-u folderu components/properties kreiramo komponentu UserInfo.tsx
+-u komponentu UserInfo.tsx importujemo komponentu Image
+-kreiramo tip UserInfoProps
+-funkciji UserInfo() dodajemo parametar destruktuirani prop profile
+-parametru profile dodajemo tip UserInfoProps
+-u jsx-u kreiramo article roditelj element sa Tailwind CSS klasama
+-u article element dodajemo komponentu Image sa prop src, alt, width, height i className
+-kreiramo div i p elemente sa Tailwind CSS klasama
+-u komponenti properties/[id]/page.tsx kreiramo varijable const firstName i const profileImage
+-importujemo komponentu UserInfo.tsx
+-u jsx-u dodajemo komponentu UserInfo sa prop profile
