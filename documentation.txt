@@ -1337,3 +1337,28 @@ Country Name and Flag - fixed
 -u section element dodajemo komponentu BreadCrumbs sa prop name
 -u section element kreiramo elemente header, h2 i div sa Tailwind CSS klasama
 -u div element dodajemo komponentu FavoriteToggleButton sa prop propertyId
+
+118. Share Button Component
+-otvorimo link: https://www.npmjs.com/package/react-share
+-u terminalu instaliramo paket React Share sa komandom npm i react-share
+-otvorimo link: https://ui.shadcn.com/docs/components/popover
+-u folderu components/properties kreiramo komponentu ShareButton.tsx
+-u komponentu ShareButton.tsx dodajemo direktivu 'use client'
+-importujemo komponente TwitterShareButton, EmailShareButton, LinkedinShareButton, TwitterIcon, EmailIcon i LinkedinIcon iz paketa React Share
+-importujemo komponente iz foldera ui
+-funkciji ShareButton() dodajemo parametre destruktuirane prop propertyId i name
+-parametrima dodajemo tipove
+-u .env fajlu kreiramo env varijablu NEXT_PUBLIC_WEBSITE_URL
+-u .env.local fajl dodajemo primjer varijable koju trebamo kreirati
+-u komponenti ShareButton.tsx kreiramo varijable const url i const shareLink
+-u jsx-u dodajemo komponentu Popover kao roditelj element
+-u komponentu Popover dodajemo komponentu PopoverTrigger sa otvorenim i zatvorenim tagom
+-komponenti PopoverTrigger dodajemo prop asChild
+-u komponentu Popover dodajemo komponentu Button i komponentu LuShare2
+-komponenti Button dodajemo prop variant, size i className
+-u komponentu Popover dodajemo komponentu PopoverContent sa otvorenim i zatvorenim tagom
+-komponenti PopoverContent dodajemo prop side, align, sideOffset i className
+-u komponentu PopoverContent dodajemo komponente TwitterShareButton, EmailShareButton, LinkedinShareButton, TwitterIcon, EmailIcon i LinkedinIcon
+-komponentama dodajemo prop url i title
+-u komponentu properties/[id]/page.tsx importujemo komponentu ShareButton.tsx
+-u div element dodajemo komponentu ShareButton sa prop name i propertyId
