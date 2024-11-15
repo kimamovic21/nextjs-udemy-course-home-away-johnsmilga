@@ -1362,3 +1362,19 @@ Country Name and Flag - fixed
 -komponentama dodajemo prop url i title
 -u komponentu properties/[id]/page.tsx importujemo komponentu ShareButton.tsx
 -u div element dodajemo komponentu ShareButton sa prop name i propertyId
+
+119. Image Container Component
+-u folderu components/properties kreiramo komponentu ImageContainer.tsx
+-u komponentu ImageContainer.tsx importujemo komponentu Link
+-funkciji ImageContainer() dodajemo parametre destruktuirane prop mainImage i name
+-parametrima dodajemo tipove string
+-u jsx-u kreiramo section roditelj element sa Tailwind CSS klasama
+-u section element dodajemo komponentu Image
+-komponenti Image dodajemo prop src, fill, sizes alt, className i priority
+-u komponentu properties/[id]/page.tsx importujemo komponentu ImageContainer.tsx i PropertyRating.tsx
+-u jsx-u dodajemo komponentu ImageContainer sa prop mainImage i name
+-ispod komponente ImageContainer kreiramo section element sa Tailwind CSS Grid klasama
+-u section elementu kreiramo dva div elementa sa Tailwind CSS klasama
+-u prvom div elementu kreiramo div element
+-u taj div element kreiramo h2 element i dodajemo komponentu PropertyRating sa prop inPage i propertyId
+-drugom div elementu u section elementu dodajemo Tailwind CSS klase
