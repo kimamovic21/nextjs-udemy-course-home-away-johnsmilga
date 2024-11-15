@@ -1393,3 +1393,18 @@ Country Name and Flag - fixed
 -funkciji useState() dodajemo tip <DateRange | undefined>
 -u jsx-u dodajemo komponentu Calendar sa prop id, mode, defaultMonth, selected i onSelect
 -u prop onSelect proslijedujemo funkciju setRange
+
+121. Property Details Component
+-u format.ts fajlu kreiramo i eksportujemo funkciju formatQuantity()
+-u folderu components/properties kreiramo komponentu PropertyDetails.tsx
+-u komponentu PropertyDetails.tsx importujemo funkciju formatQuantity iz foldera utils
+-importujemo React ikonicu LuDot
+-kreiramo tip PropertyDetailsProps
+-funkciji PropertyDetails() dodajemo parametar destruktuirani prop details
+-parametru details dodajemo tip PropertyDetailsProps
+-u jsx-u kreiramo p roditelj element sa Tailwind CSS klasama
+-u p elementu kreiramo cetiri span elementa
+-u span elemente dodajemo funkciju formatQuantity()
+-u prva tri span elementa dodajemo komponentu LuDot
+-u komponentu properties/[id]/page.tsx importujemo komponentu PropertyDetails.tsx
+-u jsx-u komponenti PropertyDetails dodajemo prop details
