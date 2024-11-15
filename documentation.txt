@@ -1319,4 +1319,21 @@ Country Name and Flag - fixed
 -dodajemo uslov if (!property)
 -u uslov if (!property) dodajemo funkciju redirect()
 -vrijednost varijable property pohranjujemo u destruktuirane varijabla const { baths, bedrooms, beds, guests }
+-kreiramo varijablu const details
 -u folderu properties izbrisemo komponentu page.tsx
+
+117. Breadcrumbs Component
+-otvorimo link: https://ui.shadcn.com/docs/components/breadcrumb
+-u folderu components kreiramo folder properties i komponentu BreadCrumbs.tsx
+-u komponenta BreadCrumbs.tsx importujemo komponente iz komponente ui/breadcrumb.tsx
+-funkciji BreadCrumbs() dodajemo parametar destruktuirani prop sa tipom string
+-u jsx-u dodajemo komponentu Breadcrumb kao roditelj element
+-u komponentu Breadcrumb dodajemo komponentu BreadcrumbList sa otvorenim i zatvorenim tagom
+-u komponentu BreadcrumbList dodajemo dvije komponente BreadcrumbItem i komponentu BreadcrumbSeparator
+-u prvu komponentu BreadcrumbItem dodajemo komponentu BreadcrumbLink sa otvorenim i zatvorenim tagom
+-u drugu komponentu BreadcrumbItem dodajemo komponentu BreadcrumbPage sa otvorenim i zatvorenim tagom
+-u komponentu properties/[id]/page.tsx importujemo komponente BreadCrumbs.tsx i FavoriteToggleButton.tsx 
+-u jsx-u kreiramo section roditelj element
+-u section element dodajemo komponentu BreadCrumbs sa prop name
+-u section element kreiramo elemente header, h2 i div sa Tailwind CSS klasama
+-u div element dodajemo komponentu FavoriteToggleButton sa prop propertyId

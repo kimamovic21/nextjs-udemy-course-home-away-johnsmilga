@@ -1,5 +1,7 @@
 import { redirect } from 'next/navigation';
 import { fetchPropertyDetails } from '@/utils/actions';
+import BreadCrumbs from '@/components/properties/BreadCrumbs';
+import FavoriteToggleButton from '@/components/card/FavoriteToggleButton';
 
 async function PropertyDetailsPage({ params }: { params: { id: string } }) {
   const property = await fetchPropertyDetails(params.id);
@@ -9,7 +11,16 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
   const details = { baths, bedrooms, beds, guests };
   
   return (
-    <div>PropertyDetailsPage</div>
+    <section>
+      <BreadCrumbs name={property.name} />
+      <header className='flex justify-between items-center mt-4'>
+        <h2 className='text-4xl font-bold '>{property.tagline}</h2>
+        <div className='flex items-center gap-x-4'>
+          {/* share button */}
+          <FavoriteToggleButton propertyId={property.id} />
+        </div>
+      </header>
+    </section>
   );
 };
 
