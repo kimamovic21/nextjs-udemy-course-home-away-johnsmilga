@@ -3403,13 +3403,19 @@ return (
 
 - components/properties/booking/BookingCalendar.tsx
 
+[React Day Picker](https://www.npmjs.com/package/react-day-picker)
+
+```sh
+npm i react-day-picker
+```
+
 ```tsx
 'use client';
 import { useState } from 'react';
 import { Calendar } from '@/components/ui/calendar';
 import { DateRange } from 'react-day-picker';
 
-export default function App() {
+function BookingCalendar() {
   const currentDate = new Date();
   const defaultSelected: DateRange = {
     from: undefined,
@@ -3426,7 +3432,9 @@ export default function App() {
       onSelect={setRange}
     />
   );
-}
+};
+
+export default BookingCalendar;
 ```
 
 - properties/[id]/page.tsx

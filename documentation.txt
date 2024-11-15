@@ -1378,3 +1378,18 @@ Country Name and Flag - fixed
 -u prvom div elementu kreiramo div element
 -u taj div element kreiramo h2 element i dodajemo komponentu PropertyRating sa prop inPage i propertyId
 -drugom div elementu u section elementu dodajemo Tailwind CSS klase
+
+120. Calendar Component
+-otvorimo link: https://www.npmjs.com/package/react-day-picker
+-u terminalu instaliramo paket React Day Picker sa komandom npm i react-day-picker
+-u folderu components/properties kreiramo komponentu BookingCalendar.tsx
+-u komponentu BookingCalendar.tsx dodajemo direktivu 'use client'
+-importujemo funkciju useState
+-otvorimo link: https://ui.shadcn.com/docs/components/calendar
+-importujemo komponentu Calendar iz komponente ui/calendar.tsx
+-kreiramo varijablu const currentDate
+-kreiramo varijablu objekt const defaultSelected sa tipom DateRange
+-kreiramo state varijablu const range i set funkciju setRange
+-funkciji useState() dodajemo tip <DateRange | undefined>
+-u jsx-u dodajemo komponentu Calendar sa prop id, mode, defaultMonth, selected i onSelect
+-u prop onSelect proslijedujemo funkciju setRange
