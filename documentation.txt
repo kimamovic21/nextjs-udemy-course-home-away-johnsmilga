@@ -1301,3 +1301,22 @@ Country Name and Flag - fixed
 -importujemo komponente EmptyList.tsx i PropertiesList.tsx
 -u jsx-u dodajemo komponentu PropertiesList
 -komponenti PropertiesList dodajemo prop properties
+
+116. Property Details Page - Setup
+-u actions.ts fajlu kreiramo i eksportujemo funkciju fetchPropertyDetails() sa parametrom id
+-parametru id dodajemo tip string
+-u return izjavu dodajemo metodu db.property.findUnique()
+-u funkcija findUnique() dodajemo metode where i include
+-u folderu properties kreiramo komponentu loading.tsx
+-kreiramo folder [id]
+-u [id] folderu kreiramo komponentu page.tsx
+-u komponenti [id]/page.tsx kreiramo funkciju PropertyDetailsPage()
+-funkciji PropertyDetailsPage() dodajemo destruktuirani parametar params sa tipom
+-importujemo funkciju fetchPropertyDetails iz foldera utils
+-importujemo funkciju redirect iz paketa Next Navigation
+-u funkciju PropertyDetailsPage() dodajemo funkciju await fetchPropertyDetails()
+-vrijednost funkcije await fetchPropertyDetails() pohranjujemo u varijablu const property
+-dodajemo uslov if (!property)
+-u uslov if (!property) dodajemo funkciju redirect()
+-vrijednost varijable property pohranjujemo u destruktuirane varijabla const { baths, bedrooms, beds, guests }
+-u folderu properties izbrisemo komponentu page.tsx
