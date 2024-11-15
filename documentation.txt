@@ -1421,3 +1421,27 @@ Country Name and Flag - fixed
 -u komponenti properties/[id]/page.tsx kreiramo varijable const firstName i const profileImage
 -importujemo komponentu UserInfo.tsx
 -u jsx-u dodajemo komponentu UserInfo sa prop profile
+
+123. Description Component
+-u folderu components/properties kreiramo komponente Title.tsx i Description.tsx
+-u komponenti Title.tsx, funkciji Title() dodajemo parametar destruktuirani prop text sa tipom text
+-u jsx-u kreiramo h3 element sa Tailwind CSS klasama
+-u komponentu Description.tsx dodajemo direktivu 'use client'
+-importujemo funkciju useState
+-importujemo komponente Title.tsx i komponentu Button iz komponente ui/button.tsx
+-funkciji Description dodajemo parametar destruktuirani prop description sa tipom string
+-kreiramo state varijablu const isFullDescriptionShown i set funkciju setIsFullDescriptionShown
+-kreiramo varijable const words i const isLongDescription
+-kreiramo funkciju toggleDescription()
+-u funkciju toggleDescription() dodajemo funkciju setIsFullDescriptionShown()
+-kreiramo varijablu const displayedDescription 
+-u jsx-u kreiramo article roditelj element sa Tailwind CSS klasom
+-u article element dodajemo komponentu Title sa prop text
+-kreiramo p element sa Tailwind CSS klasama u kojem prikazujemo varijablu displayedDescription
+-dodajemo uslov isLongDescription && (...) za prikazivanje komponente Button
+-komponenti Button dodajemo prop variant, className i onClick
+-u dogadaj onClick proslijedujemo funkciju toggleDescription
+-u komponentu Button dodajemo uslov ternarni operator za varijablu isFullDescriptionShown
+-u komponentu properties/[id]/page.tsx importujemo komponente Separator iz komponente ui/separator.tsx i Description.tsx
+-u jsx-u komponenti Separator dodajemo prop className
+-u jsx-u komponenti Description dodajemo prop description
