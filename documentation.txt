@@ -1497,3 +1497,9 @@ Country Name and Flag - fixed
 -u jsx-u dodajemo komponentu DynamicMap sa prop countryCode
 
 126. Supabase Bug !!!
+
+127. Deploy Application on Vercel
+-otvorimo link: https://favicon.io/favicon-converter/
+-u folder app dodajemo nasu narandzastu sator sliku favicon.ico
+-u package.json fajlu, u objekt scripts dodajemo npx prisma generate u komandu build
+-otvorimo web stranicu: https://vercel.com/
