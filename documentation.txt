@@ -1503,3 +1503,4 @@ Country Name and Flag - fixed
 -u folder app dodajemo nasu narandzastu sator sliku favicon.ico
 -u package.json fajlu, u objekt scripts dodajemo npx prisma generate u komandu build
 -otvorimo web stranicu: https://vercel.com/
+-otvorimo link: https://github.com/shadcn-ui/ui/issues/5706
