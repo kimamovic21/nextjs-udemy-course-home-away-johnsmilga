@@ -1495,3 +1495,5 @@ Country Name and Flag - fixed
 -importujemo i kreiramo funkciju dynamic iz Next Dynamic paketa
 -vrijednost funkcije dynamic pohranjujemo u varijablu komponentu const DynamicMap
 -u jsx-u dodajemo komponentu DynamicMap sa prop countryCode
+
+126. Supabase Bug !!!
