@@ -1445,3 +1445,21 @@ Country Name and Flag - fixed
 -u komponentu properties/[id]/page.tsx importujemo komponente Separator iz komponente ui/separator.tsx i Description.tsx
 -u jsx-u komponenti Separator dodajemo prop className
 -u jsx-u komponenti Description dodajemo prop description
+
+124. Amenities Component
+-u folderu components/properties kreiramo komponentu Amenities.tsx
+-u komponentu Amenities.tsx importujemo tip Amenity
+-importujemo komponentu Title.tsx
+-importujemo React ikonicu LuFolderCheck
+-funkciji Amenities() dodajemo parametar destruktuirani prop amenities sa tipom string
+-kreiramo varijable const amenitiesList i const noAmenities
+-varijabli amenitiesList dodajemo tip Amenity[]
+-dodajemo uslov if (noAmenities)
+-u jsx-u u roditelj div element dodajemo komponentu Title sa prop text
+-ispod komponente Title kreiramo div element sa Tailwind CSS klasama
+-u div element dodajemo metodu amenitiesList.map()
+-u funkciju map() dodajemo uslov if (!amenity.selected) return null
+-kreiramo div element sa Tailwind CSS klasama
+-u div element dodajemo komponentu LuFolderCheck i kreiramo span element sa Tailwind CSS klasama
+-u komponentu properties/[id]/page.tsx importujemo komponentu Amenities.ts
+-u jsx-u dodajemo komponentu Amenities sa prop amenities
