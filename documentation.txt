@@ -1463,3 +1463,35 @@ Country Name and Flag - fixed
 -u div element dodajemo komponentu LuFolderCheck i kreiramo span element sa Tailwind CSS klasama
 -u komponentu properties/[id]/page.tsx importujemo komponentu Amenities.ts
 -u jsx-u dodajemo komponentu Amenities sa prop amenities
+
+125. Property Map Component
+-otvorimo web stranicu: https://react-leaflet.js.org/
+-otvorimo link: https://www.npmjs.com/package/leaflet
+-otvorimo link: https://www.npmjs.com/package/react-leaflet
+-otvorimo link: https://www.npmjs.com/package/@types/leaflet
+-u terminalu instaliramo Leaflet pakete
+-u terminalu ukucamo komande: npm install react react-dom leaflet react-leaflet i npm install -D @types/leaflet
+-u folderu components/properties kreiramo komponentu PropertyMap.tsx
+-u komponentu PropertyMap.tsx dodajemo direktivu 'use client'
+-importujemo komponente  MapContainer, TileLayer, Marker i ZoomControl iz paketa React Leaflet
+-importujemo i kreiramo funkciju icon() iz paketa Leaflet
+-vrijednost funkcije icon() pohranjujemo u varijablu const markerIcon
+-importujemo funkciju findCountryByCode iz foldera utils
+-importujemo komponente Title.tsx i CountryFlagAndName.tsx
+-importujemo CSS stil za Leaflet biblioteku
+-funkciji PropertyMap() dodajemo parametar destruktuirani prop countryCode sa tipom string
+-kreiramo varijable const defaultLocation i const location
+-u roditelj div elementu kreiramo div element
+-u taj div element dodajemo komponente Title i CountryFlagAndName
+-komponenti Title dodajemo prop text
+-komponenti CountryFlagAndName dodajemo prop countryCode
+-u roditelj div element dodajemo komponentu MapContainer sa otvorenim i zatvorenim tagom
+-komponenti MapContainer dodajemo prop scrollWheelZoom, zoomControl, className, center i zoom
+-u komponentu MapContainer dodajemo komponente TileLayer, ZoomControl i Marker
+-komponenti TileLayer dodajemo prop attribution i url
+-komponenti ZoomControl dodajemo prop position
+-komponenti Marker dodajemo prop position i icon
+-u komponentu properties/[id]/page.tsx importujemo komponentu Skeleton iz komponente ui/skeleton.tsx
+-importujemo i kreiramo funkciju dynamic iz Next Dynamic paketa
+-vrijednost funkcije dynamic pohranjujemo u varijablu komponentu const DynamicMap
+-u jsx-u dodajemo komponentu DynamicMap sa prop countryCode
