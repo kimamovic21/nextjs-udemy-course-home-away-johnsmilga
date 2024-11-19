@@ -1532,3 +1532,28 @@ Country Name and Flag - fixed
 -u komponentu SelectTrigger do komponentu SelectValue
 -u komponentu SelectContent dodajemo metodu numbers.map()
 -u funkciju map() dodajemo komponentu SelectItem sa prop key i value
+
+130. SubmitReviews Component
+-u komponentu properties/[id]/page.tsx importujemo komponentu SubmitReview.tsx
+-u jsx-u dodajemo komponentu SubmitReview sa prop propertyId
+-u komponentu SubmitReview.tsx dodajemo direktivu 'use client'
+-importujemo funkciju useState iz paketa React
+-importujemo funkciju createReviewAction iz foldera utils
+-importujemo komponente Button i Card iz foldera ui
+-importujemo komponentu SubmitButton iz komponente Buttons.tsx
+-importujemo komponente FormContainer.tsx, RatingInput.tsx i TextAreaInput.tsx iz foldera form
+-funkciji SubmitReview() dodajemo parametar destruktuirani prop propertyId sa tipom string
+-kreiramo state varijablu const isReviewFormVisible i set funkciju setIsReviewFormVisible
+-u roditelj div element dodajemo komponente Button i Card
+-komponenti Button dodajemo prop onClick
+-u prop onClick proslijedujemo anonimnu funkciju
+-u anonimnu funkciju proslijedujemo funkciju setIsReviewFormVisible
+-dodajemo uslov logicki operator isReviewFormVisible && za prikazivanje komponente Card
+-komponenti Card dodajemo prop className i Tailwind CSS klase
+-u komponentu Card dodajemo komponentu FormContainer
+-komponenti FormContainer dodajemo prop action
+-u prop action proslijedujemo vrijednost funkcije createReviewAction
+-kreiramo input element sa atributima type, name i value
+-u komponentu FormContainer dodajemo komponentu RatingInput sa prop name
+-dodajemo komponentu TextAreaInput sa prop name, labelText i defaultValue
+-dodajemo komponentu SubmitButton sa prop text i className
