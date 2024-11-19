@@ -3999,8 +3999,8 @@ return (
 ```tsx
 import { fetchPropertyReviews } from '@/utils/actions';
 import Title from '@/components/properties/Title';
-
 import ReviewCard from './ReviewCard';
+
 async function PropertyReviews({ propertyId }: { propertyId: string }) {
   const reviews = await fetchPropertyReviews(propertyId);
   if (reviews.length < 1) return null;

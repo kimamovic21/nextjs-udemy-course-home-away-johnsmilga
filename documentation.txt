@@ -1577,3 +1577,21 @@ Country Name and Flag - fixed
 -u objekt findMany() dodajemo objekt where, select i orderBy
 -u objekt select dodajemo objekt profile
 -dodajemo izjavu return reviews
+
+133. Render Reviews 
+-u komponentu properties/[id]/page.tsx importujemo komponentu PropertyReviews.tsx
+-u jsx-u komponenti PropertyReviews dodajemo prop propertyId
+-u komponentu PropertyReviews.tsx importujemo funkciju fetchPropertyReviews iz foldera utils
+-importujemo komponente Title.tsx i ReviewCard.tsx
+-funkciji PropertyReviews() dodajemo parametar destruktuirani prop propertyId sa tipom string
+-funkciji PropertyReviews() dodajemo asinhronost
+-dodajemo metodu await fetchProperties()
+-vrijednost metode await fetchProperties() pohranjujemo u varijablu const reviews
+-dodajemo uslov if (reviews.length < 1)
+-u roditelj div element dodajemo komponentu Title sa prop text
+-kreiramo div element sa Tailwind CSS Grid klasama
+-u div element dodajemo metodu reviews.map()
+-u funkciji map() destruktuiramo varijable const { comment, rating } iz varijable review
+-destruktuiramo varijable const { firstName, profileImage } iz varijable review.profile
+-kreiramo varijablu objekt const reviewInfo
+-u izjavu return dodajemo komponentu ReviewCard sa prop key i reviewInfo
