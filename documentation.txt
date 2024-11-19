@@ -1557,3 +1557,15 @@ Country Name and Flag - fixed
 -u komponentu FormContainer dodajemo komponentu RatingInput sa prop name
 -dodajemo komponentu TextAreaInput sa prop name, labelText i defaultValue
 -dodajemo komponentu SubmitButton sa prop text i className
+
+131. SubmitReview Functionality
+-u schemas.ts fajlu kreiramo i eksportujemo varijablu const createReviewSchema
+-u actions.ts fajl importujemo varijablu createReviewSchema
+-funkciji createReviewAction() dodajemo parametre prevState i formData sa tipovima
+-kreiramo varijablu const user 
+-dodajemo blokove koda try - catch
+-u bloku koda try kreiramo varijable const rawData i const validatedFields
+-dodajemo metodu await db.review.create()
+-dodajemo funkciju revalidatePath()
+-u izjavu return dodajemo objekt poruku da je recenzija uspjesno poslana
+-u blok koda catch dodajemo funkciju renderError()

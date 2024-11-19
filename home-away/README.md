@@ -3928,7 +3928,7 @@ export const createReviewSchema = z.object({
 });
 ```
 
-- action.ts
+- actions.ts
 
 ```ts
 export async function createReviewAction(prevState: any, formData: FormData) {
