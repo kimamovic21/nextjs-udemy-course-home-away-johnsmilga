@@ -1513,3 +1513,22 @@ Country Name and Flag - fixed
 -u actions.ts fajlu kreiramo i eksportujemo cetiri asinhrone funkcije: createReviewAction(), fetchPropertyReviews(), fetchPropertyReviewsByUser() i deleteReviewAction()
 -u folderu components kreiramo folder reviews
 -u folderu reviews kreiramo pet tsx komponenti: Comment, PropertyReviews, Rating, SubmitReview i ReviewCard
+
+129. RatingInput Component
+-otvorimo link: https://ui.shadcn.com/docs/components/select
+-otvorimo link: https://ui.shadcn.com/docs/components/label
+-u folderu components/form kreiramo komponentu RatingInput.tsx
+-u komponentu RatingInput.tsx import komponentu Label iz komponente ui/label.tsx
+-importujemo komponente  Select, SelectContent, SelectItem, SelectTrigger, SelectValue iz komponente ui/select.tsx
+-funkciji RatingInput() dodajemo parametre destruktuirane prop name i labelText
+-parametrima dodajemo tipove
+-u funkciju RatingInput() dodajemo metodu Array.from()
+-vrijednost metode Array.from() pohranjujemo u varijablu const numbers
+-u jsx-u roditelj div elementu dodajemo Tailwind CSS klase
+-u div element dodajemo elemente Label i Select 
+-elementu Label dodajemo prop html i className
+-komponenti Select dodajemo prop defaultValue, name i required
+-u komponentu Select dodajemo komponente SelectTrigger i SelectContent
+-u komponentu SelectTrigger do komponentu SelectValue
+-u komponentu SelectContent dodajemo metodu numbers.map()
+-u funkciju map() dodajemo komponentu SelectItem sa prop key i value
