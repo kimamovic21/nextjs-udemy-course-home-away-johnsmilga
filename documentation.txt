@@ -1569,3 +1569,11 @@ Country Name and Flag - fixed
 -dodajemo funkciju revalidatePath()
 -u izjavu return dodajemo objekt poruku da je recenzija uspjesno poslana
 -u blok koda catch dodajemo funkciju renderError()
+
+132. Fetch Reviews
+-u actions.ts fajlu, funkciji fetchPropertyReviews() dodajemo parametar propertyId sa tipom string
+-dodajemo metodu await db.review.findMany()
+-vrijednost metode await db.review.findMany() pohranjujemo u varijablu const reviews
+-u objekt findMany() dodajemo objekt where, select i orderBy
+-u objekt select dodajemo objekt profile
+-dodajemo izjavu return reviews
