@@ -1595,3 +1595,43 @@ Country Name and Flag - fixed
 -destruktuiramo varijable const { firstName, profileImage } iz varijable review.profile
 -kreiramo varijablu objekt const reviewInfo
 -u izjavu return dodajemo komponentu ReviewCard sa prop key i reviewInfo
+
+134. ReviewCard Component
+-otvorimo link: https://ui.shadcn.com/docs/components/card
+-u komponentu ReviewCard.tsx importujemo komponente Card, CardContent i CardHeader iz komponentu ui/card.tsx
+-importujemo komponenta Rating.tsx i Comment.tsx
+-importujemo komponentu Image
+-kreiramo tip ReviewCardProps
+-funkciji ReviewCard() dodajemo parametre destruktuirane prop reviewInfo i children
+-parametrima dodajemo tip ReviewCardProps
+-u jsx-u dodajemo komponentu Card kao roditelj element
+-komponenti Card dodajemo prop className
+-u komponentu Card dodajemo komponente CardHeader i CardContent
+-u komponenti CardHeader kreiramo div element sa Tailwind CSS Flex klasama
+-u div elementu sa Tailwind CSS Flex klasama dodajemo komponentu Image i kreiramo div element sa Tailwind CSS klasom ml-4
+-u div elementu sa klasom ml-4 kreiramo h3 element i dodajemo komponentu Rating sa prop rating
+-u komponentu CardContent dodajemo komponentu Comment sa prop comment
+-u komponenti Card kreiramo div element u koji dodajemo vrijednost prop children
+-u komponentu Rating.tsx importujemo React ikonice FaStar i FaRegStar
+-funkciji Rating() dodajemo parametar destruktuirani prop rating
+-u funkciji Rating() dodajemo metodu Array.from()
+-vrijednost metode Array.from() pohranjujemo u varijablu const stars
+-u jsx-u roditelj div elementu dodajemo Tailwind CSS Flex klase
+-u div element dodajemo metodu stars.map() sa parametrima isFilled, i
+-u funkciji map() kreiramo varijablu const className
+-u izjavu return dodajemo uslov ternarni operator za varijablu isFilled
+-u prvi uslov dodajemo komponentu FaStar sa prop className i key
+-u drugi uslov dodajemo komponentu FaRegStar sa prop className i key
+-u komponentu Comment.tsx dodajemo direktivu 'use client'
+-importujemo funkciju useState iz paketa React
+-importujemo komponentu Button iz komponente ui/button.tsx
+-funkciji Comment() dodajemo parametar destruktuirani prop comment sa tipom string
+-kreiramo state varijablu isExpanded i set funkciju setIsExpanded
+-kreiramo funkciju toggleExpanded()
+-u funkciju toggleExpanded() dodajemo funkciju setIsExpanded(!isExpanded)
+-kreiramo dvije varijable const longComment i const displayComment
+-u roditelj div elementu kreiramo p element u kojem prikazujemo varijablu displayComment
+-dodajemo logicki operator za varijablu longComment && i komponentu BUtton
+-komponenti Button dodajemo prop variant, className i onClick
+-u prop onClick proslijedujemo funkciju toggleExpanded
+-u komponentu Button dodajemo ternarni uslov za varijablu isExpanded
