@@ -4398,13 +4398,17 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
 }
 ```
 
-Prisma's findUnique and findFirst methods are used to retrieve a single record from the database, but they have some differences in their behavior:
+Prisma's findUnique and findFirst methods are used to retrieve a single record from the database, 
+but they have some differences in their behavior:
 
-- findUnique: This method is used when you want to retrieve a single record that matches a unique constraint or a primary key. If no record is found, it returns null.
+- findUnique: This method is used when you want to retrieve a single record that matches a unique constraint 
+  or a primary key. If no record is found, it returns null.
 
-- findFirst: This method is used when you want to retrieve a single record that matches a non-unique constraint. It can also be used with ordering and filtering. If no record is found, it returns null.
+- findFirst: This method is used when you want to retrieve a single record that matches a non-unique constraint. 
+  It can also be used with ordering and filtering. If no record is found, it returns null.
 
-In summary, use findUnique when you're sure the field you're querying by is unique, and use findFirst when you're querying by a non-unique field or need more complex queries with ordering and filtering.
+In summary, use findUnique when you're sure the field you're querying by is unique, and use findFirst when you're 
+querying by a non-unique field or need more complex queries with ordering and filtering.
 
 ```ts
 const user = await prisma.user.findUnique({
@@ -4424,6 +4428,7 @@ const user = await prisma.user.findFirst({
   },
 });
 ```
+
 
 ### Booking Model
 

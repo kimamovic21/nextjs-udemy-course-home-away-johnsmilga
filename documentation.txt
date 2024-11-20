@@ -1719,3 +1719,13 @@ Country Name and Flag - fixed
 -funkciji PropertyRating() dodajemo asinhronost
 -vrijednost funkcije await fetchPropertyRating(propertyId) pohranjujemo u destruktuirane varijable const { rating, count }
 -dodajemo uslov if (count === 0)
+
+140. Allow Review
+-u actions.ts fajlu kreiramo i eksportujemo asinhronu funkciju findExistingReview()
+-funkciji findExistingReview() dodajemo parametre userId i propertyId sa tipovima string
+-u izjavu return dodajemo metodu db.review.findFirst()
+-u komponentu properties/[id]/page.tsx importujemo i kreiramo funkciju findExistingReview
+-importujemo funciju auth iz paketa Clerk 
+-vrijednost funkcije auth() pohranjujemo u destruktuiranu varijablu const { userId }
+-kreiramo varijable const isNotOwner i const reviewDoesNotExist
+-u jsx-u dodajemo logicki operator za varijablu reviewDoesNotExist && i prikazivanje komponente SubmitReview
