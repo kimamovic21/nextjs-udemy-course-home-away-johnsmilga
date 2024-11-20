@@ -1669,3 +1669,26 @@ Country Name and Flag - fixed
 -dodajemo objekt throw new Error()
 -u jsx-u dodajemo komponentu Button sa prop type, size, variant i className
 -u komponentu Button dodajemo uslov ternarni operator za varijablu pending 
+
+137. Reviews Page
+-u komponenti reviews/page.tsx funkciji ReviewsPage() dodajemo asinhronost
+-importujemo funkcije fetchPropertyReviewsByUser i deleteReviewAction iz foldera utils
+-importujemo tsx komponente EmptyList, Title, ReviewCard i FormContainer
+-u funkciju ReviewsPage() dodajemo metodu await fetchPropertyReviewsByUser
+-vrijednost metode await fetchPropertyReviewsByUser() pohranjujemo u varijablu const reviews
+-dodajemo uslov if (reviews.length === 0)
+-u jsx-u dodajemo prazan fragment kao roditelj element
+-u jsx dodajemo komponentu Title sa prop text
+-kreiramo section element sa Tailwind CSS klasama
+-u section element dodajemo metodu reviews.map()
+-destruktuiramo varijable const { comment, rating } iz variant review
+-destruktuiramo varijable const { name, image } iz varijable review.property
+-kreiramo varijablu objekt const reviewInfo
+-u funkciju map() dodajemo komponentu ReviewCard sa prop key i reviewInfo
+-kreiramo funkciju DeleteReview()
+-funkciji DeleteReview() dodajemo parametar destruktuirani prop reviewId sa tipom string
+-u jsx-u dodajemo komponentu FormContainer sa prop action
+-kreiramo funkciju deleteReview()
+-u prop action proslijedujemo funkciju deleteReview
+-u komponentu FormContainer dodajemo komponentu IconButton sa prop actionType
+-u komponentu ReviewCard dodajemo komponentu DeleteReview sa prop reviewId
