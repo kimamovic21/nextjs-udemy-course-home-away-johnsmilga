@@ -1635,3 +1635,21 @@ Country Name and Flag - fixed
 -komponenti Button dodajemo prop variant, className i onClick
 -u prop onClick proslijedujemo funkciju toggleExpanded
 -u komponentu Button dodajemo ternarni uslov za varijablu isExpanded
+
+135. Fetch and Delete User Reviews
+-u actions.ts fajlu u funkciju fetchPropertyReviewsByUser() dodajemo metodu await getAuthUser()
+-vrijednost metode await getAuthUser() pohranjujemo u varijablu const user
+-dodajemo metodu await db.review.findMany()
+-vrijednost metode await db.review.findMany() pohranjujemo u varijablu const reviews
+-u funkciju findMany dodajemo objekte where i select
+-u objekt select dodajemo objekt property
+-dodajemo izjavu return reviews
+-u funkciju deleteReviewAction() dodajemo parametar prevState
+-u funkciji deleteReviewAction() destruktuiramo varijablu const { reviewId} iz varijable prevState
+-kreiramo varijablu const user
+-dodajemo blokove koda try - catch
+-u blok koda try dodajemo metodu await db.review.delete()
+-u funkciju delete dodajemo objekt where
+-dodajemo funkciju revalidatePath()
+-dodajemo izjavu return objekt poruku da je recenzija uspjesno obrisana
+-u blok koda catch dodajemo funkciju return renderError(error)
