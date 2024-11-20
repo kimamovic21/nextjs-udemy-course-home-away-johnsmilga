@@ -1653,3 +1653,19 @@ Country Name and Flag - fixed
 -dodajemo funkciju revalidatePath()
 -dodajemo izjavu return objekt poruku da je recenzija uspjesno obrisana
 -u blok koda catch dodajemo funkciju return renderError(error)
+
+136. IconButton Component
+-u komponentu Buttons.tsx importujemo React ikonice LuTrash2 i LuPenSquare
+-kreiramo tip actionType
+-kreiramo i eksportujemo funkciju IconButton() 
+-funkciji IconButton() dodajemo parametar destruktuirani prop actionType sa tiopm actionType
+-u funkciju IconButton dodajemo funkciju useFormStatus()
+-vrijednost funkcije useFormStatus() pohranjujemo u destruktuiranu varijablu const { pending }
+-kreiramo funkciju renderIcon()
+-u funkciju renderIcon() dodajemo uslov switch (actionType)
+-u slucaj edit dodajemo komponentu LuPenSquare
+-u slucaj delete dodajemo komponentu LuTrash2
+-u slucaju default kreiramo varijablu const never sa tipom never
+-dodajemo objekt throw new Error()
+-u jsx-u dodajemo komponentu Button sa prop type, size, variant i className
+-u komponentu Button dodajemo uslov ternarni operator za varijablu pending 
