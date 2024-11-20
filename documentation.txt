@@ -1692,3 +1692,18 @@ Country Name and Flag - fixed
 -u prop action proslijedujemo funkciju deleteReview
 -u komponentu FormContainer dodajemo komponentu IconButton sa prop actionType
 -u komponentu ReviewCard dodajemo komponentu DeleteReview sa prop reviewId
+
+138. Reviews Loading Component
+-u folderu app/reviews kreiramo komponentu loading.tsx
+-u komponentu loading.tsx dodajemo direktivu 'use client'
+-importujemo komponente Card, CardContent i CardHeader iz komponente ui/card.tsx
+-importujemo komponentu Skeleton iz komponente ui/skeleton.tsx
+-kreiramo i eksportujemo funkciju loading()
+-u funkciji loading(), u jsx-u kreiramo roditelj section element sa Tailwind CSS klasama
+-kreiramo funkciju ReviewLoadingCard()
+-u funkciju ReviewLoadingCard(), u jsx-u dodajemo komponentu Card roditelj element
+-u komponentu Card dodajemo komponentu CardHeader
+-u komponenti CardHeader kreiramo div element sa Tailwind CSS Flex klasama
+-u div element dodajemo komponentu Skeleton i kreiramo jos jedan div element
+-u div element dodajemo dvije komponente Skeleton
+-komponentama Skeleton dodajemo Tailwind CSS klase
