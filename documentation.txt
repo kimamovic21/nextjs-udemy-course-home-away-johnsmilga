@@ -1707,3 +1707,15 @@ Country Name and Flag - fixed
 -u div element dodajemo komponentu Skeleton i kreiramo jos jedan div element
 -u div element dodajemo dvije komponente Skeleton
 -komponentama Skeleton dodajemo Tailwind CSS klase
+
+139. PropertyRating Component - Complete
+-u actions.ts fajlu kreiramo i eksportujemo asinhronu funkciju fetchPropertyRating
+-funkciji fetchPropertyRating() dodajemo parametar propertyId sa tipom string
+-u funkciju fetchPropertyRating() dodajemo metodu db.review.groupBy()
+-vrijednost metode db.review.groupBy() pohranjujemo u varijablu const result
+-u funkciju groupBy() dodajemo niz by, objekte _avg, _count i where
+-u izjavu return dodajemo objekt ukoliko ne postoje recenzije
+-u komponentu PropertyRating.tsx importujemo i kreiramo funkciju fetchPropertyRating iz foldera utils
+-funkciji PropertyRating() dodajemo asinhronost
+-vrijednost funkcije await fetchPropertyRating(propertyId) pohranjujemo u destruktuirane varijable const { rating, count }
+-dodajemo uslov if (count === 0)

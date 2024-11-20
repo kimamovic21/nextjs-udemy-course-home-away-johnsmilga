@@ -4307,6 +4307,63 @@ const ReviewLoadingCard = () => {
 export default loading;
 ```
 
+
+### PropertyRating Component - Complete
+
+- actions
+
+```ts
+export async function fetchPropertyRating(propertyId: string) {
+  const result = await db.review.groupBy({
+    by: ['propertyId'],
+    _avg: {
+      rating: true,
+    },
+    _count: {
+      rating: true,
+    },
+    where: {
+      propertyId,
+    },
+  });
+
+  // empty array if no reviews
+  return {
+    rating: result[0]?._avg.rating?.toFixed(1) ?? 0,
+    count: result[0]?._count.rating ?? 0,
+  };
+}
+```
+
+- components/card/PropertyRating.tsx
+
+```tsx
+import { fetchPropertyRating } from '@/utils/actions';
+import { FaStar } from 'react-icons/fa';
+
+async function PropertyRating({
+  propertyId,
+  inPage,
+}: {
+  propertyId: string;
+  inPage: boolean;
+}) {
+  const { rating, count } = await fetchPropertyRating(propertyId);
+  if (count === 0) return null;
+  const className = `flex gap-1 items-center ${inPage ? 'text-md' : 'text-xs'}`;
+  const countText = count === 1 ? 'review' : 'reviews';
+  const countValue = `(${count}) ${inPage ? countText : ''}`;
+  return (
+    <span className={className}>
+      <FaStar className='w-3 h-3' />
+      {rating} {countValue}
+    </span>
+  );
+}
+
+export default PropertyRating;
+```
+
 ### Allow Review
 
 - actions.ts
@@ -4366,62 +4423,6 @@ const user = await prisma.user.findFirst({
     name: 'asc',
   },
 });
-```
-
-### PropertyRating - Complete
-
-- actions
-
-```ts
-export async function fetchPropertyRating(propertyId: string) {
-  const result = await db.review.groupBy({
-    by: ['propertyId'],
-    _avg: {
-      rating: true,
-    },
-    _count: {
-      rating: true,
-    },
-    where: {
-      propertyId,
-    },
-  });
-
-  // empty array if no reviews
-  return {
-    rating: result[0]?._avg.rating?.toFixed(1) ?? 0,
-    count: result[0]?._count.rating ?? 0,
-  };
-}
-```
-
-- components/card/PropertyRating.tsx
-
-```tsx
-import { fetchPropertyRating } from '@/utils/actions';
-import { FaStar } from 'react-icons/fa';
-
-async function PropertyRating({
-  propertyId,
-  inPage,
-}: {
-  propertyId: string;
-  inPage: boolean;
-}) {
-  const { rating, count } = await fetchPropertyRating(propertyId);
-  if (count === 0) return null;
-  const className = `flex gap-1 items-center ${inPage ? 'text-md' : 'text-xs'}`;
-  const countText = count === 1 ? 'review' : 'reviews';
-  const countValue = `(${count}) ${inPage ? countText : ''}`;
-  return (
-    <span className={className}>
-      <FaStar className='w-3 h-3' />
-      {rating} {countValue}
-    </span>
-  );
-}
-
-export default PropertyRating;
 ```
 
 ### Booking Model
