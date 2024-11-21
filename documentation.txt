@@ -1748,3 +1748,32 @@ Section 04: Booking
 -u komponenti properties/[id]/page.tsx brisemo import za komponentu BookingCalendar
 -u folderu components kreiramo folder booking
 -u folderu booking kreiramo pet tsx komponenti: BookingCalendar, BookingContainer, BookingForm, BookingWrapper i ConfirmBooking
+
+143. Zustand Library
+-otvorimo link: https://zustand.docs.pmnd.rs/getting-started/introduction
+-u terminalu instaliramo paket Zustand sa komandom npm i zustand@4.5.2
+-u folderu utils kreiramo store.ts fajl
+-u store.ts fajl importujemo i kreiramo funkciju store iz paketa Zustand
+-importujemo tipove DateRange i Booking
+-kreiramo tip PropertyState
+-funkciji create dodajemo tip <PropertyState> 
+-u funkciju create dodajemo izjavu return i objekt
+-u objektu se nalaze key - value parovi za propertyId, price, bookings i range
+-vrijednost funkcije create() pohranjujemo u varijablu const useProperty
+-eksportujemo varijablu const useProperty
+-u komponentu BookingWrapper.tsx dodajemo direktivu 'use client'
+-importujemo funkcije useEffect i useProperty
+-importujemo tip Booking
+-importujemo komponente BookingCalendar.tsx i BookingContainer.tsx
+-kreiramo tip BookingWrapperProps
+-funkciji BookingWrapper() dodajemo parametre destruktuirane prop propertyId, price i bookings
+-parametrima dodajemo tip BookingWrapperProps
+-u funkciju BookingWrapper(), dodajemo funkciju useEffect()
+-prvi argument funkcije useEffect() je anonimna funkcija
+-drugi argument funkcije useEffect() je prazan niz
+-u anonimnu funkciju dodajemo funkciju useProperty.setState()
+-u jsx-u dodajemo prazan fragment roditelj element
+-u prazan fragment dodajemo komponente BookingCalendar i BookingContainer
+-u komponenti properties/[id]/page.tsx kreiramo funkciju DynamicBookingWrapper()
+-u jsx-u, u div element za kalendar dodajemo komponentu DynamicBookingWrapper
+-komponenti DynamicBookingWrapper dodajemo prop propertyId, price i bookings

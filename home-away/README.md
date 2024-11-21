@@ -4567,7 +4567,7 @@ type BookingWrapperProps = {
   price: number;
   bookings: Booking[];
 };
-export default function BookingWrapper({
+function BookingWrapper({
   propertyId,
   price,
   bookings,
@@ -4586,6 +4586,7 @@ export default function BookingWrapper({
     </>
   );
 }
+export default BookingWrapper;
 ```
 
 - properties/[id]/page.tsx
