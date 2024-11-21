@@ -1729,3 +1729,13 @@ Country Name and Flag - fixed
 -vrijednost funkcije auth() pohranjujemo u destruktuiranu varijablu const { userId }
 -kreiramo varijable const isNotOwner i const reviewDoesNotExist
 -u jsx-u dodajemo logicki operator za varijablu reviewDoesNotExist && i prikazivanje komponente SubmitReview
+
+
+Section 04: Booking
+
+141. Booking Model
+-u reviews/loading.tsx komponenti brisemo komponentu CardContent
+-u schema.prisma fajlu kreiramo model Booking
+-u modele Profile i Property dodajemo opciju bookings
+-u terminalu ukucamo komandu npx prisma db push
+-u terminalu ukucamo komandu npx prisma studio
