@@ -1739,3 +1739,12 @@ Section 04: Booking
 -u modele Profile i Property dodajemo opciju bookings
 -u terminalu ukucamo komandu npx prisma db push
 -u terminalu ukucamo komandu npx prisma studio
+
+142. Booking Components
+-u actions.ts fajlu, u funkciju fetchPropertyDetails(), u funkciju findUnique() dodajemo objekt bookings
+-u objekt bookings dodajemo objekt select
+-u types.ts fajlu kreiramo i eksportujemo tipove DateRangeSelect i Booking
+-brisemo komponentu BookingCalendar.tsx
+-u komponenti properties/[id]/page.tsx brisemo import za komponentu BookingCalendar
+-u folderu components kreiramo folder booking
+-u folderu booking kreiramo pet tsx komponenti: BookingCalendar, BookingContainer, BookingForm, BookingWrapper i ConfirmBooking
