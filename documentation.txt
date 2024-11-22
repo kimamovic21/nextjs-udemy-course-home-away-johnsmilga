@@ -1804,3 +1804,17 @@ Section 04: Booking
 -dodajemo funkciju useEffect() sa dva argumenta
 -prvi argument je anonimna funkcija, a drugi argument je prazan niz
 -u anonimnu funkciju dodajemo funkciju useProperty.setState()
+
+145. Calculate Totals
+-u komponenti BookingContainer.tsx vrijednost funkcije useProperty() pohranjujemo u destr varijablu const { range }
+-dodajemo dva uslova if
+-u folderu utils kreiramo calculateTotals.ts fajl
+-u calculateTotals.ts fajl imporujemo funkciju calculateDaysBetween iz calendar.ts fajla
+-kreiramo tip BookingDetails
+-kreiramo i eksportujemo funkciju calculateTotals() 
+-funkciji calculateTotals() dodajemo tri destruktuirana parametra checkIn, checkOut i price
+-parametrima dodajemo tip BookingDetails
+-u funkciju calculateTotals() dodajemo funkciju calculateDaysBetween() sa destruktuiranim argumentima checkIn, checkOut 
+-vrijednost funkcije calculateDaysBetween() pohranjujemo u varijablu const totalNights
+-kreiramo varijable subTotal, cleaning, service, tax i orderTotal
+-u izjavu return dodajemo objekt i kreirane varijable
