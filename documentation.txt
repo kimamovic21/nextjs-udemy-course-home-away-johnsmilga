@@ -1818,3 +1818,26 @@ Section 04: Booking
 -vrijednost funkcije calculateDaysBetween() pohranjujemo u varijablu const totalNights
 -kreiramo varijable subTotal, cleaning, service, tax i orderTotal
 -u izjavu return dodajemo objekt i kreirane varijable
+
+146. Booking Form
+-u komponentu BookingForm.tsx importujemo funkcije useProperty, calculateTotals i formatCurrency iz foldera utils
+-importujemo komponente Card, CardTitle i Separator iz foldera ui/components
+-u funkciji BookingForm(), vrijednost funkcije useProperty pohranjujemo u destruktuirane varijable const { range, price }
+-kreiramo varijable const checkIn i const checkOut
+-dodajemo funkciju calculateTotals() sa destruktuiranim argumentima checkIn, checkOut i price
+-vrijednost funkcije calculateTotals() pohranjujemo u sest destruktuiranih varijabli 
+-u komponenti BookingForm.tsx kreiramo komponentu FormRow() 
+-komponenti FormRow() dodajemo parametre destruktuirane prop label i amount
+-parametrima dodajemo tipove string i number
+-u jsx-u kreiramo parametar p sa Tailwind CSS klasama kao roditelj element
+-u p elementu kreiramo dva span elementa
+-u prvom span elementu prikazujemo varijablu label
+-u drugom span elementu prikazujemo vrijednost funkcije formatCurrency(amount)
+-u funkciji BookingForm(), u jsx-u dodajemo komponentu Card kao roditelj element
+-komponenti Card dodajemo Tailwind CSS klase
+-u komponentu Card dodajemo komponentu CardTitle sa prop className
+-dodajemo cetiri komponente FormRow
+-komponentama FormRow dodajemo prop label i amount
+-dodajemo komponentu Separator sa prop className
+-dodajemo komponentu CardTitle sa prop className
+-u komponentu CardTitle dodajemo komponentu FormRow sa prop label i amount

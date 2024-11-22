@@ -4788,7 +4788,7 @@ function BookingContainer() {
 
   if (!range || !range.from || !range.to) return null;
   if (range.to.getTime() === range.from.getTime()) return null;
-  
+
   return (
     <div className='w-full'>
       <BookingForm />
@@ -4834,6 +4834,7 @@ import { Card, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { useProperty } from '@/utils/store';
 import { formatCurrency } from '@/utils/format';
+
 function BookingForm() {
   const { range, price } = useProperty((state) => state);
   const checkIn = range?.from as Date;
@@ -4845,9 +4846,10 @@ function BookingForm() {
       checkOut,
       price,
     });
+
   return (
     <Card className='p-8 mb-4'>
-      <CardTitle className='mb-8'>Summary </CardTitle>
+      <CardTitle className='mb-8'>Summary</CardTitle>
       <FormRow label={`$${price} x ${totalNights} nights`} amount={subTotal} />
       <FormRow label='Cleaning Fee' amount={cleaning} />
       <FormRow label='Service Fee' amount={service} />
@@ -4858,7 +4860,7 @@ function BookingForm() {
       </CardTitle>
     </Card>
   );
-}
+};
 
 function FormRow({ label, amount }: { label: string; amount: number }) {
   return (
@@ -4867,7 +4869,7 @@ function FormRow({ label, amount }: { label: string; amount: number }) {
       <span>{formatCurrency(amount)}</span>
     </p>
   );
-}
+};
 
 export default BookingForm;
 ```
