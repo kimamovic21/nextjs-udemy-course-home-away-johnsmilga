@@ -1841,3 +1841,23 @@ Section 04: Booking
 -dodajemo komponentu Separator sa prop className
 -dodajemo komponentu CardTitle sa prop className
 -u komponentu CardTitle dodajemo komponentu FormRow sa prop label i amount
+
+147. Confirm Booking Component
+-u actions.ts fajlu kreiramo i eksportujemo asinhronu funkciju createBookingAction()
+-u komponentu ConfirmBooking.tsx importujemo funkciju auth i komponentu SignInButton iz paketa Clerk
+-importujemo funkciju useProperty iz utils/store.ts fajla
+-u funkciju ConfirmBooking() dodajemo funkcije useAuth() i useProperty()
+-vrijednost funkcije useAuth() pohranjujemo u destruktuiranu varijablu const { userId }
+-vrijednost funkcije useProperty() pohranjujemo u destruktuirane varijable const { propertyId, range }
+-kreiramo dvije varijable const checkIn i const checkOut
+-dodajemo uslov if (!userId)
+-u uslov if (!userId) dodajemo izjavu return i komponentu SignInButton sa prop mode
+-importujemo komponentu FormContainer.tsx, komponente Button i SubmitButton iz foldera components
+-u komponentu SignInButton dodajemo komponentu Button sa prop type i className
+-u jsx-u kreiramo section roditelj element
+-u section element dodajemo komponentu FormContainer sa prop action
+-u komponentu FormContainer dodajemo komponentu SubmitButton sa prop text i className
+-importujemo funkciju createBookingAction iz foldera utils/actions.ts
+-dodajemo metodu createBookingAction.bind()
+-vrijednost metode createBookingAction.bind() pohranjujemo u varijablu createBooking
+-u prop action proslijedujemo funkciju createBooking
