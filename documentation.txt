@@ -1861,3 +1861,24 @@ Section 04: Booking
 -dodajemo metodu createBookingAction.bind()
 -vrijednost metode createBookingAction.bind() pohranjujemo u varijablu createBooking
 -u prop action proslijedujemo funkciju createBooking
+
+148. Create Booking Action
+-u actions.ts fajl importujemo funkciju calculateTotals iz calculateTotals.ts fajla
+-funkciji createBookingAction() dodajemo parametar prevState
+-parametru prevState dodajemo tip objekt
+-kreiramo varijablu const user
+-vrijednost varijable prevState pohranjujemo u destruktuirane varijable const { propertyId, checkIn i checkOut }
+-dodajemo metodu await db.property.findUnique()
+-vrijednost metode await db.property.findUnique() pohranjujemo u varijablu const property
+-u funkciju findUnique() dodajemo objekte where i select
+-dodajemo uslov if (!property) 
+-u uslov if (!property) dodajemo izjavu objekt return da nekretnina nije pronadena
+-dodajemo funkciju calculateTotals()
+-funkciji calculateTotals() dodajemo destruktuirane argumente checkIn, checkOut i price: property.price
+-vrijednost funkcije calculateTotals() pohranjujemo u varijable const { orderTotal, totalNights }
+-dodajemo blokove koda try - catch
+-u blok koda try dodajemo metodu await db.booking.create()
+-vrijednost metode await db.booking.create() pohranjujemo u varijablu const booking
+-u funkciju create() dodajemo objekt data
+-u blok koda catch dodajemo funkciju renderError()
+-nakon blokove koda try - catch dodajemo izjavu return redirect()
