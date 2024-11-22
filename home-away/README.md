@@ -552,7 +552,7 @@ export default Providers;
 'use client';
 
 import { SignOutButton } from '@clerk/nextjs';
-import { useToast } from '../ui/use-toast';
+import { useToast } from '@/hooks/use-toast';
 
 function SignOutLink() {
   const { toast } = useToast();
@@ -753,7 +753,7 @@ export function SubmitButton({
 
 import { useFormState } from 'react-dom';
 import { useEffect } from 'react';
-import { useToast } from '@/components/ui/use-toast';
+import { useToast } from '@/hooks/use-toast';
 import { actionFunction } from '@/utils/types';
 
 const initialState = {
@@ -4709,16 +4709,40 @@ export function calculateDaysBetween({
 }
 ```
 
+### BookingContainer
+
+```tsx
+'use client';
+
+import { useProperty } from '@/utils/store';
+import ConfirmBooking from './ConfirmBooking';
+import BookingForm from './BookingForm';
+
+function BookingContainer() {
+  const { range } = useProperty((state) => state);
+
+  if (!range || !range.from || !range.to) return null;
+  if (range.to.getTime() === range.from.getTime()) return null;
+  return (
+    <div className='w-full'>
+      <BookingForm />
+      <ConfirmBooking />
+    </div>
+  );
+}
+
+export default BookingContainer;
+```
+
 ### BoookingCalendar
 
 ```tsx
 'use client';
 import { Calendar } from '@/components/ui/calendar';
 import { useEffect, useState } from 'react';
-import { useToast } from '@/components/ui/use-toast';
+import { useToast } from '@/hooks/use-toast';
 import { DateRange } from 'react-day-picker';
 import { useProperty } from '@/utils/store';
-
 import {
   generateDisabledDates,
   generateDateRange,
@@ -4744,32 +4768,9 @@ function BookingCalendar() {
       className='mb-4'
     />
   );
-}
+};
+
 export default BookingCalendar;
-```
-
-### BookingContainer
-
-```tsx
-'use client';
-
-import { useProperty } from '@/utils/store';
-import ConfirmBooking from './ConfirmBooking';
-import BookingForm from './BookingForm';
-function BookingContainer() {
-  const { range } = useProperty((state) => state);
-
-  if (!range || !range.from || !range.to) return null;
-  if (range.to.getTime() === range.from.getTime()) return null;
-  return (
-    <div className='w-full'>
-      <BookingForm />
-      <ConfirmBooking />
-    </div>
-  );
-}
-
-export default BookingContainer;
 ```
 
 ### CalculateTotals

@@ -1777,3 +1777,30 @@ Section 04: Booking
 -u komponenti properties/[id]/page.tsx kreiramo funkciju DynamicBookingWrapper()
 -u jsx-u, u div element za kalendar dodajemo komponentu DynamicBookingWrapper
 -komponenti DynamicBookingWrapper dodajemo prop propertyId, price i bookings
+
+144. Booking Container / Calendar - Initial Setup
+-u folderu utils kreiramo calendar.ts fajl
+-u calendar.ts fajl importujemo tipove DateRange i Booking
+-kreiramo i eksportujemo varijablu const defaultSelected 
+-kreiramo i eksportujemo funcije generateBlockedPeriods(), generateDateRange(), generateDisabledDates() i calculateDaysBetween()
+-u komponentu BookingContainer.tsx dodajemo direktivu 'use client'
+-importujemo i kreiramo funkciju useProperty iz utils/store.ts fajla
+-importujemo komponente ConfirmBooking.tsx i BookingForm.tsx
+-u jsx-u dodajemo roditelj div elementu Tailwind CSS klasu
+-u div element dodajemo komponente BookingForm i ConfirmBooking
+-vrijednost funkcije useProperty() pohranjujemo u varijablu const state
+-u komponentu BookingCalendar.tsx dodajemo direktivu 'use client'
+-u komponentu BookingCalendar.tsx importujemo funkcije useEffect i useState
+-importujemo tip DateRang iz paketa React Day Picker
+-importujemo komponentu Calendar iz komponente ui/calendar.tsx
+-importujemo funkciju useProperty iz utils/store.ts fajla
+-importujemo varijablu defaultSelected iz utils/calendar.ts fajla
+-kreiramo varijablu const currentDate
+-u funkciju useState() dodajemo varijablu defaultSelected
+-kreiramo state varijablu const range i set funkciju setRange()
+-funkciji useState dodajemo tipove <DateRange | undefined>
+-u jsx-u dodajemo komponentu Calendar
+-komponenti Calendar dodajemo prop mode, defaultMonth, selected, onSelect i className
+-dodajemo funkciju useEffect() sa dva argumenta
+-prvi argument je anonimna funkcija, a drugi argument je prazan niz
+-u anonimnu funkciju dodajemo funkciju useProperty.setState()
