@@ -8,10 +8,12 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { formatDate, formatCurrency } from '@/utils/format';
-import { fetchBookings } from '@/utils/actions';
+import { deleteBookingAction, fetchBookings } from '@/utils/actions';
+import { IconButton } from '@/components/form/Buttons';
 import Link from 'next/link';
 import EmptyList from '@/components/home/EmptyList';
 import CountryFlagAndName from '@/components/card/CountryFlagAndName';
+import FormContainer from '@/components/form/FormContainer';
 
 async function BookingsPage() {
   const bookings = await fetchBookings();
@@ -60,7 +62,7 @@ async function BookingsPage() {
                 <TableCell>{startDate}</TableCell>
                 <TableCell>{endDate}</TableCell>
                 <TableCell>
-                  {/* Delete Booking */}
+                  <DeleteBooking bookingId={id} />
                 </TableCell>
               </TableRow>
             );
@@ -68,6 +70,16 @@ async function BookingsPage() {
         </TableBody>
       </Table>
     </div>
+  );
+};
+
+function DeleteBooking({ bookingId }: { bookingId: string }) {
+  const deleteBooking = deleteBookingAction.bind(null, { bookingId });
+  
+  return (
+    <FormContainer action={deleteBooking}>
+      <IconButton actionType='delete' />
+    </FormContainer>
   );
 };
 

@@ -1962,3 +1962,17 @@ Section 04: Booking
 -u petoj komponenti dinamicki prikazujemo varijablu startDate
 -u sestoj komponenti dinamicki prikazujemo varijablu endDate
 -u sedmoj komponenti ce se dodati logika za brisanje rezervacije
+
+153. Delete Booking
+-u komponentu bookings/page.tsx importujemo funkciju deleteBookingAction iz foldera utils
+-importujemo komponentu FormContainer.tsx
+-importujemo komponentu IconButton iz komponente Buttons.tsx
+-kreiramo funkciju DeleteBooking() sa parametrom bookingId
+-parametru bookingId dodajemo tip string
+-u funkciju DeleteBooking() dodajemo metodu deleteBookingAction.bind()
+-vrijednost metode deleteBookingAction.bind() pohranjujemo u varijablu const deleteBooking
+-u jsx-u dodajemo komponentu FormContainer kao roditelj element
+-komponenti FormContainer dodajemo prop action
+-u prop action proslijedujemo funkciju deleteBooking
+-u komponentu FormContainer dodajemo komponentu IconButton sa prop actionType
+-u sedmu komponentu TableCell dodajemo komponentu DeleteBooking sa prop bookingId
