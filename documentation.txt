@@ -854,7 +854,7 @@ Section 03: HomeAway Project
 -funkciji createPropertyAction() dodajemo parametre prevState sa tipom any i formData sa tipm FormData
 -funkciji createPropertyAction() dodajemo tip Promise<>
 -u funkciji createBookingAction() kreiramo varijablu const user
--dodajemo blkove koda try - catch
+-dodajemo blokove koda try - catch
 -u bloku koda try kreiramo varijable const rawData i const validatedFields
 -u blok koda catch dodajemo izjavu return renderError()
 -u folderu rentals kreiramo komponentu page.tsx
@@ -1906,3 +1906,21 @@ Section 04: Booking
 -u uslov if dodajemo funkcije setRange(defaultSelected) i toast()
 -dodajemo uzjavu return true
 -izvan uslova if dodajemo izjavu return false
+
+151. Fetch Bookings and Delete Booking
+-u actions.ts fajlu kreiramo i eksportujemo asinhronu funkciju fetchBookings()
+-u funkciji fetchBookings() kreiramo varijablu const user
+-dodajemo metodu await db.booking.findMany()
+-vrijednost metode await db.booking.findMany() pohranjujemo u varijablu const bookings
+-u funkciju findMany() dodajemo objekte where, include i orderBy
+-dodajemo izjavu return bookings
+-kreiramo i eksportujemo asinhronu funkciju deleteBookingAction() sa parametrom prevState
+-parametru prevState dodajemo tip
+-u funkciji deleteBookingAction() vrijednost funkcije prevState pohranjujemo u destruktuiranu varijablu const { bookingId }
+-kreiramo varijablu const user
+-dodajemo blokove koda try i catch
+-u blok koda try dodajemo metodu await db.booking.delete()
+-u funkciju delete() dodajemo objekt where
+-dodajemo funkciju revalidatePath()
+-dodajemo izjavu return objekt poruku da je rezervacija uspjesno obrisana
+-u blok koda catch dodajemo funkciju renderError(error)
