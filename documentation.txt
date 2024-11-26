@@ -1882,3 +1882,12 @@ Section 04: Booking
 -u funkciju create() dodajemo objekt data
 -u blok koda catch dodajemo funkciju renderError()
 -nakon blokove koda try - catch dodajemo izjavu return redirect()
+
+149. Blocked Periods
+-u komponentu BookingCalendar.tsx importujemo funkciju generateBlockedPeriods iz foldera utils
+-u funkciju BookingCalendar() dodajemo funkciju useProperty()
+-vrijednost funkcije useProperty() pohranjujemo u varijablu const bookings
+-u funkciju BookingCalendar() dodajemo funkciju generateBlockedPeriods()
+-vrijednost funkcije generateBlockedPeriods() pohranjujemo u varijablu const blockedPeriods
+-u jsx-u komponenti Calendar dodajemo prop disableb
+-u prop disableb proslijedujemo vrijednost varijable blockedPeriods
