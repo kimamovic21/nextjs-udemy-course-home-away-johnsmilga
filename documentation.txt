@@ -1924,3 +1924,41 @@ Section 04: Booking
 -dodajemo funkciju revalidatePath()
 -dodajemo izjavu return objekt poruku da je rezervacija uspjesno obrisana
 -u blok koda catch dodajemo funkciju renderError(error)
+
+152. Bookings Page
+-otvorimo link: https://ui.shadcn.com/docs/components/table
+-u utils/format.ts fajlu kreiramo i eksportujemo funkciju formatDate() sa parametrom date
+-parametru date dodajemo tip Date
+-u komponenti bookings/page.tsx funkciji BookinsPage() dodajemo asinhronost
+-importujemo funkciju fetchBookings iz foldera utils
+-u funkciji BookinsPage() dodajemo metodu await fetchBookings()
+-vrijednost metode await fetchBookings() pohranjujemo u varijablu const bookings
+-importujemo komponentu EmptyList.tsx
+-dodajemo uslov if (bookings.length === 0)
+-u uslov if dodajemo komponentu EmptyList
+-u jsx-u kreiramo roditelj div element sa prop className
+-u div elementu kreiramo h4 element sa Tailwind CSS klasama
+-importujemo komponente za tabelu iz komponente ui/components.tsx
+-u div element dodajemo komponentu Table sa otvorenim i zatvorenim tagom
+-u komponentu Table dodajemo komponentu TableCaption sa otvorenim i zatvorenim tagom
+-u komponentu Table dodajemo komponentu TableHeader sa otvorenim i zatvorenim tagom
+-u komponentu TableHeader dodajemo komponentu TableRow sa otvorenim i zatvorenim tagom
+-u komponentu TableRow dodajemo sedam komponenti TableHead
+-u komponentu Table dodajemo komponentu TableBody sa otvorenim i zatvorenim tagom
+-u komponentu TableBody dodajemo metodu bookings.map()
+-u funkciji map() destruktuiramo varijable const { id, orderTotal, totalNights, checkIn, checkOut } iz varijable booking
+-destruktuiramo varijable const { id: propertyId, name, country } iz varijable booking.property
+-importujemo funkciju formatDate() iz foldera utils
+-kreiramo varijable const startDate i const endDate
+-u izjavu return dodajemo komponentu TableRow sa otvorenim i zatvorenim tagom
+-komponenti TableRow dodajemo prop key
+-u komponentu TableRow dodajemo sedam komponenti TableCell sa otvorenim i zatvorenim tagom
+-u prvu komponentu TableCell dodajemo komponentu Link sa prop href i className
+-importujemo komponentu CountryFlagAndName.tsx
+-u drugu komponentu TableCell dodajemo komponentu CountryFlagAndName sa prop countryCode
+-u trecoj komponenti dinamicki prikazujemo varijablu totalNights
+-importujemo komponentu formatCurrency iz foldera utils
+-u cetvrtu komponentu dodajemo funkciju formatCurrency(orderTotal)
+-u petoj komponenti dinamicki prikazujemo varijablu startDate
+-u sestoj komponenti dinamicki prikazujemo varijablu endDate
+-u sedmoj komponenti ce se dodati logika za brisanje rezervacije
