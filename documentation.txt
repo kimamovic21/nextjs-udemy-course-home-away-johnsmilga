@@ -1891,3 +1891,18 @@ Section 04: Booking
 -vrijednost funkcije generateBlockedPeriods() pohranjujemo u varijablu const blockedPeriods
 -u jsx-u komponenti Calendar dodajemo prop disableb
 -u prop disableb proslijedujemo vrijednost varijable blockedPeriods
+
+150. Disabled Dates
+-u komponentu BookingCalendar.tsx importujemo funkciju useToast()
+-u funkciji BookingCalendar() pozivamo funkciju useToast() vrijednost funkcije pohranjujemo u destruktuiranu varijablu const { toast }
+-importujemo funkciju generateDisabledDates() iz foldera utils
+-pozivamo funkciju generateDisabledDates() i vrijednost funkcije pohranjujemo u varijablu const unavailableDates
+-importujemo funkciju generateDateRange iz foldera utils
+-u funkciji useEffect() pozivamo funkciju generateDateRange()
+-vrijednost funkcije generateDateRange() pohranjujemo u varijablu const selectedRange
+-dodajemo metodu selectedRange.some()
+-vrijednost metode selectedRange.some() pohranjujemo u varijablu const isDisabledDateIncluded
+-u funkciju some() dodajemo uslov if(unavailableDates[dates])
+-u uslov if dodajemo funkcije setRange(defaultSelected) i toast()
+-dodajemo uzjavu return true
+-izvan uslova if dodajemo izjavu return false
