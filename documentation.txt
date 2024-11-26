@@ -1809,7 +1809,7 @@ Section 04: Booking
 -u komponenti BookingContainer.tsx vrijednost funkcije useProperty() pohranjujemo u destr varijablu const { range }
 -dodajemo dva uslova if
 -u folderu utils kreiramo calculateTotals.ts fajl
--u calculateTotals.ts fajl imporujemo funkciju calculateDaysBetween iz calendar.ts fajla
+-u calculateTotals.ts fajl importujemo funkciju calculateDaysBetween iz calendar.ts fajla
 -kreiramo tip BookingDetails
 -kreiramo i eksportujemo funkciju calculateTotals() 
 -funkciji calculateTotals() dodajemo tri destruktuirana parametra checkIn, checkOut i price
@@ -1976,3 +1976,19 @@ Section 04: Booking
 -u prop action proslijedujemo funkciju deleteBooking
 -u komponentu FormContainer dodajemo komponentu IconButton sa prop actionType
 -u sedmu komponentu TableCell dodajemo komponentu DeleteBooking sa prop bookingId
+
+154. Loading Table Component
+-u folderu components/booking kreiramo komponentu LoadingTable.tsx
+-funkciji LoadingTable() dodajemo parametar destruktuirani prop rows
+-parametru rows dodajemo tip number
+-dodajemo metodu Array.from()
+-vrijednost metode Array.from() pohranjujemo u varijablu const tableRows
+-u izjavi return kreiramo div element sa prop key i className
+-importujemo komponentu Skeleton iz komponente ui/skeleton.tsx
+-u div element dodajemo komponentu Skeleton sa Tailwind CSS klasama
+-u jsx-u dodajemo prazan fragment kao roditelj element
+-u prazan fragment dinamicki prikazujemo varijabla tableRows
+-u folderu app/bookings kreiramo komponentu loading.tsx
+-u komponentu loading.tsx dodajemo direktivu 'use client'
+-importujemo komponentu LoadingTable.tsx
+-u jsx-u dodajemo komponentu LoadingTable
