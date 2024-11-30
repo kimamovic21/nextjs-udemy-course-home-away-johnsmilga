@@ -2031,3 +2031,52 @@ Section 05: Entire App
 -dodajemo izjavu return objekt
 -u objekt dodajemo varijable ...rental, totalNightsSum i orderTotalSum
 -dodajemo izjavu return rentalsWithBookingSums
+
+156. Rentals Page
+-u folderu rentals kreiramo komponentu loading.tsx
+-u komponentu loading.tsx dodajemo direktivu 'use client'
+-importujemo komponentu LoadingTable.tsx
+-kreiramo i eksportujemo funkciju loading() kao default
+-u funkciju loading() dodajemo komponentu LoadingTable
+-u komponentu rentals/page.tsx importujemo funkcije fetchRentals, deleteRentalAction i formatCurrency iz foldera utils
+-importujemo komponentu IconButton iz komponente Buttons.tsx
+-importujemo komponente iz komponente ui/table.tsx
+-importujemo komponentu Link iz paketa Next Navigation
+-importujemo komponente EmptyList.tsx i FormContainer.tsx
+-funkciji RentalsPage() dodajemo asinhronost
+-u funkciju RentalsPage() dodajemo metodu await fetchRentals()
+-vrijednost metode await fetchRentals() pohranjujemo u varijablu const rentals
+-dodajemo uslov if (rentals.length === 0)
+-u uslov if (rentals.length === 0) dodajemo komponentu EmptyList
+-komponenti EmptyList dodajemo prop heading i message
+-roditelj div elementu dodajemo prop className Name
+-u div elementu kreiramo h4 element sa Tailwind CSS klasama
+-u div element dodajemo komponentu Table sa otvorenim i zatvorenim tagom
+-u komponentu Table dodajemo komponentu TableCaption sa otvorenim i zatvorenim tagom
+-u komponentu Table dodajemo komponentu TableHeader sa otvorenim i zatvorenim tagom
+-u komponentu TableHeader dodajemo komponentu TableRow sa otvorenim i zatvorenim tagom
+-u komponentu TableRow dodajemo pet komponenti TableHead
+-u komponentu Table dodajemo komponentu TableBody sa otvorenim i zatvorenim tagom
+-u komponentu TableBody dodajemo metodu rentals?.map()
+-u funkciji map() destruktuiramo varijable const { id:propertyId, name, price } iz varijable rental
+-destruktuiramo varijable const { totalNightsSum, orderTotalSum } iz varijable rental
+-dodajemo izjavu return
+-u izjavu return dodajemo komponentu TableRow sa otvorenim i zatvorenim tagom
+-komponenti TableRow dodajemo prop key
+-u komponentu TableRow dodajemo pet komponenti TableCell sa otvorenim i zatvorenim tagom
+-u prvu komponentu TableCell dodajemo komponentu Link sa prop href i className
+-u drugu komponentu TableCell dodajemo funkciju formatCurrency(price)
+-u trecu komponentu TableCell dodajemo varijablu totalNightsSum || 0
+-u cetvrtu komponentu TableCell dodajemo funciju formatCurrency(orderTotalSum)
+-kreiramo funkciju DeleteRental()
+-funkciji DeleteRental() dodajemo destruktuirani parametar prrop propertyId sa tipom string
+-u funkciju DeleteRental() dodajemo metodu deleteRentalAction.bind()
+-vrijednost metode deleteRentalAction.bind() pohranjujemo u varijablu const deleteRental
+-u jsx-u dodajemo komponentu FormContainer sa prop action
+-u prop action proslijedujemo funkciju deleteRental
+-u komponentu FormContainer dodajemo komponentu IconButton sa prop actionType
+-u petu komponentu TableCell dodajemo komponente Link i DeleteRental
+-komponenti Link dodajemo prop href
+-komponenti DeleteRental dodajemo prop propertyId
+-u komponentu Link dodajemo komponentu IconButton sa prop actionType
+-komponenti TableCell dodajemo Tailwind CSS Flex klase
