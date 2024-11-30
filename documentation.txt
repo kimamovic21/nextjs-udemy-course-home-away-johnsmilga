@@ -1658,7 +1658,7 @@ Country Name and Flag - fixed
 -u komponentu Buttons.tsx importujemo React ikonice LuTrash2 i LuPenSquare
 -kreiramo tip actionType
 -kreiramo i eksportujemo funkciju IconButton() 
--funkciji IconButton() dodajemo parametar destruktuirani prop actionType sa tiopm actionType
+-funkciji IconButton() dodajemo parametar destruktuirani prop actionType sa tipom actionType
 -u funkciju IconButton dodajemo funkciju useFormStatus()
 -vrijednost funkcije useFormStatus() pohranjujemo u destruktuiranu varijablu const { pending }
 -kreiramo funkciju renderIcon()
@@ -2090,3 +2090,37 @@ Section 05: Entire App
 -u funkciju findUnique() dodajemo konfiguracioni objekt
 -u konfiguracioni objekt dodajemo objekt where
 -kreiramo i eksportujemo asinhrone funkcije updatePropertyAction() i updatePropertyImageAction()
+
+158. Edit Rentals Page
+-u folderu app kreiramo foldere [id] i edit
+-u folderu [id]/edit kreiramo komponentu page.tsx
+-u komponenti page.tsx, funkciji EditRentalPage() dodajemo parametar destruktuirani prop params sa tipom string
+-importujemo funkcije fetchRentalDetails, updatePropertyImageAction i updatePropertyAction iz actions.ts fajla
+-u funkciju EditRentalPage() dodajemo metodu await fetchRentalDetails(params.id)
+-funkciji EditRentalPage() dodajemo asinhronost
+-vrijednost metode await fetchRentalDetails(params.id) pohranjujemo u varijablu const property
+-importujemo funkciju redirect iz paketa Next Navigation
+-dodajemo uslov if (!property)
+-u uslov if (!property) dodajemo funkciju redirect('/')
+-u jsx-u kreiramo section element kao roditelj element
+-u section elementu kreiramo h2 i div elemente sa Tailwind CSS klasama
+-importujemo komponentu ImageInputContainer.tsx
+-u div element dodajemo komponentu ImageInputContainer sa prop name, text, action i image
+-u prop action proslijedujemo funkciju updatePropertyImageAction
+-u komponenti ImageInputContainer kreiramo input element sa prop type, name i value
+-u prop value proslijedujemo varijablu property.id
+-importujemo komponentu FormContainer.tsx
+-u div element dodajemo komponentu FormContainer sa prop action
+-u prop action proslijedujemo funkciju updatePropertyAction
+-u komponenti FormContainer kreiramo input element sa prop type, name i value
+-kreiramo div element sa Tailwind CSS Grid klasama
+-importujemo komponente FormInput.tsx, PriceInput.tsx, CategoriesInput i CountriesInput.tsx
+-u div element dodajemo dvije komponente FormInput sa prop name, type, label i defaultValue 
+-dodajemo komponentu PriceInput sa prop defaultValue
+-dodajemo komponentu CategoriesInput sa prop defaultValue
+-dodajemo komponentu CountriesInput sa prop defaultValue
+-importujemo i dodajemo komponentu TextAreaInput sa prop name, labelText i defaultValue
+-kreiramo h3 element sa Tailwind CSS klasama
+-importujemo i dodajemo cetiri komponente CounterInput sa prop detail i defaultValue
+-importujemo i dodajemo komponentu SubmitButton sa prop text, className
+-otvorimo link u pretrazivacu: http://localhost:3000/rentals/aa5f4b30-8e18-4c61-b6e9-b637ed441ac2/edit
