@@ -2080,3 +2080,13 @@ Section 05: Entire App
 -komponenti DeleteRental dodajemo prop propertyId
 -u komponentu Link dodajemo komponentu IconButton sa prop actionType
 -komponenti TableCell dodajemo Tailwind CSS Flex klase
+
+157. Fetch Rental Details Function
+-u utils/actions.ts fajlu kreiramo i eksportujemo asinhronu funkciju fetchRentalDetails() 
+-funkciji fetchRentalDetails() dodajemo parametar propertyId sa tipom string
+-u funkciju fetchRentalDetails() dodajemo metodu await getAuthUser()
+-vrijednost metode await getAuthUser() pohranjujemo u varijablu const user
+-dodajemo izjavu db.property.findUnique()
+-u funkciju findUnique() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekt where
+-kreiramo i eksportujemo asinhrone funkcije updatePropertyAction() i updatePropertyImageAction()
