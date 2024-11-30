@@ -1992,3 +1992,42 @@ Section 04: Booking
 -u komponentu loading.tsx dodajemo direktivu 'use client'
 -importujemo komponentu LoadingTable.tsx
 -u jsx-u dodajemo komponentu LoadingTable
+
+
+Section 05: Entire App
+
+155. Fetch and Delete Rentals Functions
+-u actions.ts fajlu kreiramo i eksportujemo asinhronu funkciju deleteRentalAction sa prametrom prevState
+-parametru prevState dodajemo tip
+-destruktuiramo varijablu const { propertyId } iz varijable prevState
+-dodajemo metodu await getAuthUser()
+-vrijednost metode await getAuthUser() pohranjujemo u varijablu const user
+-dodajemo blokove koda try - catch
+-u blok koda try dodajemo metodu await db.property.delete()
+-u funkciju delete dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekt where
+-dodajemo funkciju revalidatePath()
+-dodajemo izjavu return objekt poruku da je nekretnina za iznajmljivanje izbrisana
+-u blok koda catch dodajemo izjavu return reviewDoesNotExist(error)
+-kreiramo i eksportujemo asinhronu funkciju fetchRentals()
+-u funkciju fetchRentals() dodajemo metodu await getAuthUser()
+-vrijednost metode await getAuthUser() pohranjujemo u varijablu const user
+-dodajemo metodu await db.property.findMany()
+-vrijednost metode await db.property.findMany() pohranjujemo u varijablu const rentals
+-u funkciju findMany() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekte where i select
+-dodajemo metodu await Promise.all() 
+-vrijednost metode await Promise.all() pohranjujemo u varijablu const rentalsWithBookingSums
+-u funkciju all() dodajemo metodu rentals.map()
+-u funkciji map() dodajemo anonimnu asinhronu funkciju sa parametrom rental
+-u anonimnu funkciju dodajemo metodu await db.booking.aggregate()
+-vrijednost metode await db.booking.aggregate() pohranjujemo u varijablu const totalNightsSum
+-u funkciju aggregate() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekte where i _sum
+-dodajemo metodu await db.booking.aggregate()
+-vrijednost metode await db.booking.aggregate() pohranjujemo u varijablu const orderTotalSum
+-u funkciju aggregate() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekte where i _sum
+-dodajemo izjavu return objekt
+-u objekt dodajemo varijable ...rental, totalNightsSum i orderTotalSum
+-dodajemo izjavu return rentalsWithBookingSums
