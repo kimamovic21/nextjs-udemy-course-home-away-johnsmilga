@@ -2124,3 +2124,15 @@ Section 05: Entire App
 -importujemo i dodajemo cetiri komponente CounterInput sa prop detail i defaultValue
 -importujemo i dodajemo komponentu SubmitButton sa prop text, className
 -otvorimo link u pretrazivacu: http://localhost:3000/rentals/aa5f4b30-8e18-4c61-b6e9-b637ed441ac2/edit
+
+159. Amenities Input Gotcha
+-u komponentu EditRentalPage importujemo tip Amenity iz foldera utils
+-importujemo komponentu AmenitiesInput.tsx
+-kreiramo varijablu const defaultAmenities
+-kreiramo h3 element sa Tailwind CSS klasama
+-ispod h3 elementa dodajemo komponentu AmenitiesInput sa prop defaultValue
+-u komponentu AmenitiesInput.tsx dodajemo metodu defaultValue?.map()
+-vrijednost metode defaultValue?.map() pohranjujemo u varijablu const amenitiesWithIcons
+-u funkciju map() dodajemo parametre { name, selected }
+-u izjavu return dodajemo objekt i varijable name, selected i icon
+-funkciji useState() dodajemo argument amenitiesWithIcons

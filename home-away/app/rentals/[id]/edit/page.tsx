@@ -4,6 +4,7 @@ import {
   updatePropertyImageAction,
   updatePropertyAction
 } from '@/utils/actions';
+import { type Amenity } from '@/utils/amenities';
 import { SubmitButton } from '@/components/form/Buttons';
 import ImageInputContainer from '@/components/form/ImageInputContainer';
 import FormContainer from '@/components/form/FormContainer';
@@ -13,11 +14,14 @@ import CategoriesInput from '@/components/form/CategoriesInput';
 import CountriesInput from '@/components/form/CountriesInput';
 import TextAreaInput from '@/components/form/TextAreaInput';
 import CounterInput from '@/components/form/CounterInput';
+import AmenitiesInput from '@/components/form/AmenitiesInput';
 
-async function EditRentalsPage({ params }: {params: {id: string}}) {
+async function EditRentalPage({ params }: {params: {id: string}}) {
   const property = await fetchRentalDetails(params.id);
 
   if (!property) redirect('/');
+
+  const defaultAmenities:Amenity[] = JSON.parse(property.amenities);
 
   return (
     <section>
@@ -69,6 +73,11 @@ async function EditRentalsPage({ params }: {params: {id: string}}) {
           <CounterInput detail='beds' defaultValue={property.beds} />
           <CounterInput detail='baths' defaultValue={property.baths} />
           
+          <h3 className='text-lg mt-10 mb-6 font-medium'>
+            Amenities
+          </h3>
+          <AmenitiesInput defaultValue={defaultAmenities} />
+
           <SubmitButton text='edit property' className='mt-12' />
         </FormContainer>
       </div>
@@ -76,4 +85,4 @@ async function EditRentalsPage({ params }: {params: {id: string}}) {
   );
 };
 
-export default EditRentalsPage;
+export default EditRentalPage;
