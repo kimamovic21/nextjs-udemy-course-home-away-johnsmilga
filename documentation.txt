@@ -2166,3 +2166,11 @@ Section 05: Entire App
 -dodajemo funkciju revalidatePath()
 -dodajemo izjavu return objekt poruku da je slika nekretnine uspjesno izmjenjena
 -u blok koda catch dodajemo funkciju renderError()
+
+161. Reservation Page - Setup
+-u folderu app kreiramo folder reservations
+-u folderu reservations kreiramo komponente page.tsx i loading.tsx
+-u komponentu loading.tsx dodajemo direktivu 'use client'
+-importujemo komponentu LoadingTable.tsx
+-u jsx-u dodajemo komponentu LoadingTable
+-u links.ts fajlu, u niz links dodajemo objekt rutu za rezervacije
