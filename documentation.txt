@@ -2219,3 +2219,8 @@ Section 05: Entire App
 -u cetvrtu komponentu TableCell dodajemo funkciju formatCurrency(orderTotal)
 -u petoj komponenti Table dinamicki prikazujemo varijablu startDate
 -u sestoj komponenti Table dinamicki prikazujemo varijablu endDate
+
+164. Admin Page - Setup
+-u links.ts fajlu, u nizu links kreiramo objekt rutu za admina
+-u folderu app kreiramo folder admin i komponentu page.tsx
+-u folderu components kreiramo pet tsx komponenti: Chart, ChartsContainer, Loading, StatsCard i StatsContainer
