@@ -2174,3 +2174,15 @@ Section 05: Entire App
 -importujemo komponentu LoadingTable.tsx
 -u jsx-u dodajemo komponentu LoadingTable
 -u links.ts fajlu, u niz links dodajemo objekt rutu za rezervacije
+
+162. Fetch Reservations
+-u actions.ts fajlu kreiramo i eksportujemo asinhronu funkciju fetchReservations()
+-u funkciju fetchReservations() dodajemo metodu await getAuthUser()
+-vrijednost metode await getAuthUser() pohranjujemo u varijablu const user
+-dodajemo metodu await db.booking.findMany()
+-vrijednost metode db.booking.findMany() pohranjujemo u varijablu const reservations
+-u funkciju findMany() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekte where, orderBy i include
+-u objekt include dodajemo objekt property
+-u objekt property dodajemo objekt select
+-u izjavu return dodajemo varijablu reservations
