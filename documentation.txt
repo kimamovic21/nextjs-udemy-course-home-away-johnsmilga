@@ -2224,3 +2224,22 @@ Section 05: Entire App
 -u links.ts fajlu, u nizu links kreiramo objekt rutu za admina
 -u folderu app kreiramo folder admin i komponentu page.tsx
 -u folderu components kreiramo pet tsx komponenti: Chart, ChartsContainer, Loading, StatsCard i StatsContainer
+
+165. Admin Page - Middleware
+-u .env fajlu kreiramo env varijablu ADMIN_USER_ID
+-u .env.example fajlu dodajemo primjer env varijable koju je potrebno kreirati
+-na web stranici Vercel dodajemo varijablu ADMIN_USER_ID u projekt
+-u middleware.ts fajlu brisemo varijablu const isProtectedRoute
+-kreiramo varijablu const isPublicRoute
+-u funkciju clerkMiddleware() dodajemo uslov if (!isPublicRoute(req)) auth().protect()
+-kreiramo varijablu const isAdminRoute
+-u funkciji clerkMiddleware() kreiramo varijablu const isAdminUser
+-dodajemo uslov if (isAdminRoute(req) && !isAdminUser)
+-importujemo funkciju NextResponse iz paketa Next Server
+-u uslov if dodajemo funkciju NextResponse.redirect()
+-u komponentu LinksDropdown.tsx importujemo funkciju auth iz paketa Clerk
+-u funkciji LinksDropdown() pozivamo funkciju auth()
+-vrijednost funcije auth() pohranjujemo u destruktuiranu varijablu const{ userId }
+-kreiramo varijablu const isAdminUser
+-u metodu links?.map() dodajemo uslov if (link.label === 'admin' && !isAdminUser)
+-u uslov if dodajemo izjavu return null
