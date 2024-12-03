@@ -2264,3 +2264,32 @@ Section 05: Entire App
 -komponentama Suspense dodajemo prop fallback
 -prvoj komponenti Suspense u prop fallback proslijedujemo komponentu StatsLoadingContainer
 -drugoj komponenti Suspense u prop fallback proslijedujemo komponentu ChartsLoadingContainer
+
+167. Admin Page - Stats Container
+-u actions.ts fajlu kreiramo asinhronu funkciju getAdminUser()
+-u funkciji getAdminUser() kreiramo dodajemo metodu await getAuthUser()
+-vrijednost metode await getAuthUser() pohranjujemo u varijablu const user
+-dodajemo uslov if (user.id !== process.env.ADMIN_USER_ID)
+-u uslov if dodajemo funkciju redirect()
+-dodajemo izjavu return user
+-kreiramo i eksportujemo asinhronu funkciju fetchStats()
+-u funkciji fetchStats() pozivamo funkciju getAdminUser()
+-kreiramo tri varijable const usersCount, const propertiesCount i const bookingsCount
+-dodajemo izjavu return objekt i kreirane varijable
+-u komponentu StatsContainer.tsx importujemo funkciju fetchStats iz foldera utils i komponentu StatsCard.tsx
+-funkciji StatsContainer() dodajemo asinhronost
+-u funkciju StatsContainer() dodajemo metodu await fetchStats()
+-vrijednost metode await fetchStats() pohranjujemo u varijablu cosnt data
+-roditelj div elementu dodajemo Tailwind CSS Grid klase
+-u div element dodajemo tri komponente StatsCard
+-komponentama StatsCard dodajemo prop title i value
+-u prop value pristupamo vrijednostima iz varijable data
+-u komponentu StatsCard.tsx importujemo komponente Card iz CardHeader komponente ui/card.tsx
+-kreiramo tip StatsCardProps
+-funkciji StatsCard dodajemo parametre destruktuirane prop title i value
+-parametrima dodajemo tip StatsCardProps
+-u jsx-u dodajemo komponentu Card sa otvorenim i zatvorenim tagom kao roditelj element
+-komponenti Card dodajemo prop className
+-u komponentu Card dodajemo komponentu CardHeader sa otvorenim i zatvorenim tagom 
+-komponenti CardHeader dodajemo Tailwind CSS Flex klase
+-kreiramo elemente h3 i span sa Tailwind CSS klasama
