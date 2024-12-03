@@ -2136,3 +2136,33 @@ Section 05: Entire App
 -u funkciju map() dodajemo parametre { name, selected }
 -u izjavu return dodajemo objekt i varijable name, selected i icon
 -funkciji useState() dodajemo argument amenitiesWithIcons
+
+160. Update Rental Functions
+-u actions.ts fajlu, funkciji updatePropertyAction() dodajemo parametre prevState i formData
+-parametrima dodajemo tipove 
+-funkciji updatePropertyAction() dodajemo tip Promise
+-dodajemo metodu await getAuthUser()
+-vrijednost metode await getAuthUser() pohranjujemo u varijablu const user
+-kreiramo varijablu const propertyId
+-dodajemo blokove koda try - catch
+-u bloku koda try kreiramo varijable const rawData i const validatedFields
+-dodajemo metodu await db.property.update()
+-u funkciju update() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekte where i data
+-dodajemo funkciju revalidatePath()
+-dodajemo izjavu return objekt poruku da je nekretnina uspjesno izmjenjena
+-u blok koda catch dodajemo funkciju renderError()
+-funkciji updatePropertyImageAction() dodajemo parametre prevState i formData
+-parametrima dodajemo tipove
+-funkciji updatePropertyImageAction() dodajemo tip Promise
+-dodajemo metodu await getAuthUser()
+-vrijednost metode await getAuthUser() pohranjujemo u varijablu const user
+-kreiramo varijablu const propertyId
+-dodajemo blokove koda try - catch
+-u bloku koda try kreiramo varijable const image, const validatedFields i const fullPath
+-dodajemo metodu db.property.update()
+-u funciju update() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekte where i data
+-dodajemo funkciju revalidatePath()
+-dodajemo izjavu return objekt poruku da je slika nekretnine uspjesno izmjenjena
+-u blok koda catch dodajemo funkciju renderError()
