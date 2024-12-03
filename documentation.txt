@@ -2186,3 +2186,36 @@ Section 05: Entire App
 -u objekt include dodajemo objekt property
 -u objekt property dodajemo objekt select
 -u izjavu return dodajemo varijablu reservations
+
+163. Reservations Page - Complete
+-u komponentu reservations/page.tsx importujemo funkcije fetchReservations, formatDate i formatCurrency iz foldera utils
+-importujemo komponente za tabelu iz komponente ui/table.tsx
+-importujemo komponentu Link iz paketa Next Link
+-importujemo komponente EmptyList.tsx i CountryFlagAndName.tsx iz foldera components
+-funkciji ReservationsPage() dodajemo asinhronost
+-u funkciju ReservationsPage() dodajemo metodu await fetchReservations()
+-vrijednost metode await fetchReservations() pohranjujemo u varijablu const reservations
+-dodajemo uslov if (reservations.length === 0)
+-u uslov if dodajemo komponentu EmptyList
+-u jsx-u roditelj div elementu dodajemo prop className
+-u div elementu kreiramo h4 element sa Tailwind CSS klasama
+-ispod h4 elementa dodajemo komponentu Table sa otvorenim i zatvorenim tagom
+-u komponentu Table dodajemo komponentu TableCaption sa otvorenim i zatvorenim tagom
+-u komponentu Table dodajemo komponentu TableHeader sa otvorenim i zatvorenim tagom
+-u komponentu TableHeader dodajemo komponentu TableRow sa otvorenim i zatvorenim tagom
+-u komponentu TableRow dodajemo sest komponenti TableHead sa otvorenim i zatvorenim tagom
+-u komponentu Table dodajemo komponentu TableBody sa otvorenim i zatvorenim tagom
+-u komponentu TableBody dodajemo metodu reservations.map()
+-destruktuiramo varijable const { id, orderTotal, totalNights, checkIn, checkOut } iz varijable item
+-destruktuiramo varijable const { id: propertyId, name, country } iz varijable item.property
+-kreiramo varijabla const startDate i const endDate
+-dodajemo izjavu return
+-u izjavu return dodajemo komponentu TableRow sa otvorenim i zatvorenim tagom
+-komponenti TableRow dodajemo prop key
+-u komponentu TableRow dodajemo komponentu sest komponenti TableCell sa otvorenim i zatvorenim tagom
+-u prvu komponentu TableCell dodajemo komponentu Link sa prop href i className
+-u drugu komponentu dodajemo komponentu CountryFlagAndName sa prop countryCode
+-u trecu komponentu TableCell dinamicki prikazujemo varijablu totalNights
+-u cetvrtu komponentu TableCell dodajemo funkciju formatCurrency(orderTotal)
+-u petoj komponenti Table dinamicki prikazujemo varijablu startDate
+-u sestoj komponenti Table dinamicki prikazujemo varijablu endDate
