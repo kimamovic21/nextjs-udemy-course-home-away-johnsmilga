@@ -914,7 +914,7 @@ Section 03: HomeAway Project
 -u folderu form kreiramo komponentu TextAreaInput.tsx
 -u komponentu TextAreaInput.tsx importujemo komponente Label i Textarea iz foldera ui
 -kreiramo tip TextAreaInputProps
--funkciji TextAreaInput() dodajemo parametre destruktuirane prps name, labelText i defaultValue
+-funkciji TextAreaInput() dodajemo parametre destruktuirane prop name, labelText i defaultValue
 -parametrima dodajemo tip TextAreaInputProps
 -u jsx-u kreiramo div roditelj element sa Tailwind CSS klasom
 -u div element dodajemo komponentu Label sa prop htmlFor i className
@@ -2243,3 +2243,24 @@ Section 05: Entire App
 -kreiramo varijablu const isAdminUser
 -u metodu links?.map() dodajemo uslov if (link.label === 'admin' && !isAdminUser)
 -u uslov if dodajemo izjavu return null
+
+166. Admin Page - Loading Components
+-u komponentu components/admin/Loading.tsx importujemo komponente Card, CardHeader i Skeleton iz foldera ui
+-kreiramo i eksportujemo funkciju ChartsLoadingContainer()
+-u funkciju ChartsLoadingContainer() dodajemo komponentu Skeleton sa Tailwind CSS klasama
+-izbrisemo funkciju Loading()
+-kreiramo i eksportujemo funkciju StatsLoadingContainer()
+-u funkciji StatsLoadingContainer kreiramo roditelj div element sa Tailwind CSS klasama
+-kreiramo funkciju LoadingCard()
+-u komponentu LoadingCard() dodajemo komponentu Card sa otvorenim i zatvorenim tagom kao roditelj element
+-u komponentu Card dodajemo komponentu CardHeader sa otvorenim i zatvorenim tagom
+-u komponentu CardHeader dodajemo komponentu Skeleton sa Tailwind CSS klasama
+-u funkciju StatsLoadingContainer() dodajemo tri komponente LoadingCard
+-u komponentu admin/page.tsx importujemo komponenta Suspense iz paketa React
+-u funkciji AdminPage(), u jsx-u kreiramo prazan fragment kao roditelj element
+-importujemo komponente ChartsLoadingContainer i StatsLoadingContainer iz komponente components/admin/Loading.tsx
+-importujemo komponente ChartsContainer.tsx i StatsContainer.tsx
+-u jsx-u dodajemo dvije komponente Suspense sa otvorenim i zatvorenim tagom
+-komponentama Suspense dodajemo prop fallback
+-prvoj komponenti Suspense u prop fallback proslijedujemo komponentu StatsLoadingContainer
+-drugoj komponenti Suspense u prop fallback proslijedujemo komponentu ChartsLoadingContainer
