@@ -2325,3 +2325,32 @@ Section 05: Entire App
 -u uslov else dodajemo metodu total.push()
 -izvan if - else uslova dodajemo izjavu return total
 -u funkciju fetchChartsData() dodajemo izjavu return bookingsPerMonth
+
+169. Admin Page - Chart Container
+-u komponentu ChartsContainer.tsx importujemo funkciju fetchChartsData iz foldera utils
+-importujemo komponentu Chart.tsx
+-funkciji ChartsContainer() dodajemo asinhronost
+-u funkciju ChartsContainer() dodajemo funkciju await fetchChartsData()
+-vrijednost metode await fetchChartsData() pohranjujemo u varijablu const bookings
+-u jsx-u dodajemo komponentu Chart sa prop data
+-u prop data proslijedujemo varijablu bookings
+-dodajemo uslov if (bookings.length < 1)
+-u uslov if dodajemo izjavu return null
+-otvorimo web stranicu: https://recharts.org/en-US/
+-u terminalu instaliramo paket Recharts sa komandom npm i recharts
+-u komponentu Chart.tsx dodajemo direktivu 'use client'
+-importujemo sedam komponenti iz paketa Recharts: BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
+-kreiramo tip ChartPropsType
+-funkciji Chart() dodajemo parametar destruktuirani prop data sa tipom ChartPropsType
+-u jsx-u kreiramo section element kao roditelj element
+-u section elementu kreiramo h2 element sa Tailwind CSS klasama
+-u section element dodajemo komponentu ResponsiveContainer sa otvorenim i zatvorenim tagom
+-komponenti ResponsiveContainer dodajemo prop width i height
+-u komponentu ResponsiveContainer dodajemo komponentu BarChart sa otvorenim i zatvorenim tagom
+-komponenti BarChart dodajemo prop data i margin
+-u komponentu BarChart dodajemo komponente CartesianGrid, XAxis, YAxis, Tooltip i Bar
+-komponenti CartesianGrid dodajemo prop strokeDasharray
+-komponenti XAxis dodajemo prop dataKey
+-komponenti YAxis dodajemo prop allowDecimals
+-komponenti Bar dodajemo prop dataKey, fill i barSize
+-u actions.ts fajlu, u objekt where dodajemo opciju paymentStatus: true
