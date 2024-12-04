@@ -425,6 +425,8 @@ export const createBookingAction = async (prevState: {
 }) => {
   const user = await getAuthUser();
 
+  let bookingId: null | string = null;  
+
   const { propertyId, checkIn, checkOut } = prevState;
   const property = await db.property.findUnique({
     where: { id: propertyId },
@@ -452,11 +454,12 @@ export const createBookingAction = async (prevState: {
         propertyId,
       },
     });
+    bookingId = booking.id;
   } catch (error) {
     return renderError(error);
   };
 
-  redirect('/bookings');
+  redirect(`/checkout?bookingId=${bookingId}`);
 };
 
 export const fetchBookings = async () => {
@@ -695,7 +698,8 @@ export const fetchChartsData = async () => {
   });
 
   let bookingsPerMonth = bookings.reduce((total, current) => {
-    const date = formatDate(current.createdAt, true);
+    // const date = formatDate(current.createdAt, false);
+    const date = formatDate(current.createdAt, '');
 
     const existingEntry = total.find((entry) => entry.date === date);
     if (existingEntry) {

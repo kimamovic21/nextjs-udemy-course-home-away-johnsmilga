@@ -6068,10 +6068,19 @@ export default Chart;
 
 ### Stripe
 
+-remove all existing bookings !!!
+
+[Docs](https://stripe.com/)
+
 [Embedded Form](https://docs.stripe.com/checkout/embedded/quickstart)
 
 - setup and add keys to .env
 - install
+
+```sh
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+STRIPE_SECRET_KEY=
+```
 
 ```sh
 npm install --save @stripe/react-stripe-js @stripe/stripe-js stripe axios
