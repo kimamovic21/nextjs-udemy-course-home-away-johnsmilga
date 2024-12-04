@@ -2293,3 +2293,35 @@ Section 05: Entire App
 -u komponentu Card dodajemo komponentu CardHeader sa otvorenim i zatvorenim tagom 
 -komponenti CardHeader dodajemo Tailwind CSS Flex klase
 -kreiramo elemente h3 i span sa Tailwind CSS klasama
+
+168. Admin Page - Fetch Chart Data
+-u actions.ts fajlu kreiramo i eksportujemo asinhronu funkciju fetchChartsData()
+-u funkciji fetchChartsData() dodajemo funkciju await getAdminUser()
+-kreiramo varijablu const date
+-varijabli date dodajemo metodu setMonth()
+-kreiramo varijablu const sixMonthsAgo
+-dodajemo metodu await db.booking.findMany()
+-vrijednost metode await db.booking.findMany() pohranjujemo u varijablu const booking
+-u funkciju findMany() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekte where i orderBy
+-dodajemo metodu bookings.reduce()
+-vrijednost metode bookings.reduce() pohranjujemo u varijablu const bookingsPerMonth
+-prvi argument funkcije reduce() je anonimna funkcija, a drugi argument je niz
+-anonimnoj funkciji dodajemo parametre total i current
+-nizu dodajemo tip Array
+-u format.ts fajlu, funkciji formatDate() dodajemo parametar onlyMonth sa tipom boolean
+-u funkciji formatDate() kreiramo varijablu const options sa tipom Intl.DateTimeFormatOptions
+-dodajemo uslov if (!onlyMonth)
+-u uslov if (!onlyMonth) dodajemo options.day
+-u return izjavu dodajemo funkciju Intl.DateTimeFormat()
+-funkciji Intl.DateTimeFormat() dodajemo argumente 'en-US' i varijablu options
+-u actions.ts fajl importujemo funkciju formatDate()
+-u funkciju reduce() dodajemo funkciju formatDate()
+-vrijednost funkcije formatDate() pohranjujemo u varijablu const date
+-dodajemo metodu total.find()
+-vrijednost metode total.find() pohranjujemo u varijablu const existingEntry
+-dodajemo uslove if (existingEntry) - else
+-u uslov if dodajemo existingEntry.count += 1
+-u uslov else dodajemo metodu total.push()
+-izvan if - else uslova dodajemo izjavu return total
+-u funkciju fetchChartsData() dodajemo izjavu return bookingsPerMonth
