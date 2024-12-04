@@ -2369,3 +2369,31 @@ Section 05: Entire App
 -u actions.ts fajlu, u funkciji createBookingAction() kreiramo varijablu let bookingId sa tipovima null | string
 -u bloku koda try dodajemo bookingId = booking.id
 -u funkciju redirect() dodajemo dinamicki link
+
+171. Stripe - Checkout Page
+-u komponentu checkout/page.tsx dodajemo direktivu 'use client'
+-importujemo funkciju useCallback iz paketa React
+-importujemo funkciju useSearchParams iz paketa Next Navigation
+-importujemo funkciju loadStripe iz paketa Stripe JS
+-importujemo komponente EmbeddedCheckoutProvider i EmbeddedCheckout iz paketa Stripe React JS
+-importujemo instancu axios
+-pozivamo funkciju loadStripe()
+-vrijednost funkcije loadStripe() pohranjujemo u varijablu const stripePromise
+-u funkciji CheckoutPage() pozivamo funkciju useSearchParams()
+-vrijednost funkcije useSearchParams() pohranjujemo u varijablu const searchParams
+-dodajemo metodu searchParams.get('bookingId')
+-vrijednost metode searchParams.get('bookingId') pohranjujemo u varijablu const bookingId
+-pozivamo funkciju useCallback() sa dva argumenta
+-prvi argument je anonimna funkcija, a drugi argument prazan niz
+-u anonimnu asinhronu funkciju dodajemo funkciju await axios.put()
+-vrijednost funkcije await axios.put() pohranjujemo u varijablu const response
+-funkciji post() dodajemo dva argumenta: rutu i objekt
+-dodajemo izjavu return response.data.clientSecret
+-vrijednost funkcije useCallback() pohranjujemo u varijablu const fetchClientSecret
+-kreiramo varijablu const options
+-u jsx-u roditelj div elementu dodajemo atribut id
+-u div element dodajemo komponentu EmbeddedCheckoutProvider sa otvorenim i zatvorenim tagom
+-komponenti EmbeddedCheckoutProvide dodajemo prop stripe i options
+-u prop stripe proslijedujemo varijablu stripePromise
+-u prop options proslijedujemo varijablu options
+-u komponentu EmbeddedCheckoutProvide dodajemo komponentu EmbeddedCheckout sa samozatvarajucim tagom
