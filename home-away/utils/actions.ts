@@ -12,7 +12,7 @@ import {
 } from './schemas';
 import { uploadImage } from './supabase';
 import { calculateTotals } from './calculateTotals';
-import { formatDate } from 'date-fns';
+import { formatDate } from './format';
 import db from './db';
 
 const getAuthUser = async () => {
@@ -713,8 +713,7 @@ export const fetchChartsData = async () => {
   });
 
   let bookingsPerMonth = bookings.reduce((total, current) => {
-    // const date = formatDate(current.createdAt, false);
-    const date = formatDate(current.createdAt, '');
+    const date = formatDate(current.createdAt, true);
 
     const existingEntry = total.find((entry) => entry.date === date);
     if (existingEntry) {
@@ -726,4 +725,32 @@ export const fetchChartsData = async () => {
   }, [] as Array<{ date: string; count: number }>);
 
   return bookingsPerMonth;
+};
+
+export const fetchReservationStats = async () => {
+  const user = await getAuthUser();
+  
+  const properties = await db.property.count({
+    where: {
+      profileId: user.id,
+    },
+  });
+
+  const totals = await db.booking.aggregate({
+    _sum: {
+      orderTotal: true,
+      totalNights: true,
+    },
+    where: {
+      property: {
+        profileId: user.id,
+      },
+    },
+  });
+
+  return {
+    properties,
+    nights: totals._sum.totalNights || 0,
+    amount: totals._sum.orderTotal || 0,
+  };
 };

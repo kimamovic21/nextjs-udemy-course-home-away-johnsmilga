@@ -1948,7 +1948,7 @@ Section 04: Booking
 -u komponentu TableBody dodajemo metodu bookings.map()
 -u funkciji map() destruktuiramo varijable const { id, orderTotal, totalNights, checkIn, checkOut } iz varijable booking
 -destruktuiramo varijable const { id: propertyId, name, country } iz varijable booking.property
--importujemo funkciju formatDate() iz foldera utils
+-importujemo funkciju formatDate() iz format.ts fajla
 -kreiramo varijable const startDate i const endDate
 -u izjavu return dodajemo komponentu TableRow sa otvorenim i zatvorenim tagom
 -komponenti TableRow dodajemo prop key
@@ -2403,7 +2403,7 @@ Section 05: Entire App
 -u folderu api kreiramo folder payment
 -u folderu payment kreiramo route.ts fajl
 -u route.ts fajl importujemo tipove NextRequest i NextResponse iz paketa Next Response
--importujemo funkciju formatDate iz foldera utils
+-importujemo funkciju formatDate iz format.ts fajla
 -importujemo instancu db
 -importujemo funkciju Stripe iz paketa Stripe
 -kreiramo varijablu const stripe 
@@ -2468,3 +2468,27 @@ Section 05: Entire App
 -u konfiguracioni objekt dodajemo objekt where 
 -u objekt where dodajemo paymentStatus: true
 -u funkciju fetchChartsData(), u objekt where dodajemo paymentStatus: true
+
+175. Reservations Stats
+-popravak u importu funkcije formatDate u actions.ts fajlu
+-u actions.ts fajlu kreiramo i eksportujemo asinhronu funkciju fetchReservationStats()
+-u funkciju fetchReservationStats() dodajemo funkciju await getAuthUser()
+-vrijednost funkcije await getAdminUser() pohranjujemo u varijablu const user
+-dodajemo metodu db.property.count()
+-vrijednost metode db.property.count() pohranjujemo u varijablu const properties
+-u funkciju count() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekt where
+-dodajemo metodu await db.booking.aggregate()
+-vrijednost metode await db.booking.aggregate() pohranjujemo u varijablu const totals
+-u funkciju aggregate() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekte _sum i where
+-dodajemo izjavu objekt return properties, nights i amount
+-u folderu components kreiramo folder reservations i komponentu Stats.tsx
+-u komponentu Stats.tsx importujemo funkcije fetchReservationStats i formatCurrency iz foldera utils
+-importujemo komponentu StatsCard.tsx
+-u jsx-u roditelj div elementu dodajemo Tailwind CSS klase
+-u div element dodajemo tri komponente StatsCard
+-komponentama StatsCard dodajemo prop title i value
+-u komponentu app/reservations/page.tsx importujemo komponentu Stats
+-u jsx-u dodajemo roditelj div element prazan fragment
+-otvorimo link: http://localhost:3000/reservations
