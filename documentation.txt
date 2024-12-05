@@ -2492,3 +2492,5 @@ Section 05: Entire App
 -u komponentu app/reservations/page.tsx importujemo komponentu Stats
 -u jsx-u dodajemo roditelj div element prazan fragment
 -otvorimo link: http://localhost:3000/reservations
+
+176. Deploy Bug Fix !!!
