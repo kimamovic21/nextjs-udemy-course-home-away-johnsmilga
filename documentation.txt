@@ -2456,3 +2456,15 @@ Section 05: Entire App
 -u blok koda catch dodajemo izjavu return Response.json()
 -nakon bloka koda catch dodajemo funkciju redirect('/bookings')
 -otvorimo link: https://docs.stripe.com/testing
+
+174. Stripe - Refactor Queries
+-u actions.ts fajlu, u funkciju createBookingAction() dodajemo metodu await db.booking.deleteMany()
+-u funkciju deleteMany() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekt where
+-u funkciju fetchBookings(), u objekt where dodajemo paymentStatus: true
+-u funkciju rentalsWithBookingSums(), u objekt where dodajemo paymentStatus: true
+-u funkciju fetchReservations(), u objekt where dodajemo paymentStatus: true
+-u funkciju fetchStats(), u metodu await db.booking.count() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekt where 
+-u objekt where dodajemo paymentStatus: true
+-u funkciju fetchChartsData(), u objekt where dodajemo paymentStatus: true
