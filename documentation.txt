@@ -2431,3 +2431,28 @@ Section 05: Entire App
 -u objekt product_data dodajemo key - value parove name, images i description
 -dodajemo izjavu return Response.json()
 -u blok koda catch dodajemo izjavu return Response.json()
+
+173. Stripe - Confirm Route
+-u folderu api kreiramo folder confirm i route.ts fajl
+-u route.ts fajl importujemo funkciju redirect iz paketa Next Navigation
+-importujemo tipove NextRequest i NextResponse iz paketa Next Server
+-importujemo instancu db iz foldera utils
+-importujemo funkciju Stripe iz paketa Stripe
+-kreiramo varijablu const stripe
+-kreiramo i eksportujemo asinhronu funkciju GET() sa parametrom req
+-parametru req dodajemo tip NextRequest
+-u funkciju GET() dodajemo metodu new URL(req.url)
+-vrijednost metode new URL(req.url) pohranjujemo u destruktuiranu varijablu const { searchParams }
+-kreiramo varijablu const session_id 
+-dodajemo blokove koda try - catch
+-u blok koda try dodajemo metodu await stripe.checkout.sessions.retrieve()
+-vrijednost metode await stripe.checkout.sessions.retrieve() pohranjujemo u varijablu const session
+-kreiramo varijablu const bookingId
+-dodajemo uslov if (session.status !== 'complete' || !bookingId)
+-u uslov if dodajemo funkciju throw new Error()
+-nakon uslova if dodajemo metodu metodu await db.booking.update()
+-u funkciju update() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekte where i data
+-u blok koda catch dodajemo izjavu return Response.json()
+-nakon bloka koda catch dodajemo funkciju redirect('/bookings')
+-otvorimo link: https://docs.stripe.com/testing
