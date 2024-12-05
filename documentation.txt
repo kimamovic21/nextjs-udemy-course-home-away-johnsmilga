@@ -2397,3 +2397,37 @@ Section 05: Entire App
 -u prop stripe proslijedujemo varijablu stripePromise
 -u prop options proslijedujemo varijablu options
 -u komponentu EmbeddedCheckoutProvide dodajemo komponentu EmbeddedCheckout sa samozatvarajucim tagom
+
+172. Stripe - Payment Route
+-u folderu app kreiramo folder api
+-u folderu api kreiramo folder payment
+-u folderu payment kreiramo route.ts fajl
+-u route.ts fajl importujemo tipove NextRequest i NextResponse iz paketa Next Response
+-importujemo funkciju formatDate iz foldera utils
+-importujemo instancu db
+-importujemo funkciju Stripe iz paketa Stripe
+-kreiramo varijablu const stripe 
+-kreiramo i eksportujemo asinhronu funkciju POST() sa parametrima req i res
+-parametrima dodajemo tipove
+-u funkciji POST() kreiramo varijable const requestHeaders i const origin
+-dodajemo funkciju await req.json()
+-vrijednost funkcije await req.json() pohranjujemo u destruktuiranu varijablu const { bookingId }
+-dodajemo metodu await db.booking.findUnique()
+-vrijednost metode await db.booking.findUnique() pohranjujemo u varijablu const booking
+-u funkciju findUnique() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo objekte where i include
+-u objekt include dodajemo objekt property
+-u objekt property dodajemo objekt select
+-dodajemo uslov if (!booking)
+-u uslov if (!booking) dodajemo izjavu return Response.json()
+-destruktuiramo varijable totalNights, orderTotal, checkIn, checkOut i property iz varijable booking
+-dodajemo blokove koda try - catch
+-u blok koda try dodajemo metodu await stripe.checkout.sessions.create()
+-funkciji create() dodajemo konfiguracioni objekt
+-vrijednost metode await stripe.checkout.sessions.create() pohranjujemo u varijablu const session
+-u konfiguracioni objekt dodajemo key - value parove ui_mode, metadata, line_items, mode i return_url
+-u niz line_items dodajemo key - value parove quantity, price_data i unit_amount
+-u objekt price_data dodajemo key - value parove currency u product_data
+-u objekt product_data dodajemo key - value parove name, images i description
+-dodajemo izjavu return Response.json()
+-u blok koda catch dodajemo izjavu return Response.json()

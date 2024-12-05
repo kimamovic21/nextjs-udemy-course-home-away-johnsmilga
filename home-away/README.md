@@ -6156,11 +6156,13 @@ export default function CheckoutPage() {
 api/payment/route.ts
 
 ```ts
-import Stripe from 'stripe';
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
 import { type NextRequest, type NextResponse } from 'next/server';
-import db from '@/utils/db';
 import { formatDate } from '@/utils/format';
+import db from '@/utils/db';
+import Stripe from 'stripe';
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
+
 export const POST = async (req: NextRequest, res: NextResponse) => {
   const requestHeaders = new Headers(req.headers);
   const origin = requestHeaders.get('origin');
@@ -6168,7 +6170,9 @@ export const POST = async (req: NextRequest, res: NextResponse) => {
   const { bookingId } = await req.json();
 
   const booking = await db.booking.findUnique({
-    where: { id: bookingId },
+    where: { 
+      id: bookingId 
+    },
     include: {
       property: {
         select: {
@@ -6184,7 +6188,8 @@ export const POST = async (req: NextRequest, res: NextResponse) => {
       status: 404,
       statusText: 'Not Found',
     });
-  }
+  };
+
   const {
     totalNights,
     orderTotal,
@@ -6228,7 +6233,7 @@ export const POST = async (req: NextRequest, res: NextResponse) => {
       status: 500,
       statusText: 'Internal Server Error',
     });
-  }
+  };
 };
 ```
 
